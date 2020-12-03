@@ -1,0 +1,33 @@
+@import "global.scss";
+
+.landing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.hello-text {
+  font-family: "Gotham Ultra";
+  height: 375px;
+  width: 1226px;
+  color: #28282a;
+  font-size: 418.07px;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 502px;
+  text-align: center;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.navbar-text {
+  font-family: "Gotham Book";
+  height: 30px;
+  width: 243px;
+  color: #28282a;
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 36px;
+}

@@ -8,7 +8,16 @@
   src: url("../../static/fonts/Gotham/Gotham-Ultra.otf");
 }
 
-body {
-  font-family: "Gotham Ultra";
-  font-size: 48px;
+@font-face {
+  font-family: "Gotham Book";
+  src: url("../../static/fonts/Gotham/Gotham-Book.otf");
 }
+
+html {
+  background-color: #2ed694;
+}
+
+// body {
+//   font-family: "Gotham Ultra";
+//   font-size: 48px;
+// }
