@@ -40,7 +40,7 @@
 @media all and (max-width: 768px) {
   .navbar-items-container {
     width: 92%;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-left: 10px;
     margin-right: 10px;
   }
@@ -59,7 +59,7 @@
 }
 .navbar-text {
   font-family: "Gotham Book";
-  height: 40px;
+  // height: 40px;
   width: 243px;
   color: #28282a;
   font-size: 30px;
@@ -74,8 +74,9 @@
 @media all and (max-width: 768px) {
   .navbar-text {
     width: 92%;
-    margin-left: 10px;
-    margin-right: 10px;
+    font-size: 20px;
+    // margin-left: 10px;
+    // margin-right: 10px;
   }
 }
 .hello-container {
@@ -110,7 +111,7 @@
   }
   .hello-text {
     position: unset;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
     font-size: 31vw;
