@@ -24,7 +24,7 @@ export default function Home() {
       <div className="work-container">
         <div className="title-arrow-container">
           <div className="work-title">My Work</div>
-          <img src={downArrow} alt="Down arrow"/>
+          <img id="arrow" src={downArrow} alt="Down arrow"/>
         </div>
         <div className="work-items">Event Check-In</div>
         <div className="work-items">Financial Management</div>

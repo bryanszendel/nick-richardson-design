@@ -11,7 +11,7 @@ import cvIcon from '../../static/navbar-svgs/cv_icon.svg';
 export default function NavBar() {
   return (
     <div className="navbar">
-      <div className="navbar-text">Nick Richardson</div>
+      <div className="navbar-text underline">Nick Richardson</div>
       <div className="navbar-items-container">
         <img className="navbar-items" src={dribbbleIcon} alt="Dribbble" />
         <img className="navbar-items" src={linkedinIcon} alt="LinkedIn" />
