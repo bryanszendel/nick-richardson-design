@@ -2,32 +2,208 @@
 
 .landing-container {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   margin-top: 50px;
 }
-.hello-text {
-  font-family: "Gotham Ultra";
-  height: 375px;
-  width: 1226px;
-  color: #28282a;
-  font-size: 418.07px;
-  font-weight: 900;
-  letter-spacing: 0;
-  line-height: 502px;
-  text-align: center;
+@media all and (max-width: 768px) {
+  .landing-container {
+    max-width: 315px;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
 .navbar {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+@media all and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+}
+.navbar-items-container {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  // border: 1px solid black;
+}
+@media all and (max-width: 768px) {
+  .navbar-items-container {
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+.navbar-items {
+  margin-left: 20px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+@media all and (max-width: 768px) {
+  .navbar-items {
+    margin: 0;
+    margin-right: 20px;
+  }
+}
 .navbar-text {
   font-family: "Gotham Book";
-  height: 30px;
+  height: 40px;
   width: 243px;
   color: #28282a;
   font-size: 30px;
   font-weight: 300;
   letter-spacing: 0;
   line-height: 36px;
+  -webkit-user-select: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+@media all and (max-width: 768px) {
+  .navbar-text {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+.hello-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  // border: 1px solid black;
+  position: relative;
+  height: 400px;
+  margin-top: 120px;
+}
+.hello-text {
+  font-family: "Gotham Ultra";
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  left: -11px;
+  max-width: 1200px;
+  color: #28282a;
+  // font-size: 26em;
+  font-size: 418px;
+  // letter-spacing: 0;
+  text-align: center;
+  -webkit-user-select: none;
+}
+@media all and (max-width: 768px) {
+  .hello-container {
+    height: unset;
+    position: unset;
+    margin: 0;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .hello-text {
+    position: unset;
+    margin-top: 30px;
+    font-size: 30vw;
+    height: unset;
+    text-align: center;
+  }
+}
+.description-container {
+  width: 100%;
+  margin-top: 120px;
+}
+.description-text {
+  height: 141px;
+  color: #28282a;
+  font-family: "Gotham Book";
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 46px;
+}
+@media all and (max-width: 768px) {
+  .description-container {
+    margin-top: 4px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .description-text {
+    height: auto;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+.underline {
+  border-bottom: 4px solid #2ed694;
+  &:hover {
+    cursor: pointer;
+  }
+}
+@media all and (max-width: 768px) {
+  .underline {
+    border-bottom: none;
+  }
+}
+.title-arrow-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 120px;
+}
+@media all and (max-width: 768px) {
+  #arrow {
+    display: none;
+    height: unset;
+  }
+  .title-arrow-container {
+    margin: 0;
+  }
+}
+.work-container {
+  width: 100%;
+}
+.work-title {
+  // margin-top: 120px;
+  font-family: "Gotham Ultra";
+  font-size: 30px;
+  color: #28282a;
+}
+.work-items {
+  margin-top: 120px;
+  font-family: "Gotham Ultra";
+  font-size: 60px;
+}
+@media all and (max-width: 768px) {
+  .work-container {
+    height: auto;
+    margin-top: 34px;
+  }
+  .work-title {
+    font-size: 18px;
+    height: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: -24px;
+  }
+  .work-items {
+    margin-top: 54px;
+    font-size: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    line-height: 38px;
+    color: #28282a;
+  }
+}
+.footer {
+  height: 240px;
+}
+@media all and (max-width: 768px) {
+  .footer {
+    height: 54px;
+  }
 }
