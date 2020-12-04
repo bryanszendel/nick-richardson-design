@@ -12,11 +12,11 @@ export default function NavBar() {
   return (
     <div className="navbar">
       <div className="navbar-text">Nick Richardson</div>
-      <div>
-        <img src={dribbbleIcon} />
-        <img src={linkedinIcon} />
-        <img src={emailIcon} />
-        <img src={cvIcon} />
+      <div className="navbar-items-container">
+        <img className="navbar-items" src={dribbbleIcon} alt="Dribbble" />
+        <img className="navbar-items" src={linkedinIcon} alt="LinkedIn" />
+        <img className="navbar-items" src={emailIcon} alt="Email" />
+        <img className="navbar-items" src={cvIcon} alt="CV" />
       </div>
     </div>
   )

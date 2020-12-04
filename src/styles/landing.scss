@@ -5,29 +5,102 @@
   margin: 0 auto;
   margin-top: 50px;
 }
-.hello-text {
-  font-family: "Gotham Ultra";
-  height: 375px;
-  width: 1226px;
-  color: #28282a;
-  font-size: 418.07px;
-  font-weight: 900;
-  letter-spacing: 0;
-  line-height: 502px;
-  text-align: center;
-}
 .navbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+.navbar-items-container {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  // border: 1px solid black;
+}
+.navbar-items {
+  margin-left: 20px;
+  &:hover {
+    cursor: pointer;
+  }
+}
 .navbar-text {
   font-family: "Gotham Book";
-  height: 30px;
+  height: 40px;
   width: 243px;
   color: #28282a;
   font-size: 30px;
   font-weight: 300;
   letter-spacing: 0;
   line-height: 36px;
+  border-bottom: 4px solid #2ed694;
+  -webkit-user-select: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.hello-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  // border: 1px solid black;
+  position: relative;
+  height: 375px;
+  margin-top: 120px;
+}
+.hello-text {
+  font-family: "Gotham Ultra";
+  width: 100%;
+  position: absolute;
+  left: -11px;
+  max-width: 1200px;
+  color: #28282a;
+  // font-size: 26em;
+  font-size: 418px;
+  letter-spacing: 0;
+  text-align: center;
+  -webkit-user-select: none;
+}
+.description-container {
+  width: 100%;
+  margin-top: 120px;
+}
+.description-text {
+  height: 141px;
+  width: 100%;
+  color: #28282a;
+  font-family: "Gotham Book";
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 46px;
+}
+.underline {
+  border-bottom: 4px solid #2ed694;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.title-arrow-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 120px;
+}
+.work-container {
+  width: 100%;
+}
+.work-title {
+  // margin-top: 120px;
+  font-family: "Gotham Ultra";
+  font-size: 30px;
+}
+.work-items {
+  margin-top: 120px;
+  font-family: "Gotham Ultra";
+  font-size: 60px;
+}
+.footer {
+  height: 240px;
 }
