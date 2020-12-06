@@ -5,10 +5,10 @@
   margin: 0 auto;
 }
 .landing-container {
-  max-width: 1200px;
+  max-width: 1250px;
   width: 92vw;
-  margin-top: 50px;
   margin: 0 auto;
+  margin-top: 50px;
 }
 @media screen and (max-width: 768px) {
   .landing-container {
@@ -81,6 +81,7 @@
 }
 .hello-container {
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -91,12 +92,24 @@
   font-family: "Gotham Ultra";
   height: 400px;
   position: absolute;
-  left: -11px;
+  left: -1.1rem;
   max-width: 1200px;
   color: #28282a;
-  font-size: 418px;
+  font-size: 27.4rem;
   text-align: center;
   -webkit-user-select: none;
+}
+@media all and (max-width: 1250px) {
+  .hello-container {
+    margin-top: 3rem;
+    height: unset;
+  }
+  .hello-text {
+    font-size: 33vw;
+    position: unset;
+    left: unset;
+    height: unset;
+  }
 }
 @media all and (max-width: 768px) {
   .hello-container {
@@ -105,7 +118,6 @@
     position: unset;
     display: flex;
     margin: 0;
-
     justify-content: flex-start;
     align-items: center;
   }
@@ -131,13 +143,28 @@
   margin-top: 120px;
   color: #28282a;
   font-family: "Gotham Book";
-  font-size: 2rem;
+  font-size: 1.85rem;
+  line-height: 47px;
+}
+
+@media all and (max-width: 1250px) {
+  .description-container {
+    margin-top: 3rem;
+  }
+  .description {
+    margin-top: 0;
+    font-size: 1.75rem;
+    // line-height: 2rem;
+  }
 }
 
 @media all and (max-width: 768px) {
+  .description-container {
+    margin-top: -4px;
+  }
   .description {
     width: 92%;
-    margin-top: 4px;
+    // margin-top: 4px;
     font-size: 1.25rem;
     line-height: 30px;
   }
@@ -179,7 +206,6 @@
   flex-direction: column;
 }
 .work-title {
-  // margin-top: 120px;
   font-family: "Gotham Ultra";
   font-size: 30px;
   color: #28282a;
@@ -189,6 +215,12 @@
   font-family: "Gotham Ultra";
   font-size: 60px;
   color: #28282a;
+}
+@media all and (max-width: 1250px) {
+  .work-items {
+    font-size: 3rem;
+    margin-top: 5rem;
+  }
 }
 @media all and (max-width: 768px) {
   .work-container {
@@ -212,7 +244,7 @@
     margin-bottom: -24px;
   }
   .work-items {
-    margin-top: 54px;
+    margin-top: 52px;
     font-size: 30px;
     // margin-left: 10px;
     // margin-right: 10px;
