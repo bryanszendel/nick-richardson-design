@@ -25,6 +25,7 @@ export default function ParagraphWithTitle(props) {
         style={{
           fontFamily: 'Gotham Ultra',
           textAlign: 'left',
+          lineHeight: '48px',
           // paddingRight: '20px',
           // paddingLeft: '20px'
         }}

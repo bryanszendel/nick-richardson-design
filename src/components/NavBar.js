@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 
 import '../styles/global.scss';
 import '../styles/landing.scss';
+import '../styles/navbar.scss';
 
 import dribbbleIcon from '../../static/navbar-svgs/dribbble_icon.svg';
 import linkedinIcon from '../../static/navbar-svgs/linkedin_icon.svg';
@@ -30,13 +31,13 @@ export default function NavBar(props) {
           <img style={{
             height: '48px', 
             width: '48px', 
-            marginRight: '10px'
+            // marginRight: '10px'
             }} src={backArrow} alt="Back arrow" 
           />
           <div className="navbar-text">All Projects</div>
         </Link>
       )}
-      <div className="navbar-items-container">
+      <div className="navbar-items-container no-display">
         <img className="navbar-items" src={dribbbleIcon} alt="Dribbble" />
         <img className="navbar-items" src={linkedinIcon} alt="LinkedIn" />
         <img className="navbar-items" src={emailIcon} alt="Email" />

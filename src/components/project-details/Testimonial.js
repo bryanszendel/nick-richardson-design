@@ -29,7 +29,7 @@ export default function Testimonial(props) {
           paddingRight: '20px',
           paddingLeft: '20px'
         }}
-      >{props.statement}</div>
+      >“{props.statement}“</div>
       <div 
         style={{
           fontFamily: 'Gotham Book',

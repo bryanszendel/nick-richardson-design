@@ -1,0 +1,64 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media all and (max-width: 1200px) {
+  .navbar {
+    width: 92%;
+  }
+}
+@media all and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 92%;
+  }
+}
+.navbar-items-container {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+@media all and (max-width: 768px) {
+  .navbar-items-container {
+    width: 92%;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+.navbar-items {
+  margin-left: 20px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+@media all and (max-width: 768px) {
+  .navbar-items {
+    margin: 0;
+    margin-right: 20px;
+  }
+}
+.navbar-text {
+  font-family: "Gotham Book";
+  width: 243px;
+  color: #28282a;
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 36px;
+  -webkit-user-select: none;
+}
+
+@media all and (max-width: 768px) {
+  .navbar-text {
+    font-size: 30px;
+    line-height: 36px;
+    margin-left: 10px;
+  }
+  .no-display {
+    display: none;
+  }
+}

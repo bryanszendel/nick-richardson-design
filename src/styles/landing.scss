@@ -1,75 +1,21 @@
 .landing-container {
-  max-width: 1250px;
+  max-width: 1200px;
   width: 92vw;
   margin: 0 auto;
   margin-top: 50px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .landing-container {
-    // width: 100%;
-    // margin: 0 auto;
-    margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
   }
 }
-.navbar {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-@media all and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    width: 92%;
+@media screen and (max-width: 768px) {
+  .landing-container {
+    margin-top: 30px;
   }
 }
-.navbar-items-container {
-  display: flex;
-  align-items: center;
-  padding: 0;
-}
-@media all and (max-width: 768px) {
-  .navbar-items-container {
-    width: 92%;
-    margin-top: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-}
-.navbar-items {
-  margin-left: 20px;
-  &:hover {
-    cursor: pointer;
-  }
-}
-@media all and (max-width: 768px) {
-  .navbar-items {
-    margin: 0;
-    margin-right: 20px;
-  }
-}
-.navbar-text {
-  font-family: "Gotham Book";
-  // height: 40px;
-  width: 243px;
-  color: #28282a;
-  font-size: 30px;
-  font-weight: 300;
-  letter-spacing: 0;
-  line-height: 36px;
-  -webkit-user-select: none;
-}
-@media all and (max-width: 768px) {
-  .navbar-text {
-    width: 92%;
-    font-size: 20px;
-    // margin-left: 10px;
-    // margin-right: 10px;
-  }
-}
+
 .hello-container {
   display: flex;
   width: 100%;
@@ -86,11 +32,11 @@
   left: -1.1rem;
   max-width: 1200px;
   color: #28282a;
-  font-size: 27.4rem;
+  font-size: 421px;
   text-align: center;
   -webkit-user-select: none;
 }
-@media all and (max-width: 1250px) {
+@media all and (max-width: 1280px) {
   .hello-container {
     margin-top: 3rem;
     height: unset;
@@ -134,7 +80,7 @@
   margin-top: 120px;
   color: #28282a;
   font-family: "Gotham Book";
-  font-size: 1.85rem;
+  font-size: 30px;
   line-height: 47px;
 }
 
@@ -144,8 +90,6 @@
   }
   .description {
     margin-top: 0;
-    font-size: 1.75rem;
-    // line-height: 2rem;
   }
 }
 
@@ -155,8 +99,7 @@
   }
   .description {
     width: 92%;
-    // margin-top: 4px;
-    font-size: 1.25rem;
+    font-size: 20px;
     line-height: 30px;
   }
 }
@@ -235,15 +178,11 @@
     font-size: 18px;
     height: auto;
     width: 100%;
-    // margin-left: 10px;
-    // margin-right: 10px;
     margin-bottom: -24px;
   }
   .work-items {
     margin-top: 52px;
     font-size: 30px;
-    // margin-left: 10px;
-    // margin-right: 10px;
     width: 92%;
     line-height: 38px;
   }

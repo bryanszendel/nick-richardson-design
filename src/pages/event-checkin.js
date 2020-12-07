@@ -54,20 +54,20 @@ export default function EventCheckin() {
           title="Key Improvements"
           paragraph="Since this was a product that already existed, we were able to recycle much of the same functionality and user flows. Although we made key UX improvements, the real wins would be found in the elegant UI, new backend platform, performance improvements, and the fact that it would work exceptionally well on mobile devices of all kinds."
         />
-        <div className="img-container">
+        <div className="img-container key-improvements-img">
           <img className="detail-images" src={KeyImprovementsImage} alt="" />
         </div>
         <ParagraphWithTitle
           title="A Fresh Interface"
           paragraph="I focused most of my efforts on a new UI which was just a slight alteration to our existing app UI style that introduced a softer version of Proxima Nova, larger font sizes, and more white space (taking queues from Air BnB’s design, which I love). In the process I developed new style guidelines and a Sketch symbols library which we will use for our future mobile apps."
         />
-        <div className="img-container">
+        <div className="img-container drop-shadow">
           <img className="detail-images" src={FreshInterfaceImage1} alt="" />
         </div>
-        <div className="img-container">
+        <div className="img-container drop-shadow">
           <img className="detail-images" src={FreshInterfaceImage2} alt="" />
         </div>
-        <div className="img-container">
+        <div className="img-container drop-shadow">
           <img className="detail-images" src={CheckInAppStore} alt="" />
         </div>
         <ParagraphWithTitle
