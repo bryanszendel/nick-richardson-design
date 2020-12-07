@@ -34,41 +34,41 @@ export default function EventCheckin() {
           paragraph="Sunday mornings are already far too stressful if you’re a church volunteer. Now imagine your check-in software breaks and the line of parents who need to check their kids into childcare or bible study ends up out the door… For far too many of our customers, this was a common reality."
         />
         <div className="img-container">
-          <img className="detail-images" src={ChallengeImage} alt="" />
+          <img className="detail-images" src={CheckInAppImage} alt="Check in app" />
         </div>
         <ParagraphWithTitle
           title="The Challenge"
           paragraph="Since this was a product that already existed (in non-responsive web app form) and we had thousands of customers currently depending on it, it was necessary for me to have a deep understanding of the existing experience and its users before I could make changes that would be well-received. We met with multiple users to understand their jobs to be done, their struggles, and what they would hope to see in a check-in native app."
         />
         <div className="img-container">
-          <img className="detail-images" src={CheckInAppImage} alt="" />
+          <img className="detail-images" src={ChallengeImage} alt="challenge" />
         </div>
         <ParagraphWithTitle
           title="The Process"
           paragraph="Since this was a product that already existed (in non-responsive web app form) and we had thousands of customers currently depending on it, it was necessary for me to have a deep understanding of the existing experience and its users before I could make changes that would be well-received. We met with multiple users to understand their jobs to be done, their struggles, and what they would hope to see in a check-in native app."
         />
         <div className="img-container">
-          <img className="detail-images" src={ProcessImage} alt="" />
+          <img className="detail-images" src={ProcessImage} alt="process" />
         </div>
         <ParagraphWithTitle
           title="Key Improvements"
           paragraph="Since this was a product that already existed, we were able to recycle much of the same functionality and user flows. Although we made key UX improvements, the real wins would be found in the elegant UI, new backend platform, performance improvements, and the fact that it would work exceptionally well on mobile devices of all kinds."
         />
         <div className="img-container key-improvements-img">
-          <img className="detail-images" src={KeyImprovementsImage} alt="" />
+          <img className="detail-images" src={KeyImprovementsImage} alt="key improvements" />
         </div>
         <ParagraphWithTitle
           title="A Fresh Interface"
           paragraph="I focused most of my efforts on a new UI which was just a slight alteration to our existing app UI style that introduced a softer version of Proxima Nova, larger font sizes, and more white space (taking queues from Air BnB’s design, which I love). In the process I developed new style guidelines and a Sketch symbols library which we will use for our future mobile apps."
         />
         <div className="img-container drop-shadow">
-          <img className="detail-images" src={FreshInterfaceImage1} alt="" />
+          <img className="detail-images" src={FreshInterfaceImage1} alt="fresh interface 1" />
         </div>
         <div className="img-container drop-shadow">
-          <img className="detail-images" src={FreshInterfaceImage2} alt="" />
+          <img className="detail-images" src={FreshInterfaceImage2} alt="fresh interface 2" />
         </div>
         <div className="img-container drop-shadow">
-          <img className="detail-images" src={CheckInAppStore} alt="" />
+          <img className="detail-images" src={CheckInAppStore} alt="check in app store" />
         </div>
         <ParagraphWithTitle
           title="For the Win"

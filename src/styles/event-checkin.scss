@@ -1,5 +1,9 @@
 @import "global.scss";
 
+#gatsby-focus-wrapper {
+  overflow-x: hidden;
+}
+
 .outer-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -20,9 +24,11 @@
     .img-container {
       max-width: 825px;
       margin-top: 80px;
+      // border: 1px solid black;
     }
     .detail-images {
       width: 100%;
+      // position: relative;
     }
 
     @media all and (max-width: 768px) {
@@ -30,7 +36,8 @@
         box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.16);
       }
       .key-improvements-img {
-        width: 145vw;
+        // position: absolute;
+        width: 545px;
       }
     }
   }
@@ -41,8 +48,4 @@
     align-items: center;
     justify-content: center;
   }
-}
-
-body {
-  overflow-x: hidden;
 }

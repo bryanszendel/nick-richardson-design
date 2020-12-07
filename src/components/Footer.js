@@ -18,7 +18,14 @@ export default function Footer(props) {
   return (
     <div className="footer">
       <div className="footer-text">VIEW ON APP STORE</div>
-      <img src={upArrow} alt="Up arrow" className="up-arrow" onClick={scrollTop} />
+      <div 
+        onClick={scrollTop} 
+        onKeyPress={scrollTop}
+        role="button" 
+        tabIndex="0" 
+      >
+        <img src={upArrow} alt="Up arrow" className="up-arrow" />
+      </div>
     </div>
   )
 }
