@@ -1,24 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
+import { Link } from "gatsby";
 
 import 'normalize.css';
-import '../styles/global.scss';
 import '../styles/landing.scss';
+import '../styles/global.scss';
 
 import NavBar from '../components/NavBar';
 
 import downArrow from '../../static/down_arrow.svg';
 
 export default function Home() {
+
+  useEffect(() => {
+    document.documentElement.style.setProperty('--bg', 'rgb(3, 183, 112)')
+  }, [])
+
   return (
-    <div className="wrapper">
+    <>
       <Helmet>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Portfolio of Nick Richardson</title>
       </Helmet>
       <div className="landing-container">
-        <NavBar />
+        <NavBar landing={true} />
         <div className="hello-container">
           <div className="hello-text">
             Hello!
@@ -37,7 +43,9 @@ export default function Home() {
             <img id="arrow" src={downArrow} alt="Down arrow"/>
           </div>
           <div className="work-items-container">
-            <div className="work-items">Event Check-In</div>
+            <div className="work-items">
+              <Link to="/event-checkin" className="work-items-link" >Event Check-In</Link>
+            </div>
             <div className="work-items">Financial Management</div>
             <div className="work-items">Volunteer Scheduling</div>
             <div className="work-items">CRM Mobile App</div>
@@ -47,6 +55,6 @@ export default function Home() {
         </div>
         <div className="footer"></div>
       </div>
-    </div>
+    </>
   )
 }

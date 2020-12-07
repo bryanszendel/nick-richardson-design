@@ -1,0 +1,27 @@
+@import "global.scss";
+
+.outer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  .inner-container {
+    max-width: 825px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+
+    .img-container {
+      max-width: 825px;
+      margin-top: 80px;
+    }
+    .detail-images {
+      width: 100%;
+    }
+  }
+}

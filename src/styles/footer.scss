@@ -1,0 +1,19 @@
+@import "global.scss";
+
+.footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: auto;
+  margin-top: 80px;
+  margin-bottom: 160px;
+}
+.footer-text {
+  font-family: "Gotham Ultra";
+  font-size: 30px;
+  line-height: 48px;
+  margin-bottom: 68px;
+}
+.up-arrow {
+  transform: rotate(180deg);
+}
