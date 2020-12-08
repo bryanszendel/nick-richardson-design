@@ -1,6 +1,6 @@
 .landing-container {
   max-width: 1200px;
-  width: 92vw;
+  width: 92%;
   margin: 0 auto;
   margin-top: 50px;
 }
@@ -103,14 +103,33 @@
     line-height: 30px;
   }
 }
+
 .underline {
-  border-bottom: 4px solid #2ed694;
+  padding: 4px;
+  position: relative;
   &:hover {
     cursor: pointer;
+    border: unset;
+    background-color: #ffc7e8;
+    padding-top: 4px;
+    padding-bottom: 4px;
   }
 }
+.underline::before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  height: 1px;
+  width: calc(100% - 8px);
+  border-bottom: 4px solid #2ed694;
+}
+.underline:hover::before {
+  border-bottom: none;
+  padding: 0;
+}
+
 @media all and (max-width: 768px) {
-  .underline {
+  .underline::before {
     border-bottom: none;
   }
 }
