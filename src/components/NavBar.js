@@ -58,12 +58,12 @@ export default function NavBar(props) {
             alt="Dribbble" 
             onMouseOver={() => {
                 setDribbble(dribbbleHover);
-                props.setHoverState('dribbble');
+                props.landing && props.setHoverState('dribbble');
               }
             } 
             onMouseOut={() => {
                 setDribbble(dribbbleIcon);
-                props.setHoverState(null)
+                props.landing && props.setHoverState(null)
               }
             } 
           />
@@ -75,12 +75,12 @@ export default function NavBar(props) {
             alt="LinkedIn"
             onMouseOver={() => {
                 setLinkedin(linkedinHover)
-                props.setHoverState('linkedin')
+                props.landing && props.setHoverState('linkedin')
               }
             } 
             onMouseOut={() => {
                 setLinkedin(linkedinIcon);
-                props.setHoverState(null);
+                props.landing && props.setHoverState(null);
               }
             } 
           />
@@ -92,12 +92,12 @@ export default function NavBar(props) {
             alt="Email"
             onMouseOver={() => {
                 setEmail(emailHover)
-                props.setHoverState('email')
+                props.landing && props.setHoverState('email')
               }
             } 
             onMouseOut={() => {
                 setEmail(emailIcon)
-                props.setHoverState(null);
+                props.landing && props.setHoverState(null);
               }
             }
           />
@@ -109,12 +109,12 @@ export default function NavBar(props) {
             alt="CV" 
             onMouseOver={() => {
                 setResume(resumeHover)
-                props.setHoverState('resume')
+                props.landing && props.setHoverState('resume')
               }
             } 
             onMouseOut={() => {
                 setResume(resumeIcon);
-                props.setHoverState(null);
+                props.landing && props.setHoverState(null);
               }
             }
           />
