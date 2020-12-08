@@ -19,6 +19,7 @@
 .hello-container {
   display: flex;
   width: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -36,10 +37,23 @@
   text-align: center;
   -webkit-user-select: none;
 }
+.hover-state {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 400px;
+}
+.hover-img {
+  width: 65%;
+  height: auto;
+}
+
 @media all and (max-width: 1280px) {
   .hello-container {
-    margin-top: 3rem;
-    height: unset;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    height: 400px;
   }
   .hello-text {
     font-size: 33vw;
@@ -106,6 +120,8 @@
 
 .underline {
   padding: 4px;
+  margin-left: -4px;
+  margin-right: -4px;
   position: relative;
   &:hover {
     cursor: pointer;
@@ -173,6 +189,9 @@
 .work-items-link {
   text-decoration: none;
   color: #28282a;
+  &:hover {
+    color: #ffc7e8;
+  }
 }
 @media all and (max-width: 1250px) {
   .work-items {
@@ -213,4 +232,8 @@
   .footer {
     height: 54px;
   }
+}
+
+.no-display {
+  display: none;
 }

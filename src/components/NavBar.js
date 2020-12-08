@@ -17,18 +17,20 @@ import resumeHover from '../../static/hover-svgs/resume_hover.svg';
 import backArrow from '../../static/back_arrow.svg';
 
 export default function NavBar(props) {
+
   const [dribbble, setDribbble] = useState(dribbbleIcon)
   const [linkedin, setLinkedin] = useState(linkedinIcon)
   const [email, setEmail] = useState(emailIcon)
   const [resume, setResume] = useState(resumeIcon)
 
-  // const hoverHandler = (regImg, hoverImg) => {
-  //   onMouseEnter
-  // }
   return (
     <div className="navbar">
       {props.landing ? (
-        <span className="underline navbar-text">Nick Richardson</span>
+        <span 
+          className="underline navbar-text"
+          onMouseOver={() => props.setHoverState('nick')}
+          onMouseOut={() => props.setHoverState(null)}
+        >Nick Richardson</span>
       ) : (
         <Link 
           to="/"
@@ -54,17 +56,33 @@ export default function NavBar(props) {
             className="dribbble" 
             src={dribbble} 
             alt="Dribbble" 
-            onMouseOver={() => setDribbble(dribbbleHover)} 
-            onMouseOut={() => setDribbble(dribbbleIcon)} 
+            onMouseOver={() => {
+                setDribbble(dribbbleHover);
+                props.setHoverState('dribbble');
+              }
+            } 
+            onMouseOut={() => {
+                setDribbble(dribbbleIcon);
+                props.setHoverState(null)
+              }
+            } 
           />
         </div>
         <div className="navbar-items">
           <img 
             className="linkedin" 
-            src={linkedin} 
+            src={linkedin } 
             alt="LinkedIn"
-            onMouseEnter={() => setLinkedin(linkedinHover)} 
-            onMouseLeave={() => setLinkedin(linkedinIcon)} 
+            onMouseOver={() => {
+                setLinkedin(linkedinHover)
+                props.setHoverState('linkedin')
+              }
+            } 
+            onMouseOut={() => {
+                setLinkedin(linkedinIcon);
+                props.setHoverState(null);
+              }
+            } 
           />
         </div>
         <div className="navbar-items">
@@ -72,8 +90,16 @@ export default function NavBar(props) {
             className="email" 
             src={email} 
             alt="Email"
-            onMouseEnter={() => setEmail(emailHover)} 
-            onMouseLeave={() => setEmail(emailIcon)}
+            onMouseOver={() => {
+                setEmail(emailHover)
+                props.setHoverState('email')
+              }
+            } 
+            onMouseOut={() => {
+                setEmail(emailIcon)
+                props.setHoverState(null);
+              }
+            }
           />
         </div>
         <div className="navbar-items">
@@ -81,8 +107,16 @@ export default function NavBar(props) {
             className="resume" 
             src={resume} 
             alt="CV" 
-            onMouseEnter={() => setResume(resumeHover)} 
-            onMouseLeave={() => setResume(resumeIcon)}
+            onMouseOver={() => {
+                setResume(resumeHover)
+                props.setHoverState('resume')
+              }
+            } 
+            onMouseOut={() => {
+                setResume(resumeIcon);
+                props.setHoverState(null);
+              }
+            }
           />
         </div>
       </div>

@@ -22,7 +22,9 @@ export default function EventCheckin() {
 
   return (
     <div className="outer-container" >
-      <NavBar landing={false} />
+      <NavBar landing={false} 
+      
+      />
       <div className="inner-container">
         <Testimonial 
           statement="We used this system over the weekend and it was AMAZING!" 
