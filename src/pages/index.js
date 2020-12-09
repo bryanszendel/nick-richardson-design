@@ -27,11 +27,20 @@ import elCactusSaguaroImg from "../../static/hover-images/El_Cactus_Saguaro.png"
 import downArrow from "../../static/down_arrow.svg";
 
 export default function Home() {
+  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const [hoverState, setHoverState] = useState(null);
 
   useEffect(() => {
     document.documentElement.style.setProperty("--bg", "rgb(3, 183, 112)");
   }, []);
+
+  // useEffect(() => {
+  //   window.innerWidth
+  window.onresize = () => {
+    setViewportWidth(window.innerWidth);
+    console.log(viewportWidth);
+  };
+  // }, [])
 
   return (
     <>
@@ -43,11 +52,18 @@ export default function Home() {
       <div className="landing-container">
         <NavBar
           landing={true}
+          viewportWidth={viewportWidth}
           hoverState={hoverState}
           setHoverState={setHoverState}
         />
         <div className="hello-container">
-          <div className={hoverState === null ? "hello-text" : "no-display"}>
+          <div
+            className={
+              hoverState === null || viewportWidth <= 768
+                ? "hello-text"
+                : "no-display"
+            }
+          >
             Hello!
           </div>
           <div className={hoverState === "nick" ? "hover-state" : "no-display"}>
