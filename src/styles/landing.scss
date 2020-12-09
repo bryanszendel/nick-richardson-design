@@ -149,6 +149,9 @@
     border-bottom: none;
   }
 }
+.work-items-container {
+  position: relative;
+}
 .title-arrow-container {
   width: 100%;
   display: flex;
@@ -192,6 +195,48 @@
   &:hover {
     color: #ffc7e8;
   }
+}
+.event-checkin-hover {
+  width: 380px;
+  position: absolute;
+  transform: rotate(8deg);
+  right: 0px;
+  top: 100px;
+}
+.financial-mgmt-hover {
+  width: 380px;
+  position: absolute;
+  transform: rotate(-4deg);
+  right: 0px;
+  top: 220px;
+}
+.volunteer-scheduling-hover {
+  width: 380px;
+  position: absolute;
+  transform: rotate(4deg);
+  right: 0px;
+  top: 430px;
+}
+.crm-hover {
+  width: 380px;
+  position: absolute;
+  transform: rotate(-5deg);
+  right: 0px;
+  bottom: 250px;
+}
+.onboarding-hover {
+  width: 380px;
+  position: absolute;
+  transform: rotate(5deg);
+  right: 0px;
+  bottom: 60px;
+}
+.graphic-design-hover {
+  width: 350px;
+  position: absolute;
+  transform: rotate(-5deg);
+  right: 0px;
+  bottom: 0px;
 }
 @media all and (max-width: 1250px) {
   .work-items {

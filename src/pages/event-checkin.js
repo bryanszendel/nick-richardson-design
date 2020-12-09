@@ -1,42 +1,43 @@
-import React, { useEffect } from 'react';
-import 'normalize.css';
+import React, { useEffect } from "react";
+import "normalize.css";
 // import '../styles/global.scss';
-import '../styles/event-checkin.scss';
-import NavBar from '../components/NavBar';
-import Testimonial from '../components/project-details/Testimonial';
-import ParagraphWithTitle from '../components/project-details/ParagraphWithTitle';
+import "../styles/event-checkin.scss";
+import NavBar from "../components/NavBar";
+import Testimonial from "../components/project-details/Testimonial";
+import ParagraphWithTitle from "../components/project-details/ParagraphWithTitle";
 
-import ChallengeImage from '../../static/event_checkin/Challenge_Image.png';
-import CheckInAppImage from '../../static/event_checkin/Check-In_App_Image.png';
-import CheckInAppStore from '../../static/event_checkin/Check-In_App_Store.png';
-import FreshInterfaceImage1 from '../../static/event_checkin/Fresh_Interface_Image_1.png';
-import FreshInterfaceImage2 from '../../static/event_checkin/Fresh_Interface_Image_2.png';
-import KeyImprovementsImage from '../../static/event_checkin/Key_Improvements_Image.png';
-import ProcessImage from '../../static/event_checkin/Process_Image.png';
-import Footer from '../components/Footer';
+import ChallengeImage from "../../static/event_checkin/Challenge_Image.png";
+import CheckInAppImage from "../../static/event_checkin/Check-In_App_Image.png";
+import CheckInAppStore from "../../static/event_checkin/Check-In_App_Store.png";
+import FreshInterfaceImage1 from "../../static/event_checkin/Fresh_Interface_Image_1.png";
+import FreshInterfaceImage2 from "../../static/event_checkin/Fresh_Interface_Image_2.png";
+import KeyImprovementsImage from "../../static/event_checkin/Key_Improvements_Image.png";
+import ProcessImage from "../../static/event_checkin/Process_Image.png";
+import Footer from "../components/Footer";
 export default function EventCheckin() {
-
   useEffect(() => {
-    document.documentElement.style.setProperty('--bg', 'white')
-  }, [])
+    document.documentElement.style.setProperty("--bg", "white");
+  }, []);
 
   return (
-    <div className="outer-container" >
-      <NavBar 
-        landing={false} 
-      />
+    <div className="outer-container">
+      <NavBar landing={false} />
       <div className="inner-container">
-        <Testimonial 
-          statement="We used this system over the weekend and it was AMAZING!" 
-          author="Sara Barlow" 
-          marginBottom="40px"  
+        <Testimonial
+          statement="We used this system over the weekend and it was AMAZING!"
+          author="Sara Barlow"
+          marginBottom="40px"
         />
-        <ParagraphWithTitle 
+        <ParagraphWithTitle
           title="Redesigning How We Check Into Events"
           paragraph="Sunday mornings are already far too stressful if you’re a church volunteer. Now imagine your check-in software breaks and the line of parents who need to check their kids into childcare or bible study ends up out the door… For far too many of our customers, this was a common reality."
         />
         <div className="img-container">
-          <img className="detail-images" src={CheckInAppImage} alt="Check in app" />
+          <img
+            className="detail-images"
+            src={CheckInAppImage}
+            alt="Check in app"
+          />
         </div>
         <ParagraphWithTitle
           title="The Challenge"
@@ -57,20 +58,36 @@ export default function EventCheckin() {
           paragraph="Since this was a product that already existed, we were able to recycle much of the same functionality and user flows. Although we made key UX improvements, the real wins would be found in the elegant UI, new backend platform, performance improvements, and the fact that it would work exceptionally well on mobile devices of all kinds."
         />
         <div className="img-container key-improvements-img">
-          <img className="detail-images" src={KeyImprovementsImage} alt="key improvements" />
+          <img
+            className="detail-images"
+            src={KeyImprovementsImage}
+            alt="key improvements"
+          />
         </div>
         <ParagraphWithTitle
           title="A Fresh Interface"
           paragraph="I focused most of my efforts on a new UI which was just a slight alteration to our existing app UI style that introduced a softer version of Proxima Nova, larger font sizes, and more white space (taking queues from Air BnB’s design, which I love). In the process I developed new style guidelines and a Sketch symbols library which we will use for our future mobile apps."
         />
         <div className="img-container drop-shadow">
-          <img className="detail-images" src={FreshInterfaceImage1} alt="fresh interface 1" />
+          <img
+            className="detail-images"
+            src={FreshInterfaceImage1}
+            alt="fresh interface 1"
+          />
         </div>
         <div className="img-container drop-shadow">
-          <img className="detail-images" src={FreshInterfaceImage2} alt="fresh interface 2" />
+          <img
+            className="detail-images"
+            src={FreshInterfaceImage2}
+            alt="fresh interface 2"
+          />
         </div>
         <div className="img-container drop-shadow">
-          <img className="detail-images" src={CheckInAppStore} alt="check in app store" />
+          <img
+            className="detail-images"
+            src={CheckInAppStore}
+            alt="check in app store"
+          />
         </div>
         <ParagraphWithTitle
           title="For the Win"
@@ -79,5 +96,5 @@ export default function EventCheckin() {
         <Footer />
       </div>
     </div>
-  )
+  );
 }
