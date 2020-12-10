@@ -27,7 +27,7 @@ import elCactusSaguaroImg from "../../static/hover-images/El_Cactus_Saguaro.png"
 import downArrow from "../../static/down_arrow.svg";
 
 export default function Home() {
-  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+  const [viewportWidth, setViewportWidth] = useState(1800);
   const [hoverState, setHoverState] = useState(null);
 
   useEffect(() => {
@@ -35,12 +35,12 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    if (typeof window !== undefined) {
-      window.onresize = () => {
-        setViewportWidth(window.innerWidth);
-      };
-    }
-  });
+    // if (typeof window !== undefined) {
+    window.onresize = () => {
+      setViewportWidth(window.innerWidth);
+    };
+    // }
+  }, []);
 
   return (
     <>
