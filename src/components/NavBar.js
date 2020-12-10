@@ -34,6 +34,15 @@ export default function NavBar(props) {
     hoverState === "resume" && setResume(resumeHover);
   };
 
+  const handleMouseOut = (hoverState) => {
+    props.landing && props.setHoverState(null);
+
+    hoverState === "dribbble" && setDribbble(dribbbleIcon);
+    hoverState === "linkedin" && setLinkedin(linkedinIcon);
+    hoverState === "email" && setEmail(emailIcon);
+    hoverState === "resume" && setResume(resumeIcon);
+  };
+
   return (
     <div className="navbar">
       {props.landing ? (
@@ -79,10 +88,7 @@ export default function NavBar(props) {
             src={dribbble}
             alt="Dribbble"
             onMouseOver={() => handleMouseOver("dribbble")}
-            onMouseOut={() => {
-              setDribbble(dribbbleIcon);
-              props.landing && props.setHoverState(null);
-            }}
+            onMouseOut={() => handleMouseOut("dribbble")}
           />
         </div>
         <div className="navbar-items">
@@ -91,10 +97,7 @@ export default function NavBar(props) {
             src={linkedin}
             alt="LinkedIn"
             onMouseOver={() => handleMouseOver("linkedin")}
-            onMouseOut={() => {
-              setLinkedin(linkedinIcon);
-              props.landing && props.setHoverState(null);
-            }}
+            onMouseOut={() => handleMouseOut("linkedin")}
           />
         </div>
         <div className="navbar-items">
@@ -103,10 +106,7 @@ export default function NavBar(props) {
             src={email}
             alt="Email"
             onMouseOver={() => handleMouseOver("email")}
-            onMouseOut={() => {
-              setEmail(emailIcon);
-              props.landing && props.setHoverState(null);
-            }}
+            onMouseOut={() => handleMouseOut("email")}
           />
         </div>
         <div className="navbar-items">
@@ -115,10 +115,7 @@ export default function NavBar(props) {
             src={resume}
             alt="CV"
             onMouseOver={() => handleMouseOver("resume")}
-            onMouseOut={() => {
-              setResume(resumeIcon);
-              props.landing && props.setHoverState(null);
-            }}
+            onMouseOut={() => handleMouseOut("resume")}
           />
         </div>
       </div>
