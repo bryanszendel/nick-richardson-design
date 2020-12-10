@@ -35,9 +35,11 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    window.onresize = () => {
-      setViewportWidth(window.innerWidth);
-    };
+    if (window !== undefined) {
+      window.onresize = () => {
+        setViewportWidth(window.innerWidth);
+      };
+    }
   });
 
   return (
