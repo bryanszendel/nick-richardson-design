@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { window } from "browser-monads";
 import { Helmet } from "react-helmet";
 import { Link } from "gatsby";
 
@@ -35,13 +34,11 @@ export default function Home() {
     document.documentElement.style.setProperty("--bg", "rgb(3, 183, 112)");
   }, []);
 
-  // useEffect(() => {
-  //   window.innerWidth
-  window.onresize = () => {
-    setViewportWidth(window.innerWidth);
-    console.log(viewportWidth);
-  };
-  // }, [])
+  useEffect(() => {
+    window.onresize = () => {
+      setViewportWidth(window.innerWidth);
+    };
+  });
 
   return (
     <>
