@@ -35,7 +35,7 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    if (window !== undefined) {
+    if (typeof window !== undefined) {
       window.onresize = () => {
         setViewportWidth(window.innerWidth);
       };
