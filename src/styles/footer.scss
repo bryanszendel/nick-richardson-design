@@ -15,9 +15,18 @@
   font-size: 30px;
   line-height: 48px;
   margin-bottom: 68px;
+  &:hover {
+    color: rgb(3, 183, 112);
+  }
 }
 .up-arrow {
   transform: rotate(180deg);
+  &:hover {
+    cursor: pointer;
+  }
+}
+.up-arrow-hover {
+  transform: rotate(180deg) scale(1.2);
   &:hover {
     cursor: pointer;
   }

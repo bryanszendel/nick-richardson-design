@@ -1,31 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 
-import '../styles/global.scss';
-import '../styles/footer.scss';
+import "../styles/global.scss";
+import "../styles/footer.scss";
 
-import upArrow from '../../static/down_arrow.svg';
+import upArrow from "../../static/down_arrow.svg";
+import upArrowHover from "../../static/up_arrow_hover.svg";
 
 export default function Footer(props) {
-
+  const [hoverState, setHoverState] = useState(upArrow);
   const scrollTop = () => {
     window.scroll({
-      top: 0, 
-      left: 0, 
-      behavior: 'smooth'
+      top: 0,
+      left: 0,
+      behavior: "smooth",
     });
-  }
-  
+  };
+
+  const handleMouseOver = () => {
+    setHoverState(upArrowHover);
+  };
+  const handleMouseOut = () => {
+    setHoverState(upArrow);
+  };
   return (
     <div className="footer">
       <div className="footer-text">VIEW ON APP STORE</div>
-      <div 
-        onClick={scrollTop} 
+      <div
+        onClick={scrollTop}
         onKeyPress={scrollTop}
-        role="button" 
-        tabIndex="0" 
+        role="button"
+        tabIndex="0"
       >
-        <img src={upArrow} alt="Up arrow" className="up-arrow" />
+        <img
+          src={hoverState}
+          alt="Up arrow"
+          className={hoverState === upArrow ? "up-arrow" : "up-arrow-hover"}
+          onMouseOver={() => handleMouseOver()}
+          onMouseOut={() => handleMouseOut()}
+        />
       </div>
     </div>
-  )
+  );
 }
