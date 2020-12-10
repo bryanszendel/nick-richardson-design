@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { window } from "browser-monads";
 import { Helmet } from "react-helmet";
 import { Link } from "gatsby";
 
