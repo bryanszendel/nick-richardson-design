@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "normalize.css";
-// import '../styles/global.scss';
-import "../styles/event-checkin.scss";
+
+import "../styles/detail-pages.scss";
 import NavBar from "../components/NavBar";
 import Testimonial from "../components/project-details/Testimonial";
 import ParagraphWithTitle from "../components/project-details/ParagraphWithTitle";

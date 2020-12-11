@@ -195,7 +195,7 @@ export default function Home() {
 
             <div className="work-items">
               <Link
-                to="/"
+                to="/volunteer-scheduling"
                 className="work-items-link"
                 onMouseOver={() => setHoverState("volunteer-scheduling")}
                 onMouseOut={() => setHoverState(null)}
