@@ -10,7 +10,7 @@ import Footer from "../components/Footer";
 import LogosGif from "../../static/graphic-design/Logos.gif";
 import CactiImage from "../../static/graphic-design/Cacti.png";
 import CactiPostersGif from "../../static/graphic-design/Cacti_posters.gif";
-import WitchHuntGif from "../../static/graphic-design/Witch_hunt.gif";
+import WitchHuntGif from "../../static/graphic-design/Witch_Hunt.gif";
 import DecadeClubImage from "../../static/graphic-design/Decade_Club.jpg";
 import SummitOrizabaGif from "../../static/graphic-design/Summit_Orizaba.gif";
 import WeddingInviteGif from "../../static/graphic-design/Wedding_Invite.gif";
