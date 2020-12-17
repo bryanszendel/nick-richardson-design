@@ -5,16 +5,16 @@ import "../styles/global.scss";
 import "../styles/landing.scss";
 import "../styles/navbar.scss";
 
-import dribbbleIcon from "../../static/navbar-svgs/dribbble_icon.svg";
-import dribbbleHover from "../../static/hover-svgs/dribbble_hover.svg";
-import linkedinIcon from "../../static/navbar-svgs/linkedin_icon.svg";
-import linkedinHover from "../../static/hover-svgs/linkedin_hover.svg";
-import emailIcon from "../../static/navbar-svgs/email_icon.svg";
-import emailHover from "../../static/hover-svgs/email_hover.svg";
-import resumeIcon from "../../static/navbar-svgs/resume_icon.svg";
-import resumeHover from "../../static/hover-svgs/resume_hover.svg";
+import dribbbleIcon from "../img/navbar-svgs/dribbble_icon.svg";
+import dribbbleHover from "../img/hover-svgs/dribbble_hover.svg";
+import linkedinIcon from "../img/navbar-svgs/linkedin_icon.svg";
+import linkedinHover from "../img/hover-svgs/linkedin_hover.svg";
+import emailIcon from "../img/navbar-svgs/email_icon.svg";
+import emailHover from "../img/hover-svgs/email_hover.svg";
+import resumeIcon from "../img/navbar-svgs/resume_icon.svg";
+import resumeHover from "../img/hover-svgs/resume_hover.svg";
 
-import backArrow from "../../static/back_arrow.svg";
+import backArrow from "../img/back_arrow.svg";
 
 export default function NavBar(props) {
   // const [navHoverState, setNavHoverState] = useState()

@@ -9,31 +9,31 @@ import "../styles/global.scss";
 
 import NavBar from "../components/NavBar";
 
-import nickImg from "../../static/hover-images/Headshots.png";
-import dribbbleImg from "../../static/hover-images/Dribbble.png";
-import linkedinImg from "../../static/hover-images/LinkedIn.png";
-import emailImg from "../../static/hover-images/Email.png";
-import resumeImg from "../../static/hover-images/Resume.png";
-import pushpayImg from "../../static/hover-images/Pushpay.png";
-import climbingImg from "../../static/hover-images/Climbing.png";
-import cactiImg from "../../static/hover-images/Cacti.png";
+import nickImg from "../img/hover-images/Headshots.png";
+import dribbbleImg from "../img/hover-images/Dribbble.png";
+import linkedinImg from "../img/hover-images/LinkedIn.png";
+import emailImg from "../img/hover-images/Email.png";
+import resumeImg from "../img/hover-images/Resume.png";
+import pushpayImg from "../img/hover-images/Pushpay.png";
+import climbingImg from "../img/hover-images/Climbing.png";
+import cactiImg from "../img/hover-images/Cacti.png";
 
-// import eventCheckinImg from "../../static/hover-images/Event_CheckIn.png";
-// import financialMgmtImg from "../../static/hover-images/Financial_Mgmt.png";
-// import volunteerSchedulingImg from "../../static/hover-images/Volunteer_Scheduling.png";
-// import crmImg from "../../static/hover-images/CRM.png";
-// import onboardingImg from "../../static/hover-images/Onboarding.png";
-// import elCactusSaguaroImg from "../../static/hover-images/El_Cactus_Saguaro.png";
+import eventCheckinImg from "../img/hover-images/Event_CheckIn.png";
+import financialMgmtImg from "../img/hover-images/Financial_Mgmt.png";
+import volunteerSchedulingImg from "../img/hover-images/Volunteer_Scheduling.png";
+import crmImg from "../img/hover-images/CRM.png";
+import onboardingImg from "../img/hover-images/Onboarding.png";
+import elCactusSaguaroImg from "../img/hover-images/El_Cactus_Saguaro.png";
 
-import downArrow from "../../static/down_arrow.svg";
+import downArrow from "../img/down_arrow.svg";
 
 export default function Home({ data }) {
   const [viewportWidth, setViewportWidth] = useState(1800);
   const [hoverState, setHoverState] = useState(null);
 
-  // useEffect(() => {
-  //   document.documentElement.style.setProperty("--bg", "rgb(3, 183, 112)");
-  // }, []);
+  useEffect(() => {
+    document.documentElement.style.setProperty("--bg", "rgb(3, 183, 112)");
+  }, []);
 
   useEffect(() => {
     // if (typeof window !== undefined) {
@@ -172,7 +172,7 @@ export default function Home({ data }) {
             {hoverState === "event-checkin" && (
               <img
                 className="event-checkin-hover"
-                src={data.eventCheckinImg}
+                src={eventCheckinImg}
                 alt="Event Check in"
               />
             )}
@@ -190,7 +190,7 @@ export default function Home({ data }) {
             {hoverState === "financial-mgmt" && (
               <img
                 className="financial-mgmt-hover"
-                src={data.financialMgmtImg}
+                src={financialMgmtImg}
                 alt="Financial Management"
               />
             )}
@@ -208,7 +208,7 @@ export default function Home({ data }) {
             {hoverState === "volunteer-scheduling" && (
               <img
                 className="volunteer-scheduling-hover"
-                src={data.volunteerSchedulingImg}
+                src={volunteerSchedulingImg}
                 alt="Volunteer Scheduling"
               />
             )}
@@ -224,11 +224,7 @@ export default function Home({ data }) {
               </Link>
             </div>
             {hoverState === "crm" && (
-              <img
-                className="crm-hover"
-                src={data.crmImg}
-                alt="CRM Mobile App"
-              />
+              <img className="crm-hover" src={crmImg} alt="CRM Mobile App" />
             )}
 
             <div className="work-items">
@@ -244,7 +240,7 @@ export default function Home({ data }) {
             {hoverState === "onboarding" && (
               <img
                 className="onboarding-hover"
-                src={data.onboardingImg}
+                src={onboardingImg}
                 alt="Customer Onboarding"
               />
             )}
@@ -262,7 +258,7 @@ export default function Home({ data }) {
             {hoverState === "graphic-design" && (
               <img
                 className="graphic-design-hover"
-                src={data.elCactusSaguaroImg}
+                src={elCactusSaguaroImg}
                 alt="Graphic Design"
               />
             )}
@@ -281,71 +277,69 @@ export default function Home({ data }) {
 // import onboardingImg from "../../static/hover-images/Onboarding.png";
 // import elCactusSaguaroImg from "../../static/hover-images/El_Cactus_Saguaro.png";
 
-export const query = graphql`
-  query {
-    eventCheckinImg: imageSharpFluid(title: { eq: "Financial Management" }) {
-      localFile {
-        childImageSharp {
-          fixed(width: 120) {
-            ...GatsbyImageSharpFixed_withWebp
-          }
-        }
-      }
-    }
-    financialMgmtImg: imageSharpFluid(title: { eq: "Financial Management" }) {
-      localFile {
-        childImageSharp {
-          fixed(width: 120) {
-            ...GatsbyImageSharpFixed_withWebp
-          }
-        }
-      }
-    }
-    volunteerSchedulingImg: imageSharpFluid(
-      title: { eq: "Volunteer Scheduling" }
-    ) {
-      credit
-      title
-      localFile {
-        childImageSharp {
-          fixed(width: 200) {
-            ...GatsbyImageSharpFixed_withWebp
-          }
-        }
-      }
-    }
-    crmImg: imageSharpFluid(title: { eq: "CRM Mobile App" }) {
-      credit
-      title
-      localFile {
-        childImageSharp {
-          fluid(maxWidth: 600) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-    onboardingImg: imageSharpFluid(title: { eq: "Onboarding" }) {
-      credit
-      title
-      localFile {
-        childImageSharp {
-          fluid(maxWidth: 600) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-    elCactusSaguaroImg: imageSharpFluid(title: { eq: "El Cactus Saguaro" }) {
-      credit
-      title
-      localFile {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-  }
-`;
+// export const query = graphql`
+//   query {
+//     eventCheckinImg: imageSharp {
+//       localFile {
+//         childImageSharp {
+//           fixed(width: 120) {
+//             ...GatsbyImageSharpFixed_withWebp
+//           }
+//         }
+//       }
+//     }
+//     financialMgmtImg: imageSharp {
+//       localFile {
+//         childImageSharp {
+//           fixed(width: 120) {
+//             ...GatsbyImageSharpFixed_withWebp
+//           }
+//         }
+//       }
+//     }
+//     volunteerSchedulingImg: imageSharp {
+//       # credit
+//       # title
+//       localFile {
+//         childImageSharp {
+//           fixed(width: 200) {
+//             ...GatsbyImageSharpFixed_withWebp
+//           }
+//         }
+//       }
+//     }
+//     crmImg: imageSharp {
+//       # credit
+//       # title
+//       localFile {
+//         childImageSharp {
+//           fluid(maxWidth: 600) {
+//             ...GatsbyImageSharpFluid_withWebp
+//           }
+//         }
+//       }
+//     }
+//     onboardingImg: imageSharp {
+//       # credit
+//       # title
+//       localFile {
+//         childImageSharp {
+//           fluid(maxWidth: 600) {
+//             ...GatsbyImageSharpFluid_withWebp
+//           }
+//         }
+//       }
+//     }
+//     elCactusSaguaroImg: imageSharp {
+//       # credit
+//       # title
+//       localFile {
+//         childImageSharp {
+//           fluid(maxWidth: 300) {
+//             ...GatsbyImageSharpFluid_withWebp
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;
