@@ -6,18 +6,18 @@ import NavBar from "../components/NavBar";
 import Testimonial from "../components/project-details/Testimonial";
 import ParagraphWithTitle from "../components/project-details/ParagraphWithTitle";
 
-import ChallengeImage from "../../static/event_checkin/Challenge_Image.png";
-import CheckInAppImage from "../../static/event_checkin/Check-In_App_Image.png";
-import CheckInAppStore from "../../static/event_checkin/Check-In_App_Store.png";
-import FreshInterfaceImage1 from "../../static/event_checkin/Fresh_Interface_Image_1.png";
-import FreshInterfaceImage2 from "../../static/event_checkin/Fresh_Interface_Image_2.png";
-import KeyImprovementsImage from "../../static/event_checkin/Key_Improvements_Image.png";
-import ProcessImage from "../../static/event_checkin/Process_Image.png";
+import ChallengeImage from "../img/event_checkin/Challenge_Image.png";
+import CheckInAppImage from "../img/event_checkin/Check-In_App_Image.png";
+import CheckInAppStore from "../img/event_checkin/Check-In_App_Store.png";
+import FreshInterfaceImage1 from "../img/event_checkin/Fresh_Interface_Image_1.png";
+import FreshInterfaceImage2 from "../img/event_checkin/Fresh_Interface_Image_2.png";
+import KeyImprovementsImage from "../img/event_checkin/Key_Improvements_Image.png";
+import ProcessImage from "../img/event_checkin/Process_Image.png";
 import Footer from "../components/Footer";
 export default function EventCheckin() {
-  useEffect(() => {
-    document.documentElement.style.setProperty("--bg", "white");
-  }, []);
+  // useEffect(() => {
+  //   document.documentElement.style.setProperty("--bg", "white");
+  // }, []);
 
   return (
     <div className="outer-container">

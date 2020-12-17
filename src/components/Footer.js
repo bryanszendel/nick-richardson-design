@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import "../styles/global.scss";
 import "../styles/footer.scss";
 
-import upArrow from "../../static/down_arrow.svg";
-import upArrowHover from "../../static/up_arrow_hover.svg";
+import upArrow from "../img/down_arrow.svg";
+import upArrowHover from "../img/up_arrow_hover.svg";
 
 export default function Footer(props) {
   const [hoverState, setHoverState] = useState(upArrow);

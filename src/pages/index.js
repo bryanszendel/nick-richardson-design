@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
-import { Link } from "gatsby";
+import { Link, graphql } from "gatsby";
+import { Img } from "gatsby-image";
 
 import "normalize.css";
 import "../styles/landing.scss";
@@ -17,22 +18,22 @@ import pushpayImg from "../../static/hover-images/Pushpay.png";
 import climbingImg from "../../static/hover-images/Climbing.png";
 import cactiImg from "../../static/hover-images/Cacti.png";
 
-import eventCheckinImg from "../../static/hover-images/Event_CheckIn.png";
-import financialMgmtImg from "../../static/hover-images/Financial_Mgmt.png";
-import volunteerSchedulingImg from "../../static/hover-images/Volunteer_Scheduling.png";
-import crmImg from "../../static/hover-images/CRM.png";
-import onboardingImg from "../../static/hover-images/Onboarding.png";
-import elCactusSaguaroImg from "../../static/hover-images/El_Cactus_Saguaro.png";
+// import eventCheckinImg from "../../static/hover-images/Event_CheckIn.png";
+// import financialMgmtImg from "../../static/hover-images/Financial_Mgmt.png";
+// import volunteerSchedulingImg from "../../static/hover-images/Volunteer_Scheduling.png";
+// import crmImg from "../../static/hover-images/CRM.png";
+// import onboardingImg from "../../static/hover-images/Onboarding.png";
+// import elCactusSaguaroImg from "../../static/hover-images/El_Cactus_Saguaro.png";
 
 import downArrow from "../../static/down_arrow.svg";
 
-export default function Home() {
+export default function Home({ data }) {
   const [viewportWidth, setViewportWidth] = useState(1800);
   const [hoverState, setHoverState] = useState(null);
 
-  useEffect(() => {
-    document.documentElement.style.setProperty("--bg", "rgb(3, 183, 112)");
-  }, []);
+  // useEffect(() => {
+  //   document.documentElement.style.setProperty("--bg", "rgb(3, 183, 112)");
+  // }, []);
 
   useEffect(() => {
     // if (typeof window !== undefined) {
@@ -48,6 +49,7 @@ export default function Home() {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Portfolio of Nick Richardson</title>
+        <link type="text/css" href="./static/whatever.css" />
       </Helmet>
       <div className="landing-container">
         <NavBar
@@ -170,7 +172,7 @@ export default function Home() {
             {hoverState === "event-checkin" && (
               <img
                 className="event-checkin-hover"
-                src={eventCheckinImg}
+                src={data.eventCheckinImg}
                 alt="Event Check in"
               />
             )}
@@ -188,7 +190,7 @@ export default function Home() {
             {hoverState === "financial-mgmt" && (
               <img
                 className="financial-mgmt-hover"
-                src={financialMgmtImg}
+                src={data.financialMgmtImg}
                 alt="Financial Management"
               />
             )}
@@ -206,7 +208,7 @@ export default function Home() {
             {hoverState === "volunteer-scheduling" && (
               <img
                 className="volunteer-scheduling-hover"
-                src={volunteerSchedulingImg}
+                src={data.volunteerSchedulingImg}
                 alt="Volunteer Scheduling"
               />
             )}
@@ -222,7 +224,11 @@ export default function Home() {
               </Link>
             </div>
             {hoverState === "crm" && (
-              <img className="crm-hover" src={crmImg} alt="CRM Mobile App" />
+              <img
+                className="crm-hover"
+                src={data.crmImg}
+                alt="CRM Mobile App"
+              />
             )}
 
             <div className="work-items">
@@ -238,7 +244,7 @@ export default function Home() {
             {hoverState === "onboarding" && (
               <img
                 className="onboarding-hover"
-                src={onboardingImg}
+                src={data.onboardingImg}
                 alt="Customer Onboarding"
               />
             )}
@@ -256,7 +262,7 @@ export default function Home() {
             {hoverState === "graphic-design" && (
               <img
                 className="graphic-design-hover"
-                src={elCactusSaguaroImg}
+                src={data.elCactusSaguaroImg}
                 alt="Graphic Design"
               />
             )}
@@ -267,3 +273,79 @@ export default function Home() {
     </>
   );
 }
+
+// import eventCheckinImg from "../../static/hover-images/Event_CheckIn.png";
+// import financialMgmtImg from "../../static/hover-images/Financial_Mgmt.png";
+// import volunteerSchedulingImg from "../../static/hover-images/Volunteer_Scheduling.png";
+// import crmImg from "../../static/hover-images/CRM.png";
+// import onboardingImg from "../../static/hover-images/Onboarding.png";
+// import elCactusSaguaroImg from "../../static/hover-images/El_Cactus_Saguaro.png";
+
+export const query = graphql`
+  query {
+    eventCheckinImg: imageSharpFluid(title: { eq: "Financial Management" }) {
+      localFile {
+        childImageSharp {
+          fixed(width: 120) {
+            ...GatsbyImageSharpFixed_withWebp
+          }
+        }
+      }
+    }
+    financialMgmtImg: imageSharpFluid(title: { eq: "Financial Management" }) {
+      localFile {
+        childImageSharp {
+          fixed(width: 120) {
+            ...GatsbyImageSharpFixed_withWebp
+          }
+        }
+      }
+    }
+    volunteerSchedulingImg: imageSharpFluid(
+      title: { eq: "Volunteer Scheduling" }
+    ) {
+      credit
+      title
+      localFile {
+        childImageSharp {
+          fixed(width: 200) {
+            ...GatsbyImageSharpFixed_withWebp
+          }
+        }
+      }
+    }
+    crmImg: imageSharpFluid(title: { eq: "CRM Mobile App" }) {
+      credit
+      title
+      localFile {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+    onboardingImg: imageSharpFluid(title: { eq: "Onboarding" }) {
+      credit
+      title
+      localFile {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+    elCactusSaguaroImg: imageSharpFluid(title: { eq: "El Cactus Saguaro" }) {
+      credit
+      title
+      localFile {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  }
+`;

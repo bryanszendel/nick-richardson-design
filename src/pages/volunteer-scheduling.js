@@ -7,13 +7,13 @@ import Testimonial from "../components/project-details/Testimonial";
 import ParagraphWithTitle from "../components/project-details/ParagraphWithTitle";
 import Footer from "../components/Footer";
 
-import ScheduleGridImage from "../../static/volunteer_scheduling/Schedule_Grid.png";
-import Collage1Image from "../../static/volunteer_scheduling/Collage_1.png";
-import CategoryListImage from "../../static/volunteer_scheduling/Category_List.png";
-import SchedulesSketchImage from "../../static/volunteer_scheduling/Schedules_Sketch.png";
-import BlackWhiteImage from "../../static/volunteer_scheduling/Black_White.png";
-import Collage2Image from "../../static/volunteer_scheduling/Collage_2.png";
-import EditSettingsModalImage from "../../static/volunteer_scheduling/Edit_Settings_Modal.png";
+import ScheduleGridImage from "../img/volunteer_scheduling/Schedule_Grid.png";
+import Collage1Image from "../img/volunteer_scheduling/Collage_1.png";
+import CategoryListImage from "../img/volunteer_scheduling/Category_List.png";
+import SchedulesSketchImage from "../img/volunteer_scheduling/Schedules_Sketch.png";
+import BlackWhiteImage from "../img/volunteer_scheduling/Black_White.png";
+import Collage2Image from "../img/volunteer_scheduling/Collage_2.png";
+import EditSettingsModalImage from "../img/volunteer_scheduling/Edit_Settings_Modal.png";
 
 export default function VolunteerScheduling() {
   useEffect(() => {
