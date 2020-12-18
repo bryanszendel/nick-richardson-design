@@ -45,7 +45,7 @@ export default function MobileApp() {
           title="Getting with the Times"
           paragraph="Church Community Builder already provided customers with the tools, just not where they needed them - on their phones. The LEAD team took a fresh approach to the desktop product and distilled it down to the critical pieces customers needed on-the-go, then simplified it and tapped into delightful, native-only functionality."
         />
-        <div className="img-container">
+        <div className="img-container key-improvements-img">
           <img className="detail-images" src={LeadUiImg} alt="Lead App UI" />
         </div>
         <ParagraphWithTitle
@@ -99,8 +99,8 @@ export default function MobileApp() {
         <ParagraphWithTitle
           title="Making an Impact"
           paragraph={`Our marketing efforts, combined with word of mouth referrals lead to quickly expanding adoption of the new tool. Since the release of LEAD. our customers have begun to give us improved NPS scores directly attributed to the product, satisfied reviews, and we have seen an increase in renewals.
-          
-          LEAD has helped transform our customer’s perception of us being an older, interprise level solution into being a progressive, forward thinking company. As mobile technology becomes more and more embedded in our lives, we recognize it’s more important than ever to invest and progress in our mobile-driven solutions.`}
+
+LEAD has helped transform our customer’s perception of us being an older, interprise level solution into being a progressive, forward thinking company. As mobile technology becomes more and more embedded in our lives, we recognize it’s more important than ever to invest and progress in our mobile-driven solutions.`}
         />
         <div className="img-container drop-shadow">
           <img className="detail-images" src={DAUGraphImg} alt="DAU Graph" />
@@ -108,11 +108,11 @@ export default function MobileApp() {
         <ParagraphWithTitle
           title="Some Parting Stats"
           paragraph={`Between May 2018 to December 2018, users of the LEAD app:
-              • Saved 512,429 attendance records
-              • Made 99,230 phone calls through the app
-              • Sent 98,660 unique text messages
-              • Sent 59,895 emails
-              • Mapped 45,258 addresses`}
+          • Saved 512,429 attendance records
+          • Made 99,230 phone calls through the app
+          • Sent 98,660 unique text messages
+          • Sent 59,895 emails
+          • Mapped 45,258 addresses`}
         />
         <Footer />
       </div>
