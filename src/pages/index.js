@@ -215,7 +215,7 @@ export default function Home({ data }) {
 
             <div className="work-items">
               <Link
-                to="/"
+                to="/mobile-app"
                 className="work-items-link"
                 onMouseOver={() => setHoverState("crm")}
                 onMouseOut={() => setHoverState(null)}
