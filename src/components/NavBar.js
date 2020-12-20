@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "gatsby";
 
 import "../styles/global.scss";
@@ -23,6 +23,8 @@ export default function NavBar(props) {
   const [email, setEmail] = useState(emailIcon);
   const [resume, setResume] = useState(resumeIcon);
 
+  const copyEmail = "nickrichardsondesign@gmail.com";
+
   const handleMouseOver = (hoverState) => {
     if (props.viewportWidth < 768) return;
 
@@ -41,6 +43,13 @@ export default function NavBar(props) {
     hoverState === "linkedin" && setLinkedin(linkedinIcon);
     hoverState === "email" && setEmail(emailIcon);
     hoverState === "resume" && setResume(resumeIcon);
+  };
+
+  const copyToClipboard = () => {
+    copyEmail.select();
+    document.execCommand("copy");
+    // e.target.focus();
+    // setCopySuccess("Copied!");
   };
 
   return (
@@ -82,7 +91,11 @@ export default function NavBar(props) {
             : "navbar-items-container no-display"
         }
       >
-        <div className="navbar-items">
+        <Link
+          className="navbar-items"
+          to="https://dribbble.com/nr-design"
+          target="_blank"
+        >
           <img
             className="dribbble"
             src={dribbble}
@@ -90,8 +103,12 @@ export default function NavBar(props) {
             onMouseOver={() => handleMouseOver("dribbble")}
             onMouseOut={() => handleMouseOut("dribbble")}
           />
-        </div>
-        <div className="navbar-items">
+        </Link>
+        <Link
+          className="navbar-items"
+          to="https://www.linkedin.com/in/nr-design/"
+          target="_blank"
+        >
           <img
             className="linkedin"
             src={linkedin}
@@ -99,8 +116,13 @@ export default function NavBar(props) {
             onMouseOver={() => handleMouseOver("linkedin")}
             onMouseOut={() => handleMouseOut("linkedin")}
           />
-        </div>
-        <div className="navbar-items">
+        </Link>
+        <div
+          className="navbar-items"
+          onClick={() => {
+            navigator.clipboard.writeText(copyEmail);
+          }}
+        >
           <img
             className="email"
             src={email}
@@ -109,7 +131,7 @@ export default function NavBar(props) {
             onMouseOut={() => handleMouseOut("email")}
           />
         </div>
-        <div className="navbar-items">
+        <Link className="navbar-items" to="" target="_blank">
           <img
             className="resume"
             src={resume}
@@ -117,7 +139,7 @@ export default function NavBar(props) {
             onMouseOver={() => handleMouseOver("resume")}
             onMouseOut={() => handleMouseOut("resume")}
           />
-        </div>
+        </Link>
       </div>
     </div>
   );
