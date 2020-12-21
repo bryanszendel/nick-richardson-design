@@ -30,6 +30,7 @@ import downArrow from "../img/down_arrow.svg";
 export default function Home({ data }) {
   const [viewportWidth, setViewportWidth] = useState(1800);
   const [hoverState, setHoverState] = useState(null);
+  const [lowerHoverState, setLowerHoverState] = useState(null);
 
   useEffect(() => {
     document.documentElement.style.setProperty("--bg", "rgb(3, 183, 112)");
@@ -163,13 +164,13 @@ export default function Home({ data }) {
               <Link
                 to="/event-checkin"
                 className="work-items-link"
-                onMouseOver={() => setHoverState("event-checkin")}
-                onMouseOut={() => setHoverState(null)}
+                onMouseOver={() => setLowerHoverState("event-checkin")}
+                onMouseOut={() => setLowerHoverState(null)}
               >
                 Event Check-In
               </Link>
             </div>
-            {hoverState === "event-checkin" && (
+            {lowerHoverState === "event-checkin" && (
               <img
                 className="event-checkin-hover"
                 src={eventCheckinImg}
@@ -181,13 +182,13 @@ export default function Home({ data }) {
               <Link
                 to="/"
                 className="work-items-link"
-                onMouseOver={() => setHoverState("financial-mgmt")}
-                onMouseOut={() => setHoverState(null)}
+                onMouseOver={() => setLowerHoverState("financial-mgmt")}
+                onMouseOut={() => setLowerHoverState(null)}
               >
                 Financial Management
               </Link>
             </div>
-            {hoverState === "financial-mgmt" && (
+            {lowerHoverState === "financial-mgmt" && (
               <img
                 className="financial-mgmt-hover"
                 src={financialMgmtImg}
@@ -195,67 +196,67 @@ export default function Home({ data }) {
               />
             )}
 
-            <div className="work-items">
+            {/* <div className="work-items">
               <Link
                 to="/volunteer-scheduling"
                 className="work-items-link"
-                onMouseOver={() => setHoverState("volunteer-scheduling")}
-                onMouseOut={() => setHoverState(null)}
+                onMouseOver={() => setLowerHoverState("volunteer-scheduling")}
+                onMouseOut={() => setLowerHoverState(null)}
               >
                 Volunteer Scheduling
               </Link>
             </div>
-            {hoverState === "volunteer-scheduling" && (
+            {lowerHoverState === "volunteer-scheduling" && (
               <img
                 className="volunteer-scheduling-hover"
                 src={volunteerSchedulingImg}
                 alt="Volunteer Scheduling"
               />
-            )}
+            )} */}
 
             <div className="work-items">
               <Link
                 to="/mobile-app"
                 className="work-items-link"
-                onMouseOver={() => setHoverState("crm")}
-                onMouseOut={() => setHoverState(null)}
+                onMouseOver={() => setLowerHoverState("crm")}
+                onMouseOut={() => setLowerHoverState(null)}
               >
                 CRM Mobile App
               </Link>
             </div>
-            {hoverState === "crm" && (
+            {lowerHoverState === "crm" && (
               <img className="crm-hover" src={crmImg} alt="CRM Mobile App" />
             )}
 
-            <div className="work-items">
+            {/* <div className="work-items">
               <Link
                 to="/"
                 className="work-items-link"
-                onMouseOver={() => setHoverState("onboarding")}
-                onMouseOut={() => setHoverState(null)}
+                onMouseOver={() => setLowerHoverState("onboarding")}
+                onMouseOut={() => setLowerHoverState(null)}
               >
                 Customer Onboarding
               </Link>
             </div>
-            {hoverState === "onboarding" && (
+            {lowerHoverState === "onboarding" && (
               <img
                 className="onboarding-hover"
                 src={onboardingImg}
                 alt="Customer Onboarding"
               />
-            )}
+            )} */}
 
             <div className="work-items">
               <Link
                 to="/graphic-design"
                 className="work-items-link"
-                onMouseOver={() => setHoverState("graphic-design")}
-                onMouseOut={() => setHoverState(null)}
+                onMouseOver={() => setLowerHoverState("graphic-design")}
+                onMouseOut={() => setLowerHoverState(null)}
               >
                 Graphic Design
               </Link>
             </div>
-            {hoverState === "graphic-design" && (
+            {lowerHoverState === "graphic-design" && (
               <img
                 className="graphic-design-hover"
                 src={elCactusSaguaroImg}
