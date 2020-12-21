@@ -14,6 +14,7 @@ import emailHover from "../img/hover-svgs/email_hover.svg";
 import resumeIcon from "../img/navbar-svgs/resume_icon.svg";
 import resumeHover from "../img/hover-svgs/resume_hover.svg";
 
+import resumeFull from "../img/CV_NickRichardsonSM.pdf";
 import backArrow from "../img/back_arrow.svg";
 
 export default function NavBar(props) {
@@ -45,11 +46,8 @@ export default function NavBar(props) {
     hoverState === "resume" && setResume(resumeIcon);
   };
 
-  const copyToClipboard = () => {
-    copyEmail.select();
-    document.execCommand("copy");
-    // e.target.focus();
-    // setCopySuccess("Copied!");
+  const openResume = () => {
+    window.open(resumeFull);
   };
 
   return (
@@ -131,7 +129,11 @@ export default function NavBar(props) {
             onMouseOut={() => handleMouseOut("email")}
           />
         </div>
-        <Link className="navbar-items" to="" target="_blank">
+        <div
+          className="navbar-items"
+          onClick={() => openResume()}
+          target="_blank"
+        >
           <img
             className="resume"
             src={resume}
@@ -139,7 +141,7 @@ export default function NavBar(props) {
             onMouseOver={() => handleMouseOver("resume")}
             onMouseOut={() => handleMouseOut("resume")}
           />
-        </Link>
+        </div>
       </div>
     </div>
   );
