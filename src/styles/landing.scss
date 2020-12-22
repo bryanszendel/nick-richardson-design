@@ -215,14 +215,15 @@
   position: absolute;
   transform: rotate(4deg);
   right: 0px;
-  top: 430px;
+  bottom: 280px;
+  // top: 430px; when other sections back in
 }
 .crm-hover {
   width: 380px;
   position: absolute;
-  transform: rotate(-5deg);
+  transform: rotate(-5deg); //-5deg when other sections back in
   right: 0px;
-  bottom: 250px;
+  bottom: 30px; //250px when other sections back in
 }
 .onboarding-hover {
   width: 380px;
@@ -234,9 +235,9 @@
 .graphic-design-hover {
   width: 350px;
   position: absolute;
-  transform: rotate(-5deg);
+  transform: rotate(5deg);
   right: 0px;
-  bottom: 0px;
+  bottom: -30px; //0px when other sections back in
 }
 @media all and (max-width: 1250px) {
   .work-items {

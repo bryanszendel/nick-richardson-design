@@ -89,58 +89,43 @@ export default function NavBar(props) {
             : "navbar-items-container no-display"
         }
       >
-        <Link
+        <div
           className="navbar-items"
-          to="https://dribbble.com/nr-design"
-          target="_blank"
+          onMouseOver={() => handleMouseOver("dribbble")}
+          onMouseOut={() => handleMouseOut("dribbble")}
         >
-          <img
-            className="dribbble"
-            src={dribbble}
-            alt="Dribbble"
-            onMouseOver={() => handleMouseOver("dribbble")}
-            onMouseOut={() => handleMouseOut("dribbble")}
-          />
-        </Link>
-        <Link
+          <a href="https://dribbble.com/nr-design" target="_blank">
+            <img className="dribbble" src={dribbble} alt="Dribbble" />
+          </a>
+        </div>
+
+        <div
           className="navbar-items"
-          to="https://www.linkedin.com/in/nr-design/"
-          target="_blank"
+          onMouseOver={() => handleMouseOver("linkedin")}
+          onMouseOut={() => handleMouseOut("linkedin")}
         >
-          <img
-            className="linkedin"
-            src={linkedin}
-            alt="LinkedIn"
-            onMouseOver={() => handleMouseOver("linkedin")}
-            onMouseOut={() => handleMouseOut("linkedin")}
-          />
-        </Link>
+          <a href="https://www.linkedin.com/in/nr-design/" target="_blank">
+            <img className="linkedin" src={linkedin} alt="LinkedIn" />
+          </a>
+        </div>
         <div
           className="navbar-items"
           onClick={() => {
             navigator.clipboard.writeText(copyEmail);
           }}
+          onMouseOver={() => handleMouseOver("email")}
+          onMouseOut={() => handleMouseOut("email")}
         >
-          <img
-            className="email"
-            src={email}
-            alt="Email"
-            onMouseOver={() => handleMouseOver("email")}
-            onMouseOut={() => handleMouseOut("email")}
-          />
+          <img className="email" src={email} alt="Email" />
         </div>
         <div
           className="navbar-items"
           onClick={() => openResume()}
           target="_blank"
+          onMouseOver={() => handleMouseOver("resume")}
+          onMouseOut={() => handleMouseOut("resume")}
         >
-          <img
-            className="resume"
-            src={resume}
-            alt="CV"
-            onMouseOver={() => handleMouseOver("resume")}
-            onMouseOut={() => handleMouseOut("resume")}
-          />
+          <img className="resume" src={resume} alt="CV" />
         </div>
       </div>
     </div>

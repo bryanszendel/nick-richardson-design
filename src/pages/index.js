@@ -178,7 +178,7 @@ export default function Home({ data }) {
               />
             )}
 
-            <div className="work-items">
+            {/* <div className="work-items">
               <Link
                 to="/"
                 className="work-items-link"
@@ -194,9 +194,9 @@ export default function Home({ data }) {
                 src={financialMgmtImg}
                 alt="Financial Management"
               />
-            )}
+            )} */}
 
-            {/* <div className="work-items">
+            <div className="work-items">
               <Link
                 to="/volunteer-scheduling"
                 className="work-items-link"
@@ -212,7 +212,7 @@ export default function Home({ data }) {
                 src={volunteerSchedulingImg}
                 alt="Volunteer Scheduling"
               />
-            )} */}
+            )}
 
             <div className="work-items">
               <Link
