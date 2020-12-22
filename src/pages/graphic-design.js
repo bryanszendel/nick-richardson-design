@@ -41,16 +41,16 @@ export default function GraphicDesign() {
         <div className="img-container">
           <img
             className="detail-images"
-            src={CrystalFightersImage}
-            alt="Crystal Fighters concert poster"
+            src={CactiPostersGif}
+            alt="Various cacti posters"
           />
         </div>
 
         <div className="img-container">
           <img
             className="detail-images"
-            src={CactiPostersGif}
-            alt="Various cacti posters"
+            src={CrystalFightersImage}
+            alt="Crystal Fighters concert poster"
           />
         </div>
 
