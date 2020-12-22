@@ -39,6 +39,12 @@
   -webkit-user-select: none;
 }
 
+.toast-message {
+  position: absolute;
+  top: 30px;
+  right: 50%;
+}
+
 @media all and (max-width: 768px) {
   .navbar {
     flex-direction: column;
