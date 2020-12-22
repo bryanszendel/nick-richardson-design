@@ -3,7 +3,6 @@ import "normalize.css";
 
 import "../styles/detail-pages.scss";
 import NavBar from "../components/NavBar";
-import Testimonial from "../components/project-details/Testimonial";
 import ParagraphWithTitle from "../components/project-details/ParagraphWithTitle";
 import Footer from "../components/Footer";
 
@@ -12,7 +11,7 @@ import CactiImage from "../img/graphic-design/Cacti.png";
 import CactiPostersGif from "../img/graphic-design/Cacti_posters.gif";
 import WitchHuntGif from "../img/graphic-design/Witch_Hunt.gif";
 import DecadeClubImage from "../img/graphic-design/Decade_Club.jpg";
-import SummitOrizabaGif from "../img/graphic-design/Summit_Orizaba.gif";
+// import SummitOrizabaGif from "../img/graphic-design/Summit_Orizaba.gif";
 import WeddingInviteGif from "../img/graphic-design/Wedding_Invite.gif";
 import MatterhornImage from "../img/graphic-design/Matterhorn.png";
 import StorefrontsOfKantoGif from "../img/graphic-design/Storefronts_of_Kanto.gif";
@@ -42,6 +41,14 @@ export default function GraphicDesign() {
         <div className="img-container">
           <img
             className="detail-images"
+            src={CrystalFightersImage}
+            alt="Crystal Fighters concert poster"
+          />
+        </div>
+
+        <div className="img-container">
+          <img
+            className="detail-images"
             src={CactiPostersGif}
             alt="Various cacti posters"
           />
@@ -59,13 +66,13 @@ export default function GraphicDesign() {
           />
         </div>
 
-        <div className="img-container">
+        {/* <div className="img-container">
           <img
             className="detail-images"
             src={SummitOrizabaGif}
             alt="Summit Orizaba t-shirt"
           />
-        </div>
+        </div> */}
 
         <div className="img-container">
           <img
@@ -88,14 +95,6 @@ export default function GraphicDesign() {
             className="detail-images"
             src={StorefrontsOfKantoGif}
             alt="Various storefronts booklet"
-          />
-        </div>
-
-        <div className="img-container">
-          <img
-            className="detail-images"
-            src={CrystalFightersImage}
-            alt="Crystal Fighters concert poster"
           />
         </div>
 

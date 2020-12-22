@@ -19,10 +19,10 @@ import climbingImg from "../img/hover-images/Climbing.png";
 import cactiImg from "../img/hover-images/Cacti.png";
 
 import eventCheckinImg from "../img/hover-images/Event_CheckIn.png";
-import financialMgmtImg from "../img/hover-images/Financial_Mgmt.png";
+// import financialMgmtImg from "../img/hover-images/Financial_Mgmt.png";
 import volunteerSchedulingImg from "../img/hover-images/Volunteer_Scheduling.png";
 import crmImg from "../img/hover-images/CRM.png";
-import onboardingImg from "../img/hover-images/Onboarding.png";
+// import onboardingImg from "../img/hover-images/Onboarding.png";
 import elCactusSaguaroImg from "../img/hover-images/El_Cactus_Saguaro.png";
 
 import downArrow from "../img/down_arrow.svg";
@@ -31,28 +31,21 @@ export default function Home({ data }) {
   const [viewportWidth, setViewportWidth] = useState(1800);
   const [hoverState, setHoverState] = useState(null);
   const [lowerHoverState, setLowerHoverState] = useState(null);
-  // const [downArrowState, setDownArrowState] = useState(downArrow)
+
   useEffect(() => {
     document.documentElement.style.setProperty("--bg", "rgb(3, 183, 112)");
   }, []);
 
   useEffect(() => {
-    // if (typeof window !== undefined) {
     window.onresize = () => {
       setViewportWidth(window.innerWidth);
     };
-    // }
   }, []);
 
   const scrollBottom = () => {
     document.querySelector(".work-items-container").scrollIntoView({
       behavior: "smooth",
     });
-    // window.scroll({
-    //   top: arrow,
-    //   left: 0,
-    //   behavior: "smooth",
-    // });
   };
 
   return (
