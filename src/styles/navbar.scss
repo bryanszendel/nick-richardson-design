@@ -26,6 +26,12 @@
   }
 }
 
+#copy-email {
+  &:hover {
+    cursor: copy;
+  }
+}
+
 .navbar-text {
   font-family: "Gotham Book";
   width: 243px;

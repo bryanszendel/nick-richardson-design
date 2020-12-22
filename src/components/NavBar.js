@@ -111,6 +111,7 @@ export default function NavBar(props) {
           </a>
         </div>
         <div
+          id="copy-email"
           className="navbar-items"
           onClick={() => {
             navigator.clipboard.writeText(copyEmail);
