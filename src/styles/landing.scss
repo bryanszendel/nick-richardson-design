@@ -1,3 +1,6 @@
+// @import "../img/down_arrow.svg";
+// @import "../img/down_arrow_hover.svg";
+
 .landing-container {
   max-width: 1200px;
   width: 92%;
@@ -160,6 +163,15 @@
   align-items: center;
   margin-top: 120px;
 }
+#arrow {
+  background-image: url("../img/down_arrow.svg");
+  &:hover {
+    background-image: url("../img/down_arrow_hover.svg");
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+}
+
 @media all and (max-width: 768px) {
   #arrow {
     display: none;

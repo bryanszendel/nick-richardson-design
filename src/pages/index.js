@@ -31,7 +31,7 @@ export default function Home({ data }) {
   const [viewportWidth, setViewportWidth] = useState(1800);
   const [hoverState, setHoverState] = useState(null);
   const [lowerHoverState, setLowerHoverState] = useState(null);
-
+  // const [downArrowState, setDownArrowState] = useState(downArrow)
   useEffect(() => {
     document.documentElement.style.setProperty("--bg", "rgb(3, 183, 112)");
   }, []);
@@ -43,6 +43,17 @@ export default function Home({ data }) {
     };
     // }
   }, []);
+
+  const scrollBottom = () => {
+    document.querySelector(".work-items-container").scrollIntoView({
+      behavior: "smooth",
+    });
+    // window.scroll({
+    //   top: arrow,
+    //   left: 0,
+    //   behavior: "smooth",
+    // });
+  };
 
   return (
     <>
@@ -157,7 +168,19 @@ export default function Home({ data }) {
         <div className="work-container">
           <div className="title-arrow-container">
             <div className="work-title">My Work</div>
-            <img id="arrow" src={downArrow} alt="Down arrow" />
+            <img
+              id="arrow"
+              src={downArrow}
+              alt="Down arrow"
+              onClick={scrollBottom}
+            />
+            {/* <img
+              id="arrow"
+              src={downArrow}
+              className={hoverState === upArrow ? "down-arrow" : "down-arrow-hover"}
+              onMouseOver={() => handleMouseOver()}
+              onMouseOut={() => handleMouseOut()}
+            /> */}
           </div>
           <div className="work-items-container">
             <div className="work-items">
