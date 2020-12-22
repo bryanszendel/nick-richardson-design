@@ -114,7 +114,10 @@ LEAD has helped transform our customer’s perception of us being an older, inte
           • Sent 59,895 emails
           • Mapped 45,258 addresses`}
         />
-        <Footer />
+        <Footer
+          appStore={true}
+          storeUrl="https://apps.apple.com/app/id1090541631"
+        />
       </div>
     </div>
   );

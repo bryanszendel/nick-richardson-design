@@ -24,7 +24,11 @@ export default function Footer(props) {
   };
   return (
     <div className="footer">
-      <div className="footer-text">VIEW ON APP STORE</div>
+      {props.appStore && (
+        <a href={props.storeUrl} className="footer-text" target="_blank">
+          VIEW ON APP STORE
+        </a>
+      )}
       <div
         onClick={scrollTop}
         onKeyPress={scrollTop}

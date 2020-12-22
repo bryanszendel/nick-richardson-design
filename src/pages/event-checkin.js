@@ -93,7 +93,10 @@ export default function EventCheckin() {
           title="For the Win"
           paragraph="The new Check-In app was released in June, 2019. So far it has been very well received and is changing the way churches run event check-in. We are very excited to see more churches adopt our check-in system as the months go on. We managed to build a mobile app of an existing product with key improvements, pleasing the existing customers, and giving prospective customers something big to bite on. We are iterating on new releases and will continue to improve the product."
         />
-        <Footer />
+        <Footer
+          appStore={true}
+          storeUrl="https://apps.apple.com/us/app/check-in-app/id970173561"
+        />
       </div>
     </div>
   );

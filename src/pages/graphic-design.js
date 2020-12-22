@@ -99,7 +99,7 @@ export default function GraphicDesign() {
           />
         </div>
 
-        <Footer />
+        <Footer appStore={false} />
       </div>
     </div>
   );

@@ -113,7 +113,7 @@ The relationship with our project partners was a huge success as it gave us the 
             alt="fresh interface 1"
           />
         </div>
-        <Footer />
+        <Footer appStore={false} />
       </div>
     </div>
   );

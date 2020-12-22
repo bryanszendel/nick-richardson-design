@@ -117,7 +117,7 @@ export default function NavBar(props) {
             setDisplayToast(true);
             setTimeout(() => {
               setDisplayToast(false);
-            }, 4000);
+            }, 3000);
           }}
           onMouseOver={() => handleMouseOver("email")}
           onMouseOut={() => handleMouseOut("email")}
@@ -134,8 +134,8 @@ export default function NavBar(props) {
           <img className="resume" src={resume} alt="CV" />
         </div>
       </div>
-      <div className={displayToast ? "toast-message" : "no-display"}>
-        Copied!
+      <div className={displayToast ? "toast-message show" : "toast-message"}>
+        Email Copied 👍
       </div>
     </div>
   );
