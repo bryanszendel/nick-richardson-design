@@ -66,7 +66,7 @@ export default function EventCheckin() {
         </div>
         <ParagraphWithTitle
           title="A Fresh Interface"
-          paragraph="I focused most of my efforts on a new UI which was just a slight alteration to our existing app UI style that introduced a softer version of Proxima Nova, larger font sizes, and more white space (taking queues from Air BnB’s design, which I love). In the process I developed new style guidelines and a Sketch symbols library which we will use for our future mobile apps."
+          paragraph="I focused most of my efforts on a new UI which was just a slight alteration to our existing app UI style that introduced a softer version of Proxima Nova, larger font sizes, and more white space (taking cues from Air BnB’s design, which I love). In the process, I developed new style guidelines and a Sketch symbols library which we will use for our future mobile apps."
         />
         <div className="img-container drop-shadow">
           <img
@@ -91,7 +91,7 @@ export default function EventCheckin() {
         </div>
         <ParagraphWithTitle
           title="For the Win"
-          paragraph="The new Check-In app was released in June, 2019. So far it has been very well received and is changing the way churches run event check-in. We are very excited to see more churches adopt our check-in system as the months go on. We managed to build a mobile app of an existing product with key improvements, pleasing the existing customers, and giving prospective customers something big to bite on. We are iterating on new releases and will continue to improve the product."
+          paragraph="The new Check-In app was released in June 2019. So far it has been very well received and is changing the way churches run event check-in. We are very excited to see more churches adopt our check-in system as the months go on. We managed to build a mobile app for an existing product with key improvements, pleasing the existing customers, and giving prospective customers something big to bite on. We are iterating on new releases and will continue to improve the product."
         />
         <Footer
           appStore={true}

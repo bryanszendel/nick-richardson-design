@@ -50,7 +50,7 @@ export default function MobileApp() {
         </div>
         <ParagraphWithTitle
           title="Research is Key"
-          paragraph="We organized the project around the research we conducted for several month prior to development. Our goal was to be user-focused and provide something our customers couldn’t live without. Myself and one of our Product Managers met with over 20 church partners and other influential church leaders to determine what feature set could be of most value in an app for our target user (small group leaders and volunteers who take on certain administrative responsibilities)."
+          paragraph="We organized the project around the research we conducted for several months prior to development. Our goal was to be user-focused and provide something our customers couldn’t live without. Myself and one of our Product Managers met with over 20 church partners and other influential church leaders to determine what feature set could be of most value in an app for our target user (small group leaders and volunteers who take on certain administrative responsibilities)."
         />
         <div className="img-container">
           <img
@@ -65,7 +65,7 @@ export default function MobileApp() {
         />
         <ParagraphWithTitle
           title="Validation"
-          paragraph={`We implemented a design sprint in order to get the first lo-fi prototype created in a week and from there, circled back with most of the church partners we met with in our initial research phase to validate our hypothesis. Months of prototyping (using InVision and Sketch), user testing, and iteration led to our MVP release of what we called "LEAD".`}
+          paragraph={`We implemented a design sprint in order to get the first lo-fi prototype created in a week and from there, circled back with most of the church partners we met within our initial research phase to validate our hypothesis. Months of prototyping (using InVision and Sketch), user testing, and iteration led to our MVP release of what we called "LEAD".`}
         />
         <div className="img-container key-improvements-img">
           <img
@@ -100,7 +100,7 @@ export default function MobileApp() {
           title="Making an Impact"
           paragraph={`Our marketing efforts, combined with word of mouth referrals lead to quickly expanding adoption of the new tool. Since the release of LEAD. our customers have begun to give us improved NPS scores directly attributed to the product, satisfied reviews, and we have seen an increase in renewals.
 
-LEAD has helped transform our customer’s perception of us being an older, interprise level solution into being a progressive, forward thinking company. As mobile technology becomes more and more embedded in our lives, we recognize it’s more important than ever to invest and progress in our mobile-driven solutions.`}
+LEAD has helped transform our customer’s perception of us being an older, enterprise-level solution into being a progressive, forward-thinking company. As mobile technology becomes more and more embedded in our lives, we recognize it’s more important than ever to invest and progress in our mobile-driven solutions.`}
         />
         <div className="img-container drop-shadow">
           <img className="detail-images" src={DAUGraphImg} alt="DAU Graph" />
@@ -108,11 +108,11 @@ LEAD has helped transform our customer’s perception of us being an older, inte
         <ParagraphWithTitle
           title="Some Parting Stats"
           paragraph={`Between May 2018 to December 2018, users of the LEAD app:
-          • Saved 512,429 attendance records
-          • Made 99,230 phone calls through the app
-          • Sent 98,660 unique text messages
-          • Sent 59,895 emails
-          • Mapped 45,258 addresses`}
+• Saved 512,429 attendance records
+• Made 99,230 phone calls through the app
+• Sent 98,660 unique text messages
+• Sent 59,895 emails
+• Mapped 45,258 addresses`}
         />
         <Footer
           appStore={true}
