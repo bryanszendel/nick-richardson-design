@@ -4,8 +4,8 @@ import { Link, graphql } from "gatsby";
 import { Img } from "gatsby-image";
 
 import "normalize.css";
-import "../styles/landing.scss";
 import "../styles/global.scss";
+import "../styles/landing.scss";
 
 import NavBar from "../components/NavBar";
 
