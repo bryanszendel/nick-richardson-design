@@ -191,6 +191,7 @@ export default function Home({ data }) {
                 className="event-checkin-hover"
                 src={eventCheckinImg}
                 alt="Event Check in"
+                loading="eager"
               />
             )}
 
@@ -227,6 +228,7 @@ export default function Home({ data }) {
                 className="volunteer-scheduling-hover"
                 src={volunteerSchedulingImg}
                 alt="Volunteer Scheduling"
+                loading="eager"
               />
             )}
 
@@ -241,7 +243,12 @@ export default function Home({ data }) {
               </Link>
             </div>
             {lowerHoverState === "crm" && (
-              <img className="crm-hover" src={crmImg} alt="CRM Mobile App" />
+              <img
+                className="crm-hover"
+                src={crmImg}
+                alt="CRM Mobile App"
+                loading="eager"
+              />
             )}
 
             {/* <div className="work-items">
@@ -277,6 +284,7 @@ export default function Home({ data }) {
                 className="graphic-design-hover"
                 src={elCactusSaguaroImg}
                 alt="Graphic Design"
+                loading="eager"
               />
             )}
           </div>
