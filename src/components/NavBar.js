@@ -14,7 +14,7 @@ import emailHover from "../img/hover-svgs/email_hover.svg";
 import resumeIcon from "../img/navbar-svgs/resume_icon.svg";
 import resumeHover from "../img/hover-svgs/resume_hover.svg";
 
-import resumeFull from "../img/CV_NickRichardsonSM.pdf";
+import resumeFull from "../img/CV_NickRichardson.pdf";
 import backArrow from "../img/back_arrow.svg";
 
 export default function NavBar(props) {
