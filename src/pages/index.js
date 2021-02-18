@@ -54,9 +54,26 @@ export default function Home({ data }) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Portfolio of Nick Richardson</title>
-        <link type="text/css" href="./static/whatever.css" />
+        <style type="text/css">
+          {`@font-face {
+            font-family: "Gotham-Ultra";
+            src: local("static/fonts/Gotham/Gotham-Ultra.otf"), local(Gotham-Ultra),
+              url("static/fonts/Gotham/Gotham-Ultra.otf");
+            };
+            @font-face {
+              font-family: "Gotham-Black";
+              src: local("static/fonts/Gotham/Gotham-Black.otf"), local(Gotham-Black),
+              url("static/fonts/Gotham/Gotham-Black.otf");
+            }
+            @font-face {
+              font-family: "Gotham-Book";
+              src: local("static/fonts/Gotham/Gotham-Book.otf"), local(Gotham-Book),
+              url("static/fonts/Gotham/Gotham-Book.otf");
+            }`}
+        </style>
       </Helmet>
-      <div className="landing-container">
+
+      <div className="landing-container is-preload">
         <NavBar
           landing={true}
           viewportWidth={viewportWidth}
@@ -167,13 +184,6 @@ export default function Home({ data }) {
               alt="Down arrow"
               onClick={scrollBottom}
             />
-            {/* <img
-              id="arrow"
-              src={downArrow}
-              className={hoverState === upArrow ? "down-arrow" : "down-arrow-hover"}
-              onMouseOver={() => handleMouseOver()}
-              onMouseOut={() => handleMouseOut()}
-            /> */}
           </div>
           <div className="work-items-container">
             <div className="work-items">
@@ -186,14 +196,19 @@ export default function Home({ data }) {
                 Event Check-In
               </Link>
             </div>
-            {lowerHoverState === "event-checkin" && (
+            <div
+              className={
+                lowerHoverState === "event-checkin"
+                  ? "event-checkin-hover"
+                  : "no-display"
+              }
+            >
               <img
-                className="event-checkin-hover"
                 src={eventCheckinImg}
-                alt="Event Check in"
-                loading="eager"
+                alt="Event Check In"
+                className="lower-hover-img"
               />
-            )}
+            </div>
 
             {/* <div className="work-items">
               <Link
@@ -223,14 +238,19 @@ export default function Home({ data }) {
                 Volunteer Scheduling
               </Link>
             </div>
-            {lowerHoverState === "volunteer-scheduling" && (
+            <div
+              className={
+                lowerHoverState === "volunteer-scheduling"
+                  ? "volunteer-scheduling-hover"
+                  : "no-display"
+              }
+            >
               <img
-                className="volunteer-scheduling-hover"
                 src={volunteerSchedulingImg}
                 alt="Volunteer Scheduling"
-                loading="eager"
+                className="lower-hover-img"
               />
-            )}
+            </div>
 
             <div className="work-items">
               <Link
@@ -242,14 +262,15 @@ export default function Home({ data }) {
                 CRM Mobile App
               </Link>
             </div>
-            {lowerHoverState === "crm" && (
+            <div
+              className={lowerHoverState === "crm" ? "crm-hover" : "no-display"}
+            >
               <img
-                className="crm-hover"
                 src={crmImg}
                 alt="CRM Mobile App"
-                loading="eager"
+                className="lower-hover-img"
               />
-            )}
+            </div>
 
             {/* <div className="work-items">
               <Link
@@ -279,14 +300,19 @@ export default function Home({ data }) {
                 Graphic Design
               </Link>
             </div>
-            {lowerHoverState === "graphic-design" && (
+            <div
+              className={
+                lowerHoverState === "graphic-design"
+                  ? "graphic-design-hover"
+                  : "no-display"
+              }
+            >
               <img
-                className="graphic-design-hover"
                 src={elCactusSaguaroImg}
                 alt="Graphic Design"
-                loading="eager"
+                className="lower-hover-img"
               />
-            )}
+            </div>
           </div>
         </div>
         <div className="footer"></div>

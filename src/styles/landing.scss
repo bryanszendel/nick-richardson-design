@@ -31,7 +31,7 @@ html {
   margin-top: 120px;
 }
 .hello-text {
-  font-family: "Gotham Ultra";
+  font-family: "Gotham-Ultra";
   height: 400px;
   position: absolute;
   left: -1.1rem;
@@ -50,6 +50,11 @@ html {
 }
 .hover-img {
   width: 65%;
+  height: auto;
+}
+
+.lower-hover-img {
+  width: 100%;
   height: auto;
 }
 
@@ -97,7 +102,7 @@ html {
   width: 100%;
   margin-top: 120px;
   color: #28282a;
-  font-family: "Gotham Book";
+  font-family: "Gotham-Book";
   font-size: 30px;
   line-height: 47px;
 }
@@ -191,13 +196,13 @@ html {
   flex-direction: column;
 }
 .work-title {
-  font-family: "Gotham Ultra";
+  font-family: "Gotham-Ultra";
   font-size: 30px;
   color: #28282a;
 }
 .work-items {
   margin-top: 120px;
-  font-family: "Gotham Ultra";
+  font-family: "Gotham-Ultra";
   font-size: 60px;
   color: #28282a;
   text-decoration: none;
