@@ -54,8 +54,8 @@ export default function Home({ data }) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Portfolio of Nick Richardson</title>
-        <link href="./styles/global.scss" rel="stylesheet" />
-        <link href="./styles/landing.scss" rel="stylesheet" />
+        <link href="../styles/global.scss" rel="stylesheet" />
+        <link href="../styles/landing.scss" rel="stylesheet" />
       </Helmet>
 
       <div className="landing-container is-preload">
