@@ -54,23 +54,6 @@ export default function Home({ data }) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Portfolio of Nick Richardson</title>
-        <style type="text/css">
-          {`@font-face {
-            font-family: "Gotham-Ultra";
-            src: local("static/fonts/Gotham/Gotham-Ultra.otf"), local(Gotham-Ultra),
-              url("static/fonts/Gotham/Gotham-Ultra.otf");
-            };
-            @font-face {
-              font-family: "Gotham-Black";
-              src: local("static/fonts/Gotham/Gotham-Black.otf"), local(Gotham-Black),
-              url("static/fonts/Gotham/Gotham-Black.otf");
-            }
-            @font-face {
-              font-family: "Gotham-Book";
-              src: local("static/fonts/Gotham/Gotham-Book.otf"), local(Gotham-Book),
-              url("static/fonts/Gotham/Gotham-Book.otf");
-            }`}
-        </style>
       </Helmet>
 
       <div className="landing-container is-preload">
