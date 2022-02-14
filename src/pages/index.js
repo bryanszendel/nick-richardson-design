@@ -48,6 +48,25 @@ export default function Home({ data }) {
     });
   };
 
+  const getNumYears = () => {
+    const years = {
+      8: 'eight',
+      9: 'nine',
+      10: 'ten',
+      11: 'eleven',
+      12: 'twelve',
+      13: 'thirteen',
+      14: 'fourteen',
+      15: 'fifteen',
+      16: 'sixteen',
+      17: 'seventeen',
+      18: 'eighteen',
+      19: 'nineteen',
+      20: 'twenty',
+    }
+    return years[new Date().getFullYear() - 2014];
+  }
+
   return (
     <>
       <Helmet>
@@ -125,17 +144,17 @@ export default function Home({ data }) {
 
         <div className="description-container">
           <div className="description">
-            <span>I am currently a Product Designer at </span>
+            {/* <span>I am currently a Product Designer at </span>
             <span
               className="underline"
               onMouseOver={() => setHoverState("pushpay")}
               onMouseOut={() => setHoverState(null)}
             >
               Pushpay
-            </span>
+            </span> */}
             <span>
-              {" "}
-              with seven years SaaS experience and a BFA in Visual Design. A
+              {/* {" "} */}
+              I am currently a Senior Product Designer at MidFirst Bank with {getNumYears()} years SaaS experience and a BFA in Visual Design. A
               lover of{" "}
             </span>
             <span
