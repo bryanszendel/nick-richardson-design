@@ -50,22 +50,22 @@ export default function Home({ data }) {
 
   const getNumYears = () => {
     const years = {
-      8: 'eight',
-      9: 'nine',
-      10: 'ten',
-      11: 'eleven',
-      12: 'twelve',
-      13: 'thirteen',
-      14: 'fourteen',
-      15: 'fifteen',
-      16: 'sixteen',
-      17: 'seventeen',
-      18: 'eighteen',
-      19: 'nineteen',
-      20: 'twenty',
-    }
+      8: "eight",
+      9: "nine",
+      10: "ten",
+      11: "eleven",
+      12: "twelve",
+      13: "thirteen",
+      14: "fourteen",
+      15: "fifteen",
+      16: "sixteen",
+      17: "seventeen",
+      18: "eighteen",
+      19: "nineteen",
+      20: "twenty",
+    };
     return years[new Date().getFullYear() - 2014];
-  }
+  };
 
   return (
     <>
@@ -153,9 +153,9 @@ export default function Home({ data }) {
               Pushpay
             </span> */}
             <span>
-              {/* {" "} */}
-              I am currently a Senior Product Designer at MidFirst Bank with {getNumYears()} years SaaS experience and a BFA in Visual Design. A
-              lover of{" "}
+              {/* {" "} */}I am currently a Senior Product Designer at MidFirst
+              Bank with {getNumYears()} years SaaS experience and a BFA in
+              Visual Design. A lover of{" "}
             </span>
             <span
               className="underline"
