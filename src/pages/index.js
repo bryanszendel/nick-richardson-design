@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { Link, graphql } from "gatsby";
-import { Img } from "gatsby-image";
+import { Img } from "gatsby-plugin-image";
 
 import "normalize.css";
 import "../styles/global.scss";
