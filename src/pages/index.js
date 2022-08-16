@@ -32,9 +32,9 @@ export default function Home({ data }) {
   const [hoverState, setHoverState] = useState(null);
   const [lowerHoverState, setLowerHoverState] = useState(null);
 
-  useEffect(() => {
-    document.documentElement.style.setProperty("--bg", "rgb(3, 183, 112)");
-  }, []);
+  // useEffect(() => {
+  //   document.documentElement.style.setProperty("--bg", "#222222");
+  // }, []);
 
   useEffect(() => {
     window.onresize = () => {
@@ -85,7 +85,7 @@ export default function Home({ data }) {
           setHoverState={setHoverState}
         />
         <div className="hello-container">
-          <div
+          {/* <div
             className={
               hoverState === null || viewportWidth <= 768
                 ? "hello-text"
@@ -93,7 +93,7 @@ export default function Home({ data }) {
             }
           >
             Hello!
-          </div>
+          </div> */}
           <div className={hoverState === "nick" ? "hover-state" : "no-display"}>
             <img src={nickImg} alt="headshots" className="hover-img" />
           </div>
@@ -144,16 +144,8 @@ export default function Home({ data }) {
 
         <div className="description-container">
           <div className="description">
-            {/* <span>I am currently a Product Designer at </span>
-            <span
-              className="underline"
-              onMouseOver={() => setHoverState("pushpay")}
-              onMouseOut={() => setHoverState(null)}
-            >
-              Pushpay
-            </span> */}
-            <span>
-              {/* {" "} */}I am currently a Senior Product Designer at MidFirst
+            {/* <span>
+              I am currently a Senior Product Designer at MidFirst
               Bank with {getNumYears()} years SaaS experience and a BFA in
               Visual Design. A lover of{" "}
             </span>
@@ -175,7 +167,18 @@ export default function Home({ data }) {
             <span>
               , passionate about solving painfully difficult problems and
               improving customer experiences.
+            </span> */}
+            <span>Hello! I’m </span>
+            <span
+              className="highlight"
+              onMouseOver={() => setHoverState("nick")}
+              onMouseOut={() => setHoverState(null)}
+            >
+              Nicholas
             </span>
+            , a Product Designer based in{" "}
+            <span className="strikethrough">OKC</span> remotely. Currently
+            working in FinTech. I build bridges between human and machine.
           </div>
         </div>
 
@@ -324,77 +327,3 @@ export default function Home({ data }) {
     </>
   );
 }
-
-// import eventCheckinImg from "../../static/hover-images/Event_CheckIn.png";
-// import financialMgmtImg from "../../static/hover-images/Financial_Mgmt.png";
-// import volunteerSchedulingImg from "../../static/hover-images/Volunteer_Scheduling.png";
-// import crmImg from "../../static/hover-images/CRM.png";
-// import onboardingImg from "../../static/hover-images/Onboarding.png";
-// import elCactusSaguaroImg from "../../static/hover-images/El_Cactus_Saguaro.png";
-
-// export const query = graphql`
-//   query {
-//     eventCheckinImg: imageSharp {
-//       localFile {
-//         childImageSharp {
-//           fixed(width: 120) {
-//             ...GatsbyImageSharpFixed_withWebp
-//           }
-//         }
-//       }
-//     }
-//     financialMgmtImg: imageSharp {
-//       localFile {
-//         childImageSharp {
-//           fixed(width: 120) {
-//             ...GatsbyImageSharpFixed_withWebp
-//           }
-//         }
-//       }
-//     }
-//     volunteerSchedulingImg: imageSharp {
-//       # credit
-//       # title
-//       localFile {
-//         childImageSharp {
-//           fixed(width: 200) {
-//             ...GatsbyImageSharpFixed_withWebp
-//           }
-//         }
-//       }
-//     }
-//     crmImg: imageSharp {
-//       # credit
-//       # title
-//       localFile {
-//         childImageSharp {
-//           fluid(maxWidth: 600) {
-//             ...GatsbyImageSharpFluid_withWebp
-//           }
-//         }
-//       }
-//     }
-//     onboardingImg: imageSharp {
-//       # credit
-//       # title
-//       localFile {
-//         childImageSharp {
-//           fluid(maxWidth: 600) {
-//             ...GatsbyImageSharpFluid_withWebp
-//           }
-//         }
-//       }
-//     }
-//     elCactusSaguaroImg: imageSharp {
-//       # credit
-//       # title
-//       localFile {
-//         childImageSharp {
-//           fluid(maxWidth: 300) {
-//             ...GatsbyImageSharpFluid_withWebp
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;

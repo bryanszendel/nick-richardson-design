@@ -1,5 +1,4 @@
-import React, { useState, useRef } from "react";
-import { Link } from "gatsby";
+import React, { useState } from "react";
 
 import "../styles/global.scss";
 import "../styles/landing.scss";
@@ -13,6 +12,8 @@ import emailIcon from "../img/navbar-svgs/email_icon.svg";
 import emailHover from "../img/hover-svgs/email_hover.svg";
 import resumeIcon from "../img/navbar-svgs/resume_icon.svg";
 import resumeHover from "../img/hover-svgs/resume_hover.svg";
+import mediumIcon from "../img/navbar-svgs/medium_icon.svg";
+import mediumHover from "../img/hover-svgs/medium_hover.svg";
 
 import resumeFull from "../img/CV_NickRichardson.pdf";
 import backArrow from "../img/back_arrow.svg";
@@ -23,6 +24,7 @@ export default function NavBar(props) {
   const [linkedin, setLinkedin] = useState(linkedinIcon);
   const [email, setEmail] = useState(emailIcon);
   const [resume, setResume] = useState(resumeIcon);
+  const [medium, setMedium] = useState(mediumIcon);
 
   const [displayToast, setDisplayToast] = useState(false);
 
@@ -37,6 +39,7 @@ export default function NavBar(props) {
     hoverState === "linkedin" && setLinkedin(linkedinHover);
     hoverState === "email" && setEmail(emailHover);
     hoverState === "resume" && setResume(resumeHover);
+    hoverState === "medium" && setMedium(mediumHover);
   };
 
   const handleMouseOut = (hoverState) => {
@@ -46,6 +49,7 @@ export default function NavBar(props) {
     hoverState === "linkedin" && setLinkedin(linkedinIcon);
     hoverState === "email" && setEmail(emailIcon);
     hoverState === "resume" && setResume(resumeIcon);
+    hoverState === "medium" && setMedium(mediumIcon);
   };
 
   const openResume = () => {
@@ -54,7 +58,7 @@ export default function NavBar(props) {
 
   return (
     <div className="navbar">
-      {props.landing ? (
+      {/* {props.landing ? (
         <span
           className="underline navbar-text"
           onMouseOver={() => props.setHoverState("nick")}
@@ -83,7 +87,7 @@ export default function NavBar(props) {
           />
           <div className="navbar-text">All Projects</div>
         </Link>
-      )}
+      )} */}
       <div
         className={
           props.landing
@@ -127,7 +131,15 @@ export default function NavBar(props) {
         </div>
         <div
           className="navbar-items"
-          onClick={() => openResume()}
+          onMouseOver={() => handleMouseOver("medium")}
+          onMouseOut={() => handleMouseOut("medium")}
+        >
+          <a href="https://medium.com/@Nick_Richardson" target="_blank">
+            <img className="medium" src={medium} alt="Medium" />
+          </a>
+        </div>
+        <div
+          className="navbar-items"
           target="_blank"
           onMouseOver={() => handleMouseOver("resume")}
           onMouseOut={() => handleMouseOut("resume")}

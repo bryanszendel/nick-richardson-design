@@ -1,5 +1,5 @@
 html {
-  background-color: rgb(3, 183, 112);
+  background-color: #222222;
 }
 
 .landing-container {
@@ -72,15 +72,15 @@ html {
   }
 }
 @media all and (max-width: 768px) {
-  .hello-container {
-    height: unset;
-    width: 100%;
-    position: unset;
-    display: flex;
-    margin: 0;
-    justify-content: flex-start;
-    align-items: center;
-  }
+  // .hello-container {
+  //   height: unset;
+  //   width: 100%;
+  //   position: unset;
+  //   display: flex;
+  //   margin: 0;
+  //   justify-content: flex-start;
+  //   align-items: center;
+  // }
   .hello-text {
     position: unset;
     margin-top: 20px;
@@ -125,6 +125,14 @@ html {
     font-size: 20px;
     line-height: 30px;
   }
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.highlight {
+  color: #71bbff;
 }
 
 .underline {
