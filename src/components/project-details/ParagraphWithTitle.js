@@ -21,7 +21,7 @@ export default function ParagraphWithTitle(props) {
     >
       <div
         style={{
-          fontFamily: "RobotoMono",
+          fontFamily: "Gotham-Ultra",
           textAlign: "left",
           lineHeight: "48px",
         }}
@@ -33,8 +33,8 @@ export default function ParagraphWithTitle(props) {
           whiteSpace: "pre-wrap",
           float: "left",
           textIndent: "0",
-          fontFamily: "RobotoMono",
-          color: "#FFFFFF",
+          fontFamily: "Gotham-Book",
+          color: "#28282A",
           fontSize: "24px",
           lineHeight: "40px",
           marginTop: "20px",
