@@ -95,6 +95,17 @@ export default function NavBar(props) {
             : "navbar-items-container no-display"
         }
       >
+        {/* CV */}
+        <div
+          className="navbar-items"
+          target="_blank"
+          onMouseOver={() => handleMouseOver("resume")}
+          onMouseOut={() => handleMouseOut("resume")}
+        >
+          <img className="resume" src={resume} alt="CV" />
+        </div>
+
+        {/* DRIBBBLE */}
         <div
           className="navbar-items"
           onMouseOver={() => handleMouseOver("dribbble")}
@@ -105,6 +116,7 @@ export default function NavBar(props) {
           </a>
         </div>
 
+        {/* LINKEDIN */}
         <div
           className="navbar-items"
           onMouseOver={() => handleMouseOver("linkedin")}
@@ -114,6 +126,19 @@ export default function NavBar(props) {
             <img className="linkedin" src={linkedin} alt="LinkedIn" />
           </a>
         </div>
+
+        {/* MEDIUM */}
+        <div
+          className="navbar-items"
+          onMouseOver={() => handleMouseOver("medium")}
+          onMouseOut={() => handleMouseOut("medium")}
+        >
+          <a href="https://medium.com/@Nick_Richardson" target="_blank">
+            <img className="medium" src={medium} alt="Medium" />
+          </a>
+        </div>
+
+        {/* EMAIL */}
         <div
           id="copy-email"
           className="navbar-items"
@@ -128,23 +153,6 @@ export default function NavBar(props) {
           onMouseOut={() => handleMouseOut("email")}
         >
           <img className="email" src={email} alt="Email" />
-        </div>
-        <div
-          className="navbar-items"
-          onMouseOver={() => handleMouseOver("medium")}
-          onMouseOut={() => handleMouseOut("medium")}
-        >
-          <a href="https://medium.com/@Nick_Richardson" target="_blank">
-            <img className="medium" src={medium} alt="Medium" />
-          </a>
-        </div>
-        <div
-          className="navbar-items"
-          target="_blank"
-          onMouseOver={() => handleMouseOver("resume")}
-          onMouseOut={() => handleMouseOut("resume")}
-        >
-          <img className="resume" src={resume} alt="CV" />
         </div>
       </div>
       <div className={displayToast ? "toast-message show" : "toast-message"}>

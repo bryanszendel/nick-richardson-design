@@ -1,19 +1,24 @@
-@font-face {
-  font-family: "Gotham-Ultra";
-  src: url("../../static/fonts/Gotham/Gotham-Ultra.otf");
-}
+// @font-face {
+//   font-family: "Gotham-Ultra";
+//   src: url("../../static/fonts/Gotham/Gotham-Ultra.otf");
+// }
+
+// @font-face {
+//   font-family: "Gotham-Black";
+//   src: url("../../static/fonts/Gotham/Gotham-Black.otf");
+// }
+
+// @font-face {
+//   font-family: "Gotham-Book";
+//   src: url("../../static/fonts/Gotham/Gotham-Book.otf");
+// }
 
 @font-face {
-  font-family: "Gotham-Black";
-  src: url("../../static/fonts/Gotham/Gotham-Black.otf");
-}
-
-@font-face {
-  font-family: "Gotham-Book";
-  src: url("../../static/fonts/Gotham/Gotham-Book.otf");
+  font-family: "RobotoMono";
+  src: url("../../static/fonts/RobotoMono/RobotoMono-Regular.ttf");
 }
 
 html {
   font-size: 1vw;
-  background-color: #222222;
+  // background-color: #222222;
 }

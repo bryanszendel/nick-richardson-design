@@ -20,7 +20,7 @@ export default function Testimonial(props) {
     >
       <div
         style={{
-          fontFamily: "Gotham-Ultra",
+          fontFamily: "RobotoMono",
           textAlign: "center",
           fontSize: "30px",
           color: "#03B770",
@@ -33,7 +33,7 @@ export default function Testimonial(props) {
       </div>
       <div
         style={{
-          fontFamily: "Gotham-Book",
+          fontFamily: "RobotoMono",
           color: "#03B770",
           fontSize: "24px",
           lineHeight: "40px",

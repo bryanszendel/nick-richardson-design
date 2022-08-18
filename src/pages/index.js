@@ -32,10 +32,6 @@ export default function Home({ data }) {
   const [hoverState, setHoverState] = useState(null);
   const [lowerHoverState, setLowerHoverState] = useState(null);
 
-  // useEffect(() => {
-  //   document.documentElement.style.setProperty("--bg", "#222222");
-  // }, []);
-
   useEffect(() => {
     window.onresize = () => {
       setViewportWidth(window.innerWidth);
@@ -77,252 +73,273 @@ export default function Home({ data }) {
         <link href="../styles/landing.scss" rel="stylesheet" />
       </Helmet>
 
-      <div className="landing-container is-preload">
-        <NavBar
-          landing={true}
-          viewportWidth={viewportWidth}
-          hoverState={hoverState}
-          setHoverState={setHoverState}
-        />
-        <div className="hello-container">
+      <div className="landing-container">
+        <div className="inner-container is-preload">
+          <NavBar
+            landing={true}
+            viewportWidth={viewportWidth}
+            hoverState={hoverState}
+            setHoverState={setHoverState}
+          />
+          {/* <div> */}
           {/* <div
-            className={
-              hoverState === null || viewportWidth <= 768
-                ? "hello-text"
-                : "no-display"
-            }
-          >
-            Hello!
-          </div> */}
-          <div className={hoverState === "nick" ? "hover-state" : "no-display"}>
-            <img src={nickImg} alt="headshots" className="hover-img" />
-          </div>
-          <div
-            className={hoverState === "pushpay" ? "hover-state" : "no-display"}
-          >
-            <img src={pushpayImg} alt="pushpay preview" className="hover-img" />
-          </div>
-          <div
-            className={hoverState === "climbing" ? "hover-state" : "no-display"}
-          >
-            <img src={climbingImg} alt="climbers" className="hover-img" />
-          </div>
-          <div
-            className={hoverState === "cacti" ? "hover-state" : "no-display"}
-          >
-            <img src={cactiImg} alt="some cacti" className="hover-img" />
-          </div>
-          <div
-            className={hoverState === "dribbble" ? "hover-state" : "no-display"}
-          >
-            <img
-              src={dribbbleImg}
-              alt="dribbble preview"
-              className="hover-img"
-            />
-          </div>
-          <div
-            className={hoverState === "linkedin" ? "hover-state" : "no-display"}
-          >
-            <img
-              src={linkedinImg}
-              alt="linkedin preview"
-              className="hover-img"
-            />
-          </div>
-          <div
-            className={hoverState === "email" ? "hover-state" : "no-display"}
-          >
-            <img src={emailImg} alt="email preview" className="hover-img" />
-          </div>
-          <div
-            className={hoverState === "resume" ? "hover-state" : "no-display"}
-          >
-            <img src={resumeImg} alt="resume preview" className="hover-img" />
-          </div>
-        </div>
-
-        <div className="description-container">
-          <div className="description">
-            {/* <span>
-              I am currently a Senior Product Designer at MidFirst
-              Bank with {getNumYears()} years SaaS experience and a BFA in
-              Visual Design. A lover of{" "}
-            </span>
-            <span
-              className="underline"
-              onMouseOver={() => setHoverState("climbing")}
-              onMouseOut={() => setHoverState(null)}
-            >
-              climbing
-            </span>
-            <span> and </span>
-            <span
-              className="underline"
-              onMouseOver={() => setHoverState("cacti")}
-              onMouseOut={() => setHoverState(null)}
-            >
-              cacti
-            </span>
-            <span>
-              , passionate about solving painfully difficult problems and
-              improving customer experiences.
-            </span> */}
-            <span>Hello! I’m </span>
-            <span
-              className="highlight"
-              onMouseOver={() => setHoverState("nick")}
-              onMouseOut={() => setHoverState(null)}
-            >
-              Nicholas
-            </span>
-            , a Product Designer based in{" "}
-            <span className="strikethrough">OKC</span> remotely. Currently
-            working in FinTech. I build bridges between human and machine.
-          </div>
-        </div>
-
-        <div className="work-container">
-          <div className="title-arrow-container">
-            <div className="work-title">My Work</div>
-            <img
-              id="arrow"
-              src={downArrow}
-              alt="Down arrow"
-              onClick={scrollBottom}
-            />
-          </div>
-          <div className="work-items-container">
-            <div className="work-items">
-              <Link
-                to="/event-checkin"
-                className="work-items-link"
-                onMouseOver={() => setLowerHoverState("event-checkin")}
-                onMouseOut={() => setLowerHoverState(null)}
-              >
-                Event Check-In
-              </Link>
-            </div>
-            <div
               className={
-                lowerHoverState === "event-checkin"
-                  ? "event-checkin-hover"
+                hoverState === null || viewportWidth <= 768
+                  ? "hello-text"
                   : "no-display"
               }
             >
-              <img
-                src={eventCheckinImg}
-                alt="Event Check In"
-                className="lower-hover-img"
-              />
-            </div>
+              Hello!
+            </div> */}
 
-            {/* <div className="work-items">
-              <Link
-                to="/"
-                className="work-items-link"
-                onMouseOver={() => setLowerHoverState("financial-mgmt")}
-                onMouseOut={() => setLowerHoverState(null)}
-              >
-                Financial Management
-              </Link>
-            </div>
-            {lowerHoverState === "financial-mgmt" && (
-              <img
-                className="financial-mgmt-hover"
-                src={financialMgmtImg}
-                alt="Financial Management"
-              />
-            )} */}
-
-            <div className="work-items">
-              <Link
-                to="/volunteer-scheduling"
-                className="work-items-link"
-                onMouseOver={() => setLowerHoverState("volunteer-scheduling")}
-                onMouseOut={() => setLowerHoverState(null)}
-              >
-                Volunteer Scheduling
-              </Link>
-            </div>
-            <div
+          {/* <div
               className={
-                lowerHoverState === "volunteer-scheduling"
-                  ? "volunteer-scheduling-hover"
-                  : "no-display"
+                hoverState === "pushpay" ? "hover-state" : "no-display"
               }
             >
               <img
-                src={volunteerSchedulingImg}
-                alt="Volunteer Scheduling"
-                className="lower-hover-img"
+                src={pushpayImg}
+                alt="pushpay preview"
+                className="hover-img"
               />
-            </div>
-
-            <div className="work-items">
-              <Link
-                to="/mobile-app"
-                className="work-items-link"
-                onMouseOver={() => setLowerHoverState("crm")}
-                onMouseOut={() => setLowerHoverState(null)}
-              >
-                CRM Mobile App
-              </Link>
-            </div>
-            <div
-              className={lowerHoverState === "crm" ? "crm-hover" : "no-display"}
-            >
-              <img
-                src={crmImg}
-                alt="CRM Mobile App"
-                className="lower-hover-img"
-              />
-            </div>
-
-            {/* <div className="work-items">
-              <Link
-                to="/"
-                className="work-items-link"
-                onMouseOver={() => setLowerHoverState("onboarding")}
-                onMouseOut={() => setLowerHoverState(null)}
-              >
-                Customer Onboarding
-              </Link>
-            </div>
-            {lowerHoverState === "onboarding" && (
-              <img
-                className="onboarding-hover"
-                src={onboardingImg}
-                alt="Customer Onboarding"
-              />
-            )} */}
-
-            <div className="work-items">
-              <Link
-                to="/graphic-design"
-                className="work-items-link"
-                onMouseOver={() => setLowerHoverState("graphic-design")}
-                onMouseOut={() => setLowerHoverState(null)}
-              >
-                Graphic Design
-              </Link>
-            </div>
-            <div
+            </div> */}
+          {/* <div
               className={
-                lowerHoverState === "graphic-design"
-                  ? "graphic-design-hover"
-                  : "no-display"
+                hoverState === "climbing" ? "hover-state" : "no-display"
+              }
+            >
+              <img src={climbingImg} alt="climbers" className="hover-img" />
+            </div>
+            <div
+              className={hoverState === "cacti" ? "hover-state" : "no-display"}
+            >
+              <img src={cactiImg} alt="some cacti" className="hover-img" />
+            </div> */}
+          {/* <div
+              className={
+                hoverState === "dribbble" ? "hover-state" : "no-display"
               }
             >
               <img
-                src={elCactusSaguaroImg}
-                alt="Graphic Design"
-                className="lower-hover-img"
+                src={dribbbleImg}
+                alt="dribbble preview"
+                className="hover-img"
               />
+            </div>
+            <div
+              className={
+                hoverState === "linkedin" ? "hover-state" : "no-display"
+              }
+            >
+              <img
+                src={linkedinImg}
+                alt="linkedin preview"
+                className="hover-img"
+              />
+            </div>
+            <div
+              className={hoverState === "email" ? "hover-state" : "no-display"}
+            >
+              <img src={emailImg} alt="email preview" className="hover-img" />
+            </div>
+            <div
+              className={hoverState === "resume" ? "hover-state" : "no-display"}
+            >
+              <img src={resumeImg} alt="resume preview" className="hover-img" />
+            </div> */}
+          {/* </div> */}
+
+          <div className="description-container">
+            <div className="description">
+              <div
+                className={
+                  hoverState === "nick" ? "nick-hover-state" : "no-display"
+                }
+              >
+                <img src={nickImg} alt="headshots" className="nick-hover-img" />
+              </div>
+              {/* <span>
+                I am currently a Senior Product Designer at MidFirst
+                Bank with {getNumYears()} years SaaS experience and a BFA in
+                Visual Design. A lover of{" "}
+              </span>
+              <span
+                className="underline"
+                onMouseOver={() => setHoverState("climbing")}
+                onMouseOut={() => setHoverState(null)}
+              >
+                climbing
+              </span>
+              <span> and </span>
+              <span
+                className="underline"
+                onMouseOver={() => setHoverState("cacti")}
+                onMouseOut={() => setHoverState(null)}
+              >
+                cacti
+              </span>
+              <span>
+                , passionate about solving painfully difficult problems and
+                improving customer experiences.
+              </span> */}
+              <span>Hello! I’m </span>
+              <span
+                className="highlight"
+                onMouseOver={() => setHoverState("nick")}
+                onMouseOut={() => setHoverState(null)}
+              >
+                Nicholas
+              </span>
+              , a Product Designer based{" "}
+              <span className="strikethrough">in OKC</span> remotely. Currently
+              working in FinTech. I build bridges between human and machine.
             </div>
           </div>
+
+          <div className="work-container">
+            <div className="title-arrow-container">
+              <div className="work-title">My Work</div>
+              <img
+                id="arrow"
+                src={downArrow}
+                alt="Down arrow"
+                onClick={scrollBottom}
+              />
+            </div>
+            <div className="work-items-container">
+              <div className="work-items">
+                <Link
+                  to="/event-checkin"
+                  className="work-items-link"
+                  onMouseOver={() => setLowerHoverState("event-checkin")}
+                  onMouseOut={() => setLowerHoverState(null)}
+                >
+                  Event Check-In
+                </Link>
+              </div>
+              <div
+                className={
+                  lowerHoverState === "event-checkin"
+                    ? "event-checkin-hover"
+                    : "no-display"
+                }
+              >
+                <img
+                  src={eventCheckinImg}
+                  alt="Event Check In"
+                  className="lower-hover-img"
+                />
+              </div>
+
+              {/* <div className="work-items">
+                <Link
+                  to="/"
+                  className="work-items-link"
+                  onMouseOver={() => setLowerHoverState("financial-mgmt")}
+                  onMouseOut={() => setLowerHoverState(null)}
+                >
+                  Financial Management
+                </Link>
+              </div>
+              {lowerHoverState === "financial-mgmt" && (
+                <img
+                  className="financial-mgmt-hover"
+                  src={financialMgmtImg}
+                  alt="Financial Management"
+                />
+              )} */}
+
+              <div className="work-items">
+                <Link
+                  to="/volunteer-scheduling"
+                  className="work-items-link"
+                  onMouseOver={() => setLowerHoverState("volunteer-scheduling")}
+                  onMouseOut={() => setLowerHoverState(null)}
+                >
+                  Volunteer Scheduling
+                </Link>
+              </div>
+              <div
+                className={
+                  lowerHoverState === "volunteer-scheduling"
+                    ? "volunteer-scheduling-hover"
+                    : "no-display"
+                }
+              >
+                <img
+                  src={volunteerSchedulingImg}
+                  alt="Volunteer Scheduling"
+                  className="lower-hover-img"
+                />
+              </div>
+
+              <div className="work-items">
+                <Link
+                  to="/mobile-app"
+                  className="work-items-link"
+                  onMouseOver={() => setLowerHoverState("crm")}
+                  onMouseOut={() => setLowerHoverState(null)}
+                >
+                  CRM Mobile App
+                </Link>
+              </div>
+              <div
+                className={
+                  lowerHoverState === "crm" ? "crm-hover" : "no-display"
+                }
+              >
+                <img
+                  src={crmImg}
+                  alt="CRM Mobile App"
+                  className="lower-hover-img"
+                />
+              </div>
+
+              {/* <div className="work-items">
+                <Link
+                  to="/"
+                  className="work-items-link"
+                  onMouseOver={() => setLowerHoverState("onboarding")}
+                  onMouseOut={() => setLowerHoverState(null)}
+                >
+                  Customer Onboarding
+                </Link>
+              </div>
+              {lowerHoverState === "onboarding" && (
+                <img
+                  className="onboarding-hover"
+                  src={onboardingImg}
+                  alt="Customer Onboarding"
+                />
+              )} */}
+
+              <div className="work-items">
+                <Link
+                  to="/graphic-design"
+                  className="work-items-link"
+                  onMouseOver={() => setLowerHoverState("graphic-design")}
+                  onMouseOut={() => setLowerHoverState(null)}
+                >
+                  Graphic Design
+                </Link>
+              </div>
+              <div
+                className={
+                  lowerHoverState === "graphic-design"
+                    ? "graphic-design-hover"
+                    : "no-display"
+                }
+              >
+                <img
+                  src={elCactusSaguaroImg}
+                  alt="Graphic Design"
+                  className="lower-hover-img"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="footer"></div>
         </div>
-        <div className="footer"></div>
       </div>
     </>
   );
