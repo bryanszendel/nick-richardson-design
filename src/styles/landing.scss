@@ -1,11 +1,13 @@
 // html {
 //   background-color: #222222;
 // }
+@import "colors.scss";
 
 .landing-container {
   background-color: #222222;
   width: 100%;
   padding-top: 50px;
+  position: relative;
 }
 
 .inner-container {
@@ -74,15 +76,6 @@
 .no-display {
   display: none;
   animation: fadeOut 200ms;
-
-  // animation: fadeOut 200ms;
-  // overflow: hidden;
-  // height: 0;
-  // opacity: 0;
-  // animation: fadeOut 200ms;
-  // transition: height 0ms 200ms, opacity 200ms 0ms;
-  // opacity: 0;
-  // animation: fadeOut 200ms;
 }
 
 .lower-hover-img {
@@ -150,6 +143,45 @@
   img {
     transform: rotate(147deg);
   }
+}
+
+.side-nav {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 150px;
+  width: 45px;
+  padding-bottom: 37.5px;
+  right: 0;
+  bottom: 0;
+  .side-nav-item {
+    cursor: pointer;
+    width: 34px;
+    transition: width 300ms;
+    height: 6px;
+    &:hover {
+      width: 45px;
+      transition: width 300ms;
+    }
+  }
+}
+
+.blue {
+  background-color: var(--blue);
+}
+.orange {
+  background-color: var(--orange);
+}
+.yellow {
+  background-color: var(--yellow);
+}
+.pink {
+  background-color: var(--pink);
+}
+.green {
+  background-color: var(--green);
 }
 .sub-description-container {
   display: flex;

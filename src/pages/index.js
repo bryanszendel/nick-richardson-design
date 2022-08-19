@@ -8,6 +8,7 @@ import "../styles/global.scss";
 import "../styles/landing.scss";
 
 import NavBar from "../components/NavBar";
+import SideNav from "../components/SideNav";
 
 import nickImg from "../img/hover-images/Headshots.png";
 import dribbbleImg from "../img/hover-images/Dribbble.png";
@@ -75,6 +76,7 @@ export default function Home({ data }) {
       </Helmet>
 
       <div className="landing-container">
+        <SideNav />
         <div className="inner-container is-preload">
           <NavBar
             landing={true}
