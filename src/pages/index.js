@@ -27,7 +27,13 @@ import crmImg from "../img/hover-images/CRM.png";
 import elCactusSaguaroImg from "../img/hover-images/El_Cactus_Saguaro.png";
 import circleText from "../img/Circle Text.svg";
 
-import downArrow from "../img/down_arrow.svg";
+import arrow from "../img/Arrow.svg";
+import Project from "../components/Project";
+import eventCheckinThumb from "../img/Event Check-In Thumb.png";
+import finInsightsThumb from "../img/Financial Insights Thumb.png";
+import savingsGoalsThumb from "../img/Savings Goals Thumb.png";
+import volSchedulingThumb from "../img/Volunteer Scheduling Thumb.png";
+import crmNativeThumb from "../img/CRM Native App.png";
 
 export default function Home({ data }) {
   const [viewportWidth, setViewportWidth] = useState(1800);
@@ -132,143 +138,37 @@ export default function Home({ data }) {
 
       <div className="work-container inner-container">
         <div className="title-arrow-container">
-          <div className="work-title">My Work</div>
-          <img
-            id="arrow"
-            src={downArrow}
-            alt="Down arrow"
-            onClick={scrollBottom}
-          />
+          <div className="work-title">Selected Projects</div>
+          <img id="arrow" src={arrow} alt="Down arrow" onClick={scrollBottom} />
         </div>
-        <div className="work-items-container">
-          <div className="work-items">
-            <Link
-              to="/event-checkin"
-              className="work-items-link"
-              onMouseOver={() => setLowerHoverState("event-checkin")}
-              onMouseOut={() => setLowerHoverState(null)}
-            >
-              Event Check-In
-            </Link>
-          </div>
-          <div
-            className={
-              lowerHoverState === "event-checkin"
-                ? "event-checkin-hover"
-                : "no-display"
-            }
-          >
-            <img
-              src={eventCheckinImg}
-              alt="Event Check In"
-              className="lower-hover-img"
-            />
-          </div>
 
-          {/* <div className="work-items">
-                <Link
-                  to="/"
-                  className="work-items-link"
-                  onMouseOver={() => setLowerHoverState("financial-mgmt")}
-                  onMouseOut={() => setLowerHoverState(null)}
-                >
-                  Financial Management
-                </Link>
-              </div>
-              {lowerHoverState === "financial-mgmt" && (
-                <img
-                  className="financial-mgmt-hover"
-                  src={financialMgmtImg}
-                  alt="Financial Management"
-                />
-              )} */}
-
-          <div className="work-items">
-            <Link
-              to="/volunteer-scheduling"
-              className="work-items-link"
-              onMouseOver={() => setLowerHoverState("volunteer-scheduling")}
-              onMouseOut={() => setLowerHoverState(null)}
-            >
-              Volunteer Scheduling
-            </Link>
-          </div>
-          <div
-            className={
-              lowerHoverState === "volunteer-scheduling"
-                ? "volunteer-scheduling-hover"
-                : "no-display"
-            }
-          >
-            <img
-              src={volunteerSchedulingImg}
-              alt="Volunteer Scheduling"
-              className="lower-hover-img"
-            />
-          </div>
-
-          <div className="work-items">
-            <Link
-              to="/mobile-app"
-              className="work-items-link"
-              onMouseOver={() => setLowerHoverState("crm")}
-              onMouseOut={() => setLowerHoverState(null)}
-            >
-              CRM Mobile App
-            </Link>
-          </div>
-          <div
-            className={lowerHoverState === "crm" ? "crm-hover" : "no-display"}
-          >
-            <img
-              src={crmImg}
-              alt="CRM Mobile App"
-              className="lower-hover-img"
-            />
-          </div>
-
-          {/* <div className="work-items">
-                <Link
-                  to="/"
-                  className="work-items-link"
-                  onMouseOver={() => setLowerHoverState("onboarding")}
-                  onMouseOut={() => setLowerHoverState(null)}
-                >
-                  Customer Onboarding
-                </Link>
-              </div>
-              {lowerHoverState === "onboarding" && (
-                <img
-                  className="onboarding-hover"
-                  src={onboardingImg}
-                  alt="Customer Onboarding"
-                />
-              )} */}
-
-          <div className="work-items">
-            <Link
-              to="/graphic-design"
-              className="work-items-link"
-              onMouseOver={() => setLowerHoverState("graphic-design")}
-              onMouseOut={() => setLowerHoverState(null)}
-            >
-              Graphic Design
-            </Link>
-          </div>
-          <div
-            className={
-              lowerHoverState === "graphic-design"
-                ? "graphic-design-hover"
-                : "no-display"
-            }
-          >
-            <img
-              src={elCactusSaguaroImg}
-              alt="Graphic Design"
-              className="lower-hover-img"
-            />
-          </div>
-        </div>
+        <Project
+          title="Savings Goals"
+          imgSrc={savingsGoalsThumb}
+          imgAlt="Savings Goals"
+        />
+        <Project
+          switchDir="true"
+          title="Financial Insights"
+          imgSrc={finInsightsThumb}
+          imgAlt="Financial Insights"
+        />
+        <Project
+          title="Volunteer Scheduling"
+          imgSrc={volSchedulingThumb}
+          imgAlt="Volunteer Scheduling"
+        />
+        <Project
+          switchDir="true"
+          title="Event Check-In"
+          imgSrc={eventCheckinThumb}
+          imgAlt="Event Check-In"
+        />
+        <Project
+          title="CRM Native App"
+          imgSrc={crmNativeThumb}
+          imgAlt="CRM Native App"
+        />
       </div>
       <div className="footer"></div>
     </>
