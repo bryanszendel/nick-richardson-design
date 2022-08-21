@@ -6,6 +6,10 @@
   justify-content: space-between;
 }
 
+.reverse {
+  flex-direction: row-reverse;
+}
+
 .navbar-items-container {
   display: flex;
   align-items: center;

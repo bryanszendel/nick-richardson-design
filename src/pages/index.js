@@ -117,7 +117,11 @@ export default function Home({ data }) {
 
           <div className="description-container">
             <div className="circle-text">
-              <img src={circleText} alt="" />
+              <img
+                className="rotating"
+                src={circleText}
+                alt="Have you closed your knowledge gaps?"
+              />
             </div>
             <div className="description">
               <div
@@ -180,28 +184,35 @@ export default function Home({ data }) {
             title="Savings Goals"
             imgSrc={savingsGoalsThumb}
             imgAlt="Savings Goals"
+            comingSoon={true}
+            linkTo=""
           />
           <Project
             switchDir={true}
             title="Financial Insights"
             imgSrc={finInsightsThumb}
             imgAlt="Financial Insights"
+            linkTo=""
+            comingSoon={true}
           />
           <Project
             title="Volunteer Scheduling"
             imgSrc={volSchedulingThumb}
             imgAlt="Volunteer Scheduling"
+            linkTo="volunteer-scheduling"
           />
           <Project
             switchDir={true}
             title="Event Check-In"
             imgSrc={eventCheckinThumb}
             imgAlt="Event Check-In"
+            linkTo="event-checkin"
           />
           <Project
             title="CRM Native App"
             imgSrc={crmNativeThumb}
             imgAlt="CRM Native App"
+            linkTo="mobile-app"
           />
         </div>
       </div>

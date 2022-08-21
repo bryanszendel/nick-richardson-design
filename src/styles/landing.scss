@@ -204,9 +204,18 @@
   position: absolute;
   bottom: -207px;
   right: 0;
-  img {
-    transform: rotate(147deg);
+}
+@keyframes rotating {
+  from {
+    -webkit-transform: rotate(360deg);
   }
+  to {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+.rotating {
+  animation: rotating 45s linear infinite;
 }
 
 .side-nav {
@@ -220,11 +229,15 @@
   padding-bottom: 37.5px;
   right: 0;
   bottom: 0;
-  .side-nav-item {
-    cursor: pointer;
-    width: 34px;
+  .side-nav-item-container {
+    padding: 18.75px 0;
     transition: width 300ms;
-    height: 6px;
+    width: 34px;
+    .side-nav-item {
+      cursor: pointer;
+      width: 45px;
+      height: 6px;
+    }
     &:hover {
       width: 45px;
       transition: width 300ms;
@@ -266,6 +279,11 @@
 }
 .right {
   flex-direction: row-reverse;
+}
+.subtitle {
+  position: absolute;
+  bottom: -32px;
+  left: 0;
 }
 
 @media all and (max-width: 1250px) {
@@ -344,14 +362,6 @@
 #arrow {
   padding-left: 24px;
 }
-// #arrow {
-//   background-image: url("../img/down_arrow.svg");
-//   &:hover {
-//     background-image: url("../img/down_arrow_hover.svg");
-//     cursor: pointer;
-//     transform: scale(1.2);
-//   }
-// }
 
 @media all and (max-width: 768px) {
   #arrow {
@@ -370,6 +380,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin-bottom: 144px;
 }
 .project-title-container {
   display: flex;
@@ -377,6 +388,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .work-title {
   font-family: "RobotoMono";
   font-size: 30px;
@@ -388,9 +400,10 @@
 }
 .project-title {
   position: absolute;
+  height: auto;
   right: 0;
   font-family: "RobotoMono";
-  font-size: 60px;
+  font-size: 55px;
   font-weight: 400;
   color: #222222;
   display: block;
@@ -410,12 +423,39 @@
   font-size: 60px;
   color: #222222;
   text-decoration: none;
+  &:hover .project-img {
+    border-width: 8px;
+    margin: 0;
+  }
+  &:hover .project-title-container #volunteer-scheduling {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 50%,
+      var(--yellow) 50%
+    );
+  }
+  &:hover .project-title-container #event-checkin {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 50%,
+      var(--pink) 50%
+    );
+  }
+  &:hover .project-title-container #mobile-app {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 50%,
+      var(--green) 50%
+    );
+  }
 }
 .switch-dir {
   flex-direction: row-reverse;
 }
 .project-img {
   width: 44.5%;
+  margin: 7px;
+  border: 1px solid var(--black);
 }
 .work-items-link {
   text-decoration: none;

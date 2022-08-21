@@ -53,7 +53,7 @@ export default function Footer(props) {
         </div>
       )}
       {!props.landing && (
-        <div className="landing">
+        <div className="footer">
           {props.appStore && !props.landing && (
             <a href={props.storeUrl} className="footer-text" target="_blank">
               VIEW ON APP STORE

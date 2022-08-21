@@ -18,7 +18,41 @@
   src: url("../../static/fonts/RobotoMono/RobotoMono-Regular.ttf");
 }
 
+@font-face {
+  font-family: "RobotoMonoBold";
+  src: url("../../static/fonts/RobotoMono/RobotoMono-Bold.ttf");
+}
+
 html {
   font-size: 1vw;
   // background-color: #222222;
+}
+
+h1 {
+  font-family: "RobotoMono";
+  font-size: 60px;
+  line-height: 98px;
+  font-weight: 400;
+}
+
+h2 {
+  font-family: "RobotoMono";
+  font-size: 44px;
+  line-height: 68px;
+  font-weight: 400;
+}
+
+h3 {
+  font-family: "RobotoMonoBold";
+  font-size: 24px;
+  line-height: 42px;
+  font-weight: 500;
+}
+
+h4 {
+  font-family: "RobotoMono";
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 200;
+  margin: 0;
 }

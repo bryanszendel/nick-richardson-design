@@ -10,30 +10,30 @@ export default function SideNav(props) {
       <AnchorLink
         to="#intro-anchor"
         title="Intro"
-        className="side-nav-item orange"
+        className="side-nav-item-container"
       >
-        <span></span>
+        <div className="side-nav-item orange"></div>
       </AnchorLink>
       <AnchorLink
         to="#projects-anchor"
         title="Projects"
-        className="side-nav-item yellow"
+        className="side-nav-item-container"
       >
-        <span></span>
+        <div className="side-nav-item yellow"></div>
       </AnchorLink>
       <AnchorLink
         to="#toolbox-anchor"
         title="Toolbox"
-        className="side-nav-item pink"
+        className="side-nav-item-container"
       >
-        <span></span>
+        <div className="side-nav-item pink"></div>
       </AnchorLink>
       <AnchorLink
         to="#contact-anchor"
         title="Say Hi :)"
-        className="side-nav-item green"
+        className="side-nav-item-container"
       >
-        <span></span>
+        <div className="side-nav-item green"></div>
       </AnchorLink>
     </div>
   );
