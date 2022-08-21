@@ -71,6 +71,26 @@ export default function Home({ data }) {
     return years[new Date().getFullYear() - 2014];
   };
 
+  const toolbox = [
+    "Figma | Sketch",
+    "Adobe Ps | Ai | In",
+    `InVision 
+    Principle`,
+    "Maze | UserZoom",
+    "Jira | Confluence",
+    "Slack | Basecamp | Zoom",
+  ];
+
+  const books = [
+    "The Lean Startup",
+    "Inspired",
+    "The Buddha and the Badass",
+    "Blue Ocean Shift",
+    "Badass: Making Users Awesome",
+    "Competing Against Luck",
+    "Kitchen Confidential",
+  ];
+
   return (
     <>
       <Helmet>
@@ -169,6 +189,31 @@ export default function Home({ data }) {
           imgSrc={crmNativeThumb}
           imgAlt="CRM Native App"
         />
+      </div>
+
+      <div className="toolbox-container">
+        <div className="inner-container flex-row">
+          <div className="toolbox">
+            <div>My Toolbox</div>
+            {toolbox.map((line) => {
+              return <div>{line}</div>;
+            })}
+          </div>
+          <div className="books">
+            <div>Favorite Books:</div>
+            {books.map((line) => {
+              return <div>{line}</div>;
+            })}
+          </div>
+        </div>
+      </div>
+
+      <div className="colors-container">
+        <div className="color-divider blue"></div>
+        <div className="color-divider orange"></div>
+        <div className="color-divider yellow"></div>
+        <div className="color-divider pink"></div>
+        <div className="color-divider green"></div>
       </div>
       <div className="footer"></div>
     </>
