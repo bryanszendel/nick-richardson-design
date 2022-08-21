@@ -155,10 +155,10 @@ export default function Home({ data }) {
               I am currently a Senior Product Designer at MidFirst Bank with{" "}
               {getNumYears()} years SaaS experience.
             </div>
-            <div className="sub-description-text"></div>
+            <div className="sub-description-text mobile-hide"></div>
           </div>
           <div className="sub-description-container">
-            <div className="sub-description-text"></div>
+            <div className="sub-description-text mobile-hide"></div>
             <div className="sub-description-text">
               User-focused, I solve experience problems leveraging design
               thinking.
