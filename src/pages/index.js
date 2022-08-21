@@ -34,11 +34,13 @@ import finInsightsThumb from "../img/Financial Insights Thumb.png";
 import savingsGoalsThumb from "../img/Savings Goals Thumb.png";
 import volSchedulingThumb from "../img/Volunteer Scheduling Thumb.png";
 import crmNativeThumb from "../img/CRM Native App.png";
+import Footer from "../components/Footer";
 
 export default function Home({ data }) {
   const [viewportWidth, setViewportWidth] = useState(1800);
   const [hoverState, setHoverState] = useState(null);
   const [lowerHoverState, setLowerHoverState] = useState(null);
+  const [displayToast, setDisplayToast] = useState(false);
 
   useEffect(() => {
     window.onresize = () => {
@@ -109,6 +111,8 @@ export default function Home({ data }) {
             viewportWidth={viewportWidth}
             hoverState={hoverState}
             setHoverState={setHoverState}
+            displayToast={displayToast}
+            setDisplayToast={setDisplayToast}
           />
 
           <div className="description-container">
@@ -168,7 +172,7 @@ export default function Home({ data }) {
           imgAlt="Savings Goals"
         />
         <Project
-          switchDir="true"
+          switchDir={true}
           title="Financial Insights"
           imgSrc={finInsightsThumb}
           imgAlt="Financial Insights"
@@ -179,7 +183,7 @@ export default function Home({ data }) {
           imgAlt="Volunteer Scheduling"
         />
         <Project
-          switchDir="true"
+          switchDir={true}
           title="Event Check-In"
           imgSrc={eventCheckinThumb}
           imgAlt="Event Check-In"
@@ -215,7 +219,14 @@ export default function Home({ data }) {
         <div className="color-divider pink"></div>
         <div className="color-divider green"></div>
       </div>
-      <div className="footer"></div>
+      <Footer
+        landing={true}
+        displayToast={displayToast}
+        setDisplayToast={setDisplayToast}
+      />
+      <div className={displayToast ? "toast-message show" : "toast-message"}>
+        Email Copied 👍
+      </div>
     </>
   );
 }

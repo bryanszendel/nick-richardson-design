@@ -14,6 +14,32 @@
   max-width: 1000px;
   margin: 0 auto;
 }
+
+.toast-message {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  font-family: "RobotoMono";
+  font-size: 18px;
+  background-color: #28282a;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+}
+
+.toast-message.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
 .flex-row {
   display: flex;
   justify-content: space-between;
@@ -469,6 +495,30 @@
   .onboarding-hover,
   .graphic-design-hover {
     display: none;
+  }
+}
+.landing-footer {
+  background-color: var(--black);
+  height: 506px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+}
+.email-footer {
+  font-family: "RobotoMono";
+  font-size: 44px;
+  color: var(--blue);
+  font-weight: 400;
+  line-height: 68px;
+  cursor: copy;
+}
+.arrow-footer-landing {
+  transform: rotate(180deg);
+  transition: all 200ms ease-in-out;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.2) rotate(180deg);
   }
 }
 .footer {

@@ -26,8 +26,6 @@ export default function NavBar(props) {
   const [resume, setResume] = useState(resumeIcon);
   const [medium, setMedium] = useState(mediumIcon);
 
-  const [displayToast, setDisplayToast] = useState(false);
-
   const copyEmail = "nickrichardsondesign@gmail.com";
 
   const handleMouseOver = (hoverState) => {
@@ -144,9 +142,9 @@ export default function NavBar(props) {
           className="navbar-items"
           onClick={() => {
             navigator.clipboard.writeText(copyEmail);
-            setDisplayToast(true);
+            props.setDisplayToast(true);
             setTimeout(() => {
-              setDisplayToast(false);
+              props.setDisplayToast(false);
             }, 3000);
           }}
           onMouseOver={() => handleMouseOver("email")}
@@ -155,9 +153,9 @@ export default function NavBar(props) {
           <img className="email" src={email} alt="Email" />
         </div>
       </div>
-      <div className={displayToast ? "toast-message show" : "toast-message"}>
+      {/* <div className={displayToast ? "toast-message show" : "toast-message"}>
         Email Copied 👍
-      </div>
+      </div> */}
     </div>
   );
 }
