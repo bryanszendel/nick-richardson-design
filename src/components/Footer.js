@@ -6,6 +6,7 @@ import "../styles/footer.scss";
 import landingArrowUp from "../img/ArrowUp.svg";
 import upArrow from "../img/down_arrow.svg";
 import upArrowHover from "../img/up_arrow_hover.svg";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 export default function Footer(props) {
   const [hoverState, setHoverState] = useState(upArrow);
@@ -42,13 +43,13 @@ export default function Footer(props) {
           >
             NickRichardsonDesign@gmail.com
           </div>
-          <div onClick={scrollTop}>
+          <AnchorLink to="#top">
             <img
               className="arrow-footer-landing"
               src={landingArrowUp}
               alt="up arrow"
             />
-          </div>
+          </AnchorLink>
         </div>
       )}
       {!props.landing && (

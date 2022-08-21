@@ -15,6 +15,39 @@
   margin: 0 auto;
 }
 
+#intro-anchor {
+  position: absolute;
+  left: 0;
+  top: 16.5px;
+  background-color: var(--orange);
+  height: 6px;
+  width: 34px;
+}
+#projects-anchor {
+  position: absolute;
+  left: 0;
+  top: 137.5px;
+  background-color: var(--yellow);
+  height: 6px;
+  width: 34px;
+}
+#toolbox-anchor {
+  position: absolute;
+  left: 0;
+  top: 149.5px;
+  background-color: var(--pink);
+  height: 6px;
+  width: 34px;
+}
+#contact-anchor {
+  position: absolute;
+  left: 0;
+  top: 178px;
+  background-color: var(--green);
+  height: 6px;
+  width: 34px;
+}
+
 .toast-message {
   position: fixed;
   top: 30px;
@@ -214,7 +247,11 @@
 .green {
   background-color: var(--green);
 }
+.intro-outer-container {
+  position: relative;
+}
 .sub-description-container {
+  position: relative;
   display: flex;
   flex-direction: row;
   margin-top: 106px;
@@ -328,6 +365,7 @@
   }
 }
 .work-container {
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -431,11 +469,15 @@
 }
 
 .toolbox-container {
+  position: relative;
   background-color: var(--black);
   padding: 132px 0;
   // display: flex;
   // flex-direction: row;
   // justify-content: space-between;
+}
+.toolbox-title {
+  margin-bottom: 42px;
 }
 .toolbox,
 .books {
@@ -496,6 +538,9 @@
   .graphic-design-hover {
     display: none;
   }
+}
+.footer-container {
+  position: relative;
 }
 .landing-footer {
   background-color: var(--black);

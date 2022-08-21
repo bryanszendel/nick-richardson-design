@@ -103,7 +103,7 @@ export default function Home({ data }) {
         <link href="../styles/landing.scss" rel="stylesheet" />
       </Helmet>
 
-      <div className="landing-container">
+      <div id="top" className="landing-container">
         <SideNav />
         <div className="inner-container is-preload">
           <NavBar
@@ -143,68 +143,80 @@ export default function Home({ data }) {
         </div>
       </div>
 
-      <div className="inner-container">
-        <div className="sub-description-container">
-          <div className="sub-description-text">
-            I am currently a Senior Product Designer at MidFirst Bank with{" "}
-            {getNumYears()} years SaaS experience.
+      <div className="intro-outer-container">
+        <div id="intro-anchor"></div>
+        <div className="inner-container">
+          <div className="sub-description-container">
+            <div className="sub-description-text">
+              I am currently a Senior Product Designer at MidFirst Bank with{" "}
+              {getNumYears()} years SaaS experience.
+            </div>
+            <div className="sub-description-text"></div>
           </div>
-          <div className="sub-description-text"></div>
-        </div>
-        <div className="sub-description-container">
-          <div className="sub-description-text"></div>
-          <div className="sub-description-text">
-            User-focused, I solve experience problems leveraging design
-            thinking.
+          <div className="sub-description-container">
+            <div className="sub-description-text"></div>
+            <div className="sub-description-text">
+              User-focused, I solve experience problems leveraging design
+              thinking.
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="work-container inner-container">
-        <div className="title-arrow-container">
-          <div className="work-title">Selected Projects</div>
-          <img id="arrow" src={arrow} alt="Down arrow" onClick={scrollBottom} />
-        </div>
+      <div className="work-container">
+        <div id="projects-anchor"></div>
+        <div className="inner-container">
+          <div className="title-arrow-container">
+            <div className="work-title">Selected Projects</div>
+            <img
+              id="arrow"
+              src={arrow}
+              alt="Down arrow"
+              onClick={scrollBottom}
+            />
+          </div>
 
-        <Project
-          title="Savings Goals"
-          imgSrc={savingsGoalsThumb}
-          imgAlt="Savings Goals"
-        />
-        <Project
-          switchDir={true}
-          title="Financial Insights"
-          imgSrc={finInsightsThumb}
-          imgAlt="Financial Insights"
-        />
-        <Project
-          title="Volunteer Scheduling"
-          imgSrc={volSchedulingThumb}
-          imgAlt="Volunteer Scheduling"
-        />
-        <Project
-          switchDir={true}
-          title="Event Check-In"
-          imgSrc={eventCheckinThumb}
-          imgAlt="Event Check-In"
-        />
-        <Project
-          title="CRM Native App"
-          imgSrc={crmNativeThumb}
-          imgAlt="CRM Native App"
-        />
+          <Project
+            title="Savings Goals"
+            imgSrc={savingsGoalsThumb}
+            imgAlt="Savings Goals"
+          />
+          <Project
+            switchDir={true}
+            title="Financial Insights"
+            imgSrc={finInsightsThumb}
+            imgAlt="Financial Insights"
+          />
+          <Project
+            title="Volunteer Scheduling"
+            imgSrc={volSchedulingThumb}
+            imgAlt="Volunteer Scheduling"
+          />
+          <Project
+            switchDir={true}
+            title="Event Check-In"
+            imgSrc={eventCheckinThumb}
+            imgAlt="Event Check-In"
+          />
+          <Project
+            title="CRM Native App"
+            imgSrc={crmNativeThumb}
+            imgAlt="CRM Native App"
+          />
+        </div>
       </div>
 
       <div className="toolbox-container">
+        <div id="toolbox-anchor"></div>
         <div className="inner-container flex-row">
           <div className="toolbox">
-            <div>My Toolbox</div>
+            <div className="toolbox-title">My Toolbox:</div>
             {toolbox.map((line) => {
               return <div>{line}</div>;
             })}
           </div>
           <div className="books">
-            <div>Favorite Books:</div>
+            <div className="toolbox-title">Favorite Books:</div>
             {books.map((line) => {
               return <div>{line}</div>;
             })}
@@ -219,11 +231,14 @@ export default function Home({ data }) {
         <div className="color-divider pink"></div>
         <div className="color-divider green"></div>
       </div>
-      <Footer
-        landing={true}
-        displayToast={displayToast}
-        setDisplayToast={setDisplayToast}
-      />
+      <div className="footer-container">
+        <div id="contact-anchor"></div>
+        <Footer
+          landing={true}
+          displayToast={displayToast}
+          setDisplayToast={setDisplayToast}
+        />
+      </div>
       <div className={displayToast ? "toast-message show" : "toast-message"}>
         Email Copied 👍
       </div>
