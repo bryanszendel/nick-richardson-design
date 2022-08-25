@@ -13,6 +13,7 @@ export default function SideNav(props) {
         className="side-nav-item-container"
       >
         <div className="side-nav-item orange"></div>
+        <div className="side-nav-label orange-text">Intro</div>
       </AnchorLink>
       <AnchorLink
         to="#projects-anchor"
@@ -20,6 +21,7 @@ export default function SideNav(props) {
         className="side-nav-item-container"
       >
         <div className="side-nav-item yellow"></div>
+        <div className="side-nav-label yellow-text">Projects</div>
       </AnchorLink>
       <AnchorLink
         to="#toolbox-anchor"
@@ -27,6 +29,7 @@ export default function SideNav(props) {
         className="side-nav-item-container"
       >
         <div className="side-nav-item pink"></div>
+        <div className="side-nav-label pink-text">Toolbox</div>
       </AnchorLink>
       <AnchorLink
         to="#contact-anchor"
@@ -34,6 +37,7 @@ export default function SideNav(props) {
         className="side-nav-item-container"
       >
         <div className="side-nav-item green"></div>
+        <div className="side-nav-label green-text">{`Say Hi :)`}</div>
       </AnchorLink>
     </div>
   );

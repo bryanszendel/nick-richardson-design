@@ -131,7 +131,7 @@ export default function Home({ data }) {
               >
                 <img src={nickImg} alt="headshots" className="nick-hover-img" />
               </div>
-              <span>Hello! I’m </span>
+              <span>I’m </span>
               <span
                 className="highlight"
                 onMouseOver={() => setHoverState("nick")}
@@ -139,9 +139,8 @@ export default function Home({ data }) {
               >
                 Nicholas
               </span>
-              , a Product Designer based{" "}
-              <span className="strikethrough">in OKC</span> remotely. Currently
-              working in FinTech. I build bridges between human and machine.
+              , a Product Designer currently working in FinTech. I build bridges
+              between human and machine.
             </div>
           </div>
         </div>

@@ -206,10 +206,10 @@
   right: 0;
 }
 @keyframes rotating {
-  from {
+  to {
     -webkit-transform: rotate(360deg);
   }
-  to {
+  from {
     -webkit-transform: rotate(0deg);
   }
 }
@@ -230,11 +230,30 @@
   right: 0;
   bottom: 0;
   .side-nav-item-container {
+    position: relative;
     padding: 18.75px 0;
     transition: width 300ms;
     width: 34px;
+    .side-nav-label {
+      display: flex;
+      opacity: 0;
+      justify-content: flex-end;
+      font-family: "RobotoMono";
+      width: 75px;
+      position: absolute;
+      font-weight: 500;
+      font-size: 12px;
+      right: 53px;
+      top: 14px;
+      transition: opacity 300ms;
+    }
+    &:hover .side-nav-label {
+      opacity: 1;
+      transition: opacity 300ms;
+    }
     .side-nav-item {
       cursor: pointer;
+      position: relative;
       width: 45px;
       height: 6px;
     }
@@ -259,6 +278,22 @@
 }
 .green {
   background-color: var(--green);
+}
+
+.blue-text {
+  color: var(--blue);
+}
+.orange-text {
+  color: var(--orange);
+}
+.yellow-text {
+  color: var(--yellow);
+}
+.pink-text {
+  color: var(--pink);
+}
+.green-text {
+  color: var(--green);
 }
 .intro-outer-container {
   position: relative;
@@ -296,6 +331,9 @@
 }
 
 @media all and (max-width: 768px) {
+  .side-nav {
+    display: none;
+  }
   .inner-container {
     margin: 0 auto;
   }
@@ -319,8 +357,7 @@
     display: none;
   }
   .circle-text {
-    transform: scale(0.6);
-    bottom: -148px;
+    display: none;
   }
 }
 
@@ -647,11 +684,11 @@
   .email-footer {
     font-size: 20px;
   }
-  #contact-anchor {
-    top: 100px;
-  }
-  #toolbox-anchor {
-    top: 100px;
+  #intro-anchor,
+  #contact-anchor,
+  #toolbox-anchor,
+  #projects-anchor {
+    display: none;
   }
 }
 .arrow-footer-landing {

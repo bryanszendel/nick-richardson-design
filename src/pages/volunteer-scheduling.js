@@ -53,7 +53,7 @@ At Church Community Builder, I worked as design lead on a project to create a us
             alt="fresh interface 1"
           />
         </div>
-        <ParagraphWithTitle />>
+        <ParagraphWithTitle />
         <div className="img-container">
           <img
             className="detail-images"
