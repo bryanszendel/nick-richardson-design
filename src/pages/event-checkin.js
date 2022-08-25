@@ -15,10 +15,6 @@ import KeyImprovementsImage from "../img/event_checkin/Key_Improvements_Image.pn
 import ProcessImage from "../img/event_checkin/Process_Image.png";
 import Footer from "../components/Footer";
 export default function EventCheckin() {
-  useEffect(() => {
-    document.documentElement.style.setProperty("--bg", "white");
-  }, []);
-
   return (
     <div className="outer-container">
       <NavBar landing={false} />

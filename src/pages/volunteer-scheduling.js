@@ -13,6 +13,7 @@ import CategoryListImage from "../img/volunteer_scheduling/Category_List.png";
 import SchedulesSketchImage from "../img/volunteer_scheduling/Schedules_Sketch.png";
 import BlackWhiteImage from "../img/volunteer_scheduling/Black_White.png";
 import Collage2Image from "../img/volunteer_scheduling/Collage_2.png";
+import laptopImg from "../img/volunteer_scheduling/laptop-img.png";
 import EditSettingsModalImage from "../img/volunteer_scheduling/Edit_Settings_Modal.png";
 
 export default function VolunteerScheduling() {
@@ -24,15 +25,35 @@ export default function VolunteerScheduling() {
     <div className="outer-container">
       <NavBar landing={false} />
       <div className="inner-container">
-        <Testimonial
+        <div className="page-title">Scheduling Make Simple</div>
+        <img
+          className="detail-images"
+          src={laptopImg}
+          alt="laptop with schedules app open"
+        />
+        {/* <Testimonial
           statement="I love the ease of use with this product. I use the scheduling software on a daily basis and they have made it easy to schedule my teams and keep everyone informed about upcoming needs."
           author="Dana S."
           marginBottom="40px"
+        /> */}
+        <ParagraphWithTitle
+          title="Intro"
+          paragraph={`Scheduling volunteers to serve is one of the keys to the success of any church. Without a great scheduling experience, no church management software will see mass adoption.
+          
+At Church Community Builder, I worked as design lead on a project to create a usable schedulding app that users loved.`}
         />
         <ParagraphWithTitle
-          title="Making Scheduling Volunteers Delightful"
-          paragraph="Scheduling volunteers to serve is one of the keys to the success of any church. Without a great scheduling experience, no church management software will see much mass adoption. Church Community Builder’s scheduling tool was built years ago, so the problems in need of solutions were plenty."
+          title="Begin with Research"
+          paragraph={`Our company already offered a tool that attempted to do this. It had thousands of monthy users so we took audit of the current experience and met with users to better understand what was working and what wasn't. We uncovered painful workarounds and flows that just didn't align with their processes and mental models. These findings, along with quantitative analysis of our data led us towards solutions.`}
         />
+        <div className="img-container">
+          <img
+            className="detail-images"
+            src={Collage2Image}
+            alt="fresh interface 1"
+          />
+        </div>
+        <ParagraphWithTitle />>
         <div className="img-container">
           <img
             className="detail-images"
@@ -106,13 +127,6 @@ The relationship with our project partners was a huge success as it gave us the 
           title="Changing the Bottom Line"
           paragraph="Luna schedules was a smash hit in Beta and even more successful in Stable. It seemed like the Lean methodology really paid off and we really achieved something special. Each week we are seeing significant increases in the use of Luna and big drops in the use of the old tool. We continue to work on the scheduling tool and it’s proving to be a critical piece to our company's targeted growth. Luna launched in summer 2018 and as of about a year later, we have seen an increase of 686.05% in usage."
         />
-        <div className="img-container">
-          <img
-            className="detail-images"
-            src={Collage2Image}
-            alt="fresh interface 1"
-          />
-        </div>
         <Footer appStore={false} />
       </div>
     </div>
