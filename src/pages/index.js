@@ -35,6 +35,7 @@ import savingsGoalsThumb from "../img/Savings Goals Thumb.png";
 import volSchedulingThumb from "../img/Volunteer Scheduling Thumb.png";
 import crmNativeThumb from "../img/CRM Native App.png";
 import Footer from "../components/Footer";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 export default function Home({ data }) {
   const [viewportWidth, setViewportWidth] = useState(1800);
@@ -49,7 +50,7 @@ export default function Home({ data }) {
   }, []);
 
   const scrollBottom = () => {
-    document.querySelector(".work-items-container").scrollIntoView({
+    document.querySelector("#projects-anchor").scrollIntoView({
       behavior: "smooth",
     });
   };
@@ -76,8 +77,8 @@ export default function Home({ data }) {
   const toolbox = [
     "Figma | Sketch",
     "Adobe Ps | Ai | In",
-    `InVision 
-    Principle`,
+    `InVision`,
+    `Principle`,
     "Maze | UserZoom",
     "Jira | Confluence",
     "Slack | Basecamp | Zoom",
@@ -171,12 +172,14 @@ export default function Home({ data }) {
         <div className="inner-container">
           <div className="title-arrow-container">
             <div className="work-title">Selected Projects</div>
-            <img
-              id="arrow"
-              src={arrow}
-              alt="Down arrow"
-              onClick={scrollBottom}
-            />
+            <AnchorLink to="#projects-anchor">
+              <img
+                id="arrow"
+                src={arrow}
+                alt="Down arrow"
+                onClick={scrollBottom}
+              />
+            </AnchorLink>
           </div>
 
           <Project

@@ -12,12 +12,22 @@ export default function Project({
   linkTo,
   comingSoon,
 }) {
+  // const getLinkClassNames = () => {
+  //   let base = "work-items";
+  //   if (switchDir) base += " switch-dir";
+  //   if (comingSoon) base += " no-hover";
+  //   return base;
+  // };
   return (
     <Link
       to={comingSoon ? undefined : "/" + linkTo}
       className={switchDir ? "work-items switch-dir" : "work-items"}
     >
-      <img className="project-img" src={imgSrc} alt={imgAlt} />
+      <img
+        className={comingSoon ? "project-img no-hover" : "project-img"}
+        src={imgSrc}
+        alt={imgAlt}
+      />
       <div to={"/" + linkTo} className="project-title-container">
         <div
           id={linkTo}

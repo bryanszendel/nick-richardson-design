@@ -11,7 +11,7 @@
 }
 
 .inner-container {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -332,7 +332,9 @@
 
 @media all and (max-width: 768px) {
   .side-nav {
-    display: none;
+    .side-nav-item-container {
+      width: 14px;
+    }
   }
   .inner-container {
     margin: 0 auto;
@@ -343,15 +345,20 @@
   }
   .description {
     width: 92%;
-    font-size: 20px;
-    line-height: 30px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 48px;
   }
   .sub-description-container {
     justify-content: center;
     align-items: center;
+    margin-top: 40px;
   }
   .sub-description-text {
     width: 92%;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 0.1em;
   }
   .mobile-hide {
     display: none;
@@ -409,7 +416,6 @@
 .title-arrow-container {
   width: 100%;
   display: flex;
-  // justify-content: space-between;
   flex-direction: row;
   align-items: center;
   margin-top: 120px;
@@ -425,10 +431,20 @@
   }
   .title-arrow-container {
     width: 92%;
-    margin: 0;
-    justify-content: center;
+    margin: 0 auto;
+    justify-content: flex-start;
+  }
+  .work-title {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 72px;
   }
 }
+// .project-title-container {
+//   width: 92%;
+// }
+
 .work-container {
   position: relative;
   width: 100%;
@@ -449,6 +465,7 @@
   font-size: 30px;
   color: #222222;
 }
+
 .switch-title-dir {
   right: unset;
   left: 0;
@@ -478,9 +495,18 @@
   font-size: 60px;
   color: #222222;
   text-decoration: none;
+  .project-img {
+    width: 44.5%;
+    margin: 7px;
+    border: 1px solid var(--black);
+  }
   &:hover .project-img {
     border-width: 8px;
     margin: 0;
+  }
+  &:hover .no-hover {
+    border-width: 1px;
+    margin: 7px;
   }
   &:hover .project-title-container #volunteer-scheduling {
     background: linear-gradient(
@@ -504,14 +530,11 @@
     );
   }
 }
+
 .switch-dir {
   flex-direction: row-reverse;
 }
-.project-img {
-  width: 44.5%;
-  margin: 7px;
-  border: 1px solid var(--black);
-}
+
 .work-items-link {
   text-decoration: none;
   color: #222222;
@@ -622,8 +645,11 @@
     flex-direction: column;
   }
   .work-items {
-    margin: 0;
+    margin: 0 auto;
     width: 100%;
+    .project-img {
+      width: 100%;
+    }
   }
   .work-title {
     font-size: 24px;
@@ -660,6 +686,7 @@
     display: none;
   }
 }
+
 .footer-container {
   position: relative;
 }
