@@ -37,7 +37,7 @@ export default function ParagraphWithTitle(props) {
           textIndent: "0",
           fontFamily: "RobotoMono",
           fontWeight: 400,
-          color: "#222222",
+          color: "#111111",
           fontSize: "16px",
           lineHeight: "42px",
           marginTop: "20px",

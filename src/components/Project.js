@@ -5,38 +5,56 @@ import "../styles/global.scss";
 import "../styles/landing.scss";
 
 export default function Project({
+  id,
   switchDir,
   title,
   imgSrc,
   imgAlt,
   linkTo,
   comingSoon,
+  external,
 }) {
-  // const getLinkClassNames = () => {
-  //   let base = "work-items";
-  //   if (switchDir) base += " switch-dir";
-  //   if (comingSoon) base += " no-hover";
-  //   return base;
-  // };
+  const generateLink = (linkTo, comingSoon, external) => {
+    if (external) {
+      return linkTo;
+    } else {
+      return comingSoon ? `` : `/${linkTo}`;
+    }
+  };
   return (
     <Link
-      to={comingSoon ? undefined : "/" + linkTo}
-      className={switchDir ? "work-items switch-dir" : "work-items"}
+      to={generateLink(linkTo, comingSoon, external)}
+      className="work-items"
     >
-      <img
-        className={comingSoon ? "project-img no-hover" : "project-img"}
-        src={imgSrc}
-        alt={imgAlt}
-      />
-      <div to={"/" + linkTo} className="project-title-container">
-        <div
-          id={linkTo}
+      <div
+        className={
+          switchDir ? "project-container switch-dir" : "project-container"
+        }
+      >
+        {/* <div
           className={
-            switchDir ? "project-title switch-title-dir" : "project-title"
+            switchDir
+              ? "project-title-container switch-title-dir"
+              : "project-title-container"
           }
-        >
-          {title}
-          {comingSoon && <h4 className="subtitle">Coming Soon</h4>}
+        > */}
+        <div className="project-title-container">
+          <div
+            id={id || linkTo}
+            className={
+              switchDir ? "project-title switch-title-dir" : "project-title"
+            }
+          >
+            {title}
+            {comingSoon && <h4 className="subtitle">Coming Soon</h4>}
+          </div>
+        </div>
+        <div className="project-img-container">
+          <img
+            className={comingSoon ? "project-img no-hover" : "project-img"}
+            src={imgSrc}
+            alt={imgAlt}
+          />
         </div>
       </div>
     </Link>

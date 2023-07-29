@@ -1,10 +1,10 @@
 // html {
-//   background-color: #222222;
+//   background-color: #111111;
 // }
 @import "colors.scss";
 
 .landing-container {
-  background-color: #222222;
+  background-color: #111111;
   width: 100%;
   padding-top: 50px;
   position: relative;
@@ -12,6 +12,7 @@
 
 .inner-container {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -86,7 +87,7 @@
 }
 @media screen and (max-width: 768px) {
   .landing-container {
-    margin-top: 30px;
+    padding-top: 30px;
   }
 }
 
@@ -310,7 +311,7 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 42px;
-  color: #222222;
+  color: #111111;
 }
 .right {
   flex-direction: row-reverse;
@@ -357,8 +358,10 @@
   .sub-description-text {
     width: 92%;
     font-size: 16px;
-    line-height: 32px;
-    letter-spacing: 0.1em;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px; /* 200% */
+    letter-spacing: 1.6px;
   }
   .mobile-hide {
     display: none;
@@ -435,15 +438,13 @@
     justify-content: flex-start;
   }
   .work-title {
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 32px;
-    margin-top: 72px;
+    // font-weight: 400;
+    // font-size: 24px;
+    // line-height: 32px;
+    // margin-top: 72px;
+    display: none;
   }
 }
-// .project-title-container {
-//   width: 92%;
-// }
 
 .work-container {
   position: relative;
@@ -453,59 +454,84 @@
   flex-direction: column;
   margin-bottom: 144px;
 }
-.project-title-container {
-  display: flex;
-  width: 50%;
-  justify-content: center;
-  align-items: center;
-}
 
 .work-title {
   font-family: "RobotoMono";
   font-size: 30px;
-  color: #222222;
+  color: #111111;
 }
 
-.switch-title-dir {
-  right: unset;
-  left: 0;
-}
-.project-title {
-  position: absolute;
-  height: auto;
-  right: 0;
-  font-family: "RobotoMono";
-  font-size: 55px;
-  font-weight: 400;
-  color: #222222;
-  display: block;
-  overflow: visible;
-}
-.switch-title-dir {
-  right: unset;
-  left: 0;
-}
 .work-items {
-  position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: row;
   margin-top: 120px;
   font-family: "RobotoMono";
   font-size: 60px;
-  color: #222222;
+  color: #111111;
   text-decoration: none;
+  .project-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    margin: 20px 0;
+  }
+  .switch-dir {
+    flex-direction: row-reverse;
+  }
+  .project-title-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .project-title {
+    position: absolute;
+    height: auto;
+    left: 0;
+    font-family: "RobotoMono";
+    font-size: 60px;
+    font-weight: 400;
+    color: #111111;
+    line-height: 60px; /* 100% */
+    letter-spacing: 2.4px;
+    white-space: nowrap;
+    overflow: visible;
+    .subtitle {
+      position: absolute;
+      bottom: unset;
+      margin-top: 16px;
+      left: 0;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px; /* 100% */
+      letter-spacing: 0.96px;
+    }
+  }
+  .switch-title-dir {
+    left: unset;
+    right: 0;
+  }
+  .project-img-container {
+    width: 44.5%;
+  }
   .project-img {
     width: 44.5%;
+    width: 100%;
     margin: 7px;
-    border: 1px solid var(--black);
+    border: 1px solid #11111100;
   }
   &:hover .project-img {
     border-width: 8px;
+    border-color: #111111;
     margin: 0;
   }
   &:hover .no-hover {
     border-width: 1px;
+    border-color: #11111100;
     margin: 7px;
   }
   &:hover .project-title-container #volunteer-scheduling {
@@ -513,6 +539,13 @@
       180deg,
       rgba(255, 255, 255, 0) 50%,
       var(--yellow) 50%
+    );
+  }
+  &:hover .project-title-container #financial-mgmt {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 50%,
+      var(--blue) 50%
     );
   }
   &:hover .project-title-container #event-checkin {
@@ -531,13 +564,9 @@
   }
 }
 
-.switch-dir {
-  flex-direction: row-reverse;
-}
-
 .work-items-link {
   text-decoration: none;
-  color: #222222;
+  color: #111111;
   &:hover {
     color: #ffc7e8;
   }
@@ -645,45 +674,87 @@
     flex-direction: column;
   }
   .work-items {
+    display: flex;
     margin: 0 auto;
-    width: 100%;
-    .project-img {
-      width: 100%;
-    }
-  }
-  .work-title {
-    font-size: 24px;
-  }
-  .project-title-container {
-    width: 100%;
-  }
-  .project-title {
-    font-size: 20px;
-    height: auto;
-    width: unset;
-    margin-bottom: -24px;
-  }
-  .subtitle {
-    font-size: 18px;
-    bottom: -18px;
-  }
-  .flex-row {
-    flex-direction: column;
-  }
-  .work-items {
+    // width: 100%;
     margin-top: 52px;
     font-size: 30px;
     width: 92%;
     line-height: 38px;
-  }
-  .hover-state,
-  .event-checkin-hover,
-  .financial-mgmt-hover,
-  .volunteer-scheduling-hover,
-  .crm-hover,
-  .onboarding-hover,
-  .graphic-design-hover {
-    display: none;
+    .project-img {
+      width: 100%;
+      margin: 0;
+      border: 0;
+    }
+    &:hover .project-img {
+      border-width: 0;
+      margin: 0;
+    }
+    &:hover .no-hover {
+      border-width: 0;
+      margin: 0;
+    }
+    &:hover .project-title-container #volunteer-scheduling,
+    &:hover .project-title-container #financial-mgmt,
+    &:hover .project-title-container #event-checkin,
+    &:hover .project-title-container #mobile-app {
+      background: unset;
+      margin: 0px;
+    }
+    .project-container {
+      display: flex;
+      flex-direction: column;
+    }
+    .project-title-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: unset;
+      right: unset;
+      width: 100%;
+      margin-bottom: 16px;
+    }
+    .project-title {
+      position: relative;
+      font-size: 24px;
+      height: auto;
+      width: unset;
+      line-height: 32px; /* 133.333% */
+      letter-spacing: 0.96px;
+      .subtitle {
+        position: absolute;
+        margin-top: 0;
+        font-size: 16px;
+        position: unset;
+        bottom: unset;
+        left: 0;
+      }
+    }
+    .project-img-container {
+      width: 100%;
+    }
+    // unset the switch
+    .switch-title-dir {
+      right: unset;
+    }
+    .flex-row {
+      flex-direction: column;
+    }
+    .financial-mgmt,
+    .event-checkin,
+    .volunteer-scheduling,
+    .crm {
+      position: unset;
+    }
+    .hover-state,
+    .event-checkin-hover,
+    .financial-mgmt-hover,
+    .volunteer-scheduling-hover,
+    .crm-hover,
+    .onboarding-hover,
+    .graphic-design-hover {
+      display: none;
+    }
   }
 }
 

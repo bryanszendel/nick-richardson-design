@@ -187,24 +187,25 @@ export default function Home({ data }) {
             imgSrc={savingsGoalsThumb}
             imgAlt="Savings Goals"
             comingSoon={true}
+            switchDir={true}
             linkTo=""
           />
           <Project
-            switchDir={true}
+            id="financial-mgmt"
             title="Financial Insights"
             imgSrc={finInsightsThumb}
             imgAlt="Financial Insights"
-            linkTo=""
-            comingSoon={true}
+            linkTo="https://www.behance.net/gallery/147772499/Financial-Insights"
+            external={true}
           />
           <Project
             title="Volunteer Scheduling"
             imgSrc={volSchedulingThumb}
             imgAlt="Volunteer Scheduling"
             linkTo="volunteer-scheduling"
+            switchDir={true}
           />
           <Project
-            switchDir={true}
             title="Event Check-In"
             imgSrc={eventCheckinThumb}
             imgAlt="Event Check-In"
@@ -215,6 +216,7 @@ export default function Home({ data }) {
             imgSrc={crmNativeThumb}
             imgAlt="CRM Native App"
             linkTo="mobile-app"
+            switchDir={true}
           />
         </div>
       </div>
@@ -224,14 +226,14 @@ export default function Home({ data }) {
         <div className="inner-container flex-row">
           <div className="toolbox">
             <div className="toolbox-title">My Toolbox:</div>
-            {toolbox.map((line) => {
-              return <div>{line}</div>;
+            {toolbox.map((line, index) => {
+              return <div key={index}>{line}</div>;
             })}
           </div>
           <div className="books">
             <div className="toolbox-title">Favorite Books:</div>
-            {books.map((line) => {
-              return <div>{line}</div>;
+            {books.map((line, index) => {
+              return <div key={index}>{line}</div>;
             })}
           </div>
         </div>

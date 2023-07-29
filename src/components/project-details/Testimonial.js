@@ -23,7 +23,7 @@ export default function Testimonial(props) {
           fontFamily: "RobotoMono",
           textAlign: "center",
           fontSize: "24px",
-          color: "#222222",
+          color: "#111111",
           lineHeight: "42px",
           paddingRight: "20px",
           paddingLeft: "20px",
@@ -34,7 +34,7 @@ export default function Testimonial(props) {
       <div
         style={{
           fontFamily: "RobotoMono",
-          color: "#222222",
+          color: "#111111",
           fontSize: "24px",
           lineHeight: "42px",
           marginTop: "20px",
