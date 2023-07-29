@@ -618,10 +618,7 @@
 .toolbox-container {
   position: relative;
   background-color: var(--black);
-  padding: 132px 0;
-  // display: flex;
-  // flex-direction: row;
-  // justify-content: space-between;
+  padding: 67px 0 132px 0;
 }
 .toolbox-title {
   margin-bottom: 42px;
@@ -630,9 +627,12 @@
 .books {
   font-family: "RobotoMono";
   color: #ffffff;
+  margin-top: 67px;
   font-size: 24px;
+  font-style: normal;
   font-weight: 500;
-  line-height: 42px;
+  line-height: 42px; /* 175% */
+  letter-spacing: 2.4px;
 }
 
 .colors-container {
@@ -737,9 +737,6 @@
     .switch-title-dir {
       right: unset;
     }
-    .flex-row {
-      flex-direction: column;
-    }
     .financial-mgmt,
     .event-checkin,
     .volunteer-scheduling,
@@ -755,6 +752,23 @@
     .graphic-design-hover {
       display: none;
     }
+  }
+  .toolbox-container {
+    padding: 67px 0;
+  }
+  .flex-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .toolbox,
+  .books {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px; /* 200% */
+    letter-spacing: 1.6px;
   }
 }
 
@@ -779,6 +793,9 @@
 }
 
 @media all and (max-width: 768px) {
+  .landing-footer {
+    height: 255px;
+  }
   .email-footer {
     font-size: 20px;
   }
