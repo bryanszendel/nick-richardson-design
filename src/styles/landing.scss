@@ -49,31 +49,6 @@
   width: 34px;
 }
 
-.toast-message {
-  position: fixed;
-  top: 30px;
-  left: 50%;
-  visibility: hidden;
-  min-width: 250px;
-  margin-left: -125px;
-  font-family: "RobotoMono";
-  font-size: 18px;
-  background-color: #28282a;
-  color: #fff;
-  text-align: center;
-  border-radius: 5px;
-  border: 1px solid #fff;
-  padding: 16px;
-  position: fixed;
-  z-index: 1;
-}
-
-.toast-message.show {
-  visibility: visible;
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;
-}
-
 .flex-row {
   display: flex;
   justify-content: space-between;
@@ -635,16 +610,6 @@
   letter-spacing: 2.4px;
 }
 
-.colors-container {
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-}
-.color-divider {
-  width: 20%;
-  height: 6px;
-}
 @media all and (max-width: 1250px) {
   .work-items {
     font-size: 3rem;

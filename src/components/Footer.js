@@ -4,13 +4,10 @@ import "../styles/global.scss";
 import "../styles/footer.scss";
 
 import landingArrowUp from "../img/ArrowUp.svg";
-import upArrow from "../img/down_arrow.svg";
-import upArrowHover from "../img/up_arrow_hover.svg";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 export default function Footer(props) {
-  const [hoverState, setHoverState] = useState(upArrow);
-
+  const [displayToast, setDisplayToast] = useState(false);
   const copyEmail = "nickrichardsondesign@gmail.com";
 
   const scrollTop = () => {
@@ -21,23 +18,31 @@ export default function Footer(props) {
     });
   };
 
-  const handleMouseOver = () => {
-    setHoverState(upArrowHover);
-  };
-  const handleMouseOut = () => {
-    setHoverState(upArrow);
-  };
+  // const handleMouseOver = () => {
+  //   setHoverState(upArrowHover);
+  // };
+  // const handleMouseOut = () => {
+  //   setHoverState(upArrow);
+  // };
   return (
     <>
-      {props.landing && (
+      <div className="colors-container">
+        <div className="color-divider blue"></div>
+        <div className="color-divider orange"></div>
+        <div className="color-divider yellow"></div>
+        <div className="color-divider pink"></div>
+        <div className="color-divider green"></div>
+      </div>
+      <div className="footer-container">
+        <div id="contact-anchor"></div>
         <div className="landing-footer">
           <div
             className="email-footer"
             onClick={() => {
               navigator.clipboard.writeText(copyEmail);
-              props.setDisplayToast(true);
+              setDisplayToast(true);
               setTimeout(() => {
-                props.setDisplayToast(false);
+                setDisplayToast(false);
               }, 3000);
             }}
           >
@@ -51,30 +56,10 @@ export default function Footer(props) {
             />
           </AnchorLink>
         </div>
-      )}
-      {!props.landing && (
-        <div className="footer">
-          {props.appStore && !props.landing && (
-            <a href={props.storeUrl} className="footer-text" target="_blank">
-              VIEW ON APP STORE
-            </a>
-          )}
-          <div
-            onClick={scrollTop}
-            onKeyPress={scrollTop}
-            role="button"
-            tabIndex="0"
-          >
-            <img
-              src={hoverState}
-              alt="Up arrow"
-              className={hoverState === upArrow ? "up-arrow" : "up-arrow-hover"}
-              onMouseOver={() => handleMouseOver()}
-              onMouseOut={() => handleMouseOut()}
-            />
-          </div>
-        </div>
-      )}
+      </div>
+      <div className={displayToast ? "toast-message show" : "toast-message"}>
+        Email Copied 👍
+      </div>
     </>
   );
 }

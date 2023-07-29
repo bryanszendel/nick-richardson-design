@@ -112,7 +112,7 @@ export default function Home({ data }) {
             viewportWidth={viewportWidth}
             hoverState={hoverState}
             setHoverState={setHoverState}
-            displayToast={displayToast}
+            // displayToast={displayToast}
             setDisplayToast={setDisplayToast}
           />
 
@@ -239,24 +239,7 @@ export default function Home({ data }) {
         </div>
       </div>
 
-      <div className="colors-container">
-        <div className="color-divider blue"></div>
-        <div className="color-divider orange"></div>
-        <div className="color-divider yellow"></div>
-        <div className="color-divider pink"></div>
-        <div className="color-divider green"></div>
-      </div>
-      <div className="footer-container">
-        <div id="contact-anchor"></div>
-        <Footer
-          landing={true}
-          displayToast={displayToast}
-          setDisplayToast={setDisplayToast}
-        />
-      </div>
-      <div className={displayToast ? "toast-message show" : "toast-message"}>
-        Email Copied 👍
-      </div>
+      <Footer />
     </>
   );
 }

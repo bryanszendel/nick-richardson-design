@@ -31,13 +31,6 @@ export default function Project({
           switchDir ? "project-container switch-dir" : "project-container"
         }
       >
-        {/* <div
-          className={
-            switchDir
-              ? "project-title-container switch-title-dir"
-              : "project-title-container"
-          }
-        > */}
         <div className="project-title-container">
           <div
             id={id || linkTo}
