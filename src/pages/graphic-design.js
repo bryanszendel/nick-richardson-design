@@ -24,7 +24,7 @@ export default function GraphicDesign() {
 
   return (
     <>
-      <div className="outer-container">
+      <div id="top" className="outer-container">
         <NavBar landing={false} />
         <div className="inner-container">
           <ParagraphWithTitle

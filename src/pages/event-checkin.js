@@ -17,7 +17,7 @@ import Footer from "../components/Footer";
 export default function EventCheckin() {
   return (
     <>
-      <div className="outer-container">
+      <div id="top" className="outer-container">
         <NavBar landing={false} />
         <div className="inner-container">
           <Testimonial
@@ -96,7 +96,7 @@ export default function EventCheckin() {
           />
         </div>
       </div>
-      <Footer />
+      <Footer style={{ marginTop: "96px" }} />
     </>
   );
 }

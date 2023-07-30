@@ -23,7 +23,7 @@ export default function MobileApp() {
 
   return (
     <>
-      <div className="outer-container">
+      <div id="top" className="outer-container">
         <NavBar landing={false} />
         <div className="inner-container">
           <Testimonial

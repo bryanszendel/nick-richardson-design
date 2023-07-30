@@ -1,47 +1,13 @@
 import React from "react";
 
 import "../../styles/global.scss";
+import "../../styles/detail-pages.scss";
 
-export default function Testimonial(props) {
+export default function Testimonial({ statement, author }) {
   return (
-    <div
-      style={{
-        width: "100%",
-        maxWidth: "692px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
-        marginRight: "auto",
-        marginLeft: "auto",
-        marginTop: "120px",
-        marginBottom: props.marginBottom,
-      }}
-    >
-      <div
-        style={{
-          fontFamily: "RobotoMono",
-          textAlign: "center",
-          fontSize: "24px",
-          color: "#111111",
-          lineHeight: "42px",
-          paddingRight: "20px",
-          paddingLeft: "20px",
-        }}
-      >
-        “{props.statement}“
-      </div>
-      <div
-        style={{
-          fontFamily: "RobotoMono",
-          color: "#111111",
-          fontSize: "24px",
-          lineHeight: "42px",
-          marginTop: "20px",
-        }}
-      >
-        — {props.author}
-      </div>
+    <div className="testimonial-container">
+      <div className="testimonial-statement">“{statement}“</div>
+      <div className="testimonial-author">— {author}</div>
     </div>
   );
 }

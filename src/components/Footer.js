@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { globalHistory } from "@reach/router";
 
 import "../styles/global.scss";
 import "../styles/footer.scss";
@@ -9,21 +10,8 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
 export default function Footer(props) {
   const [displayToast, setDisplayToast] = useState(false);
   const copyEmail = "nickrichardsondesign@gmail.com";
+  const path = globalHistory.location.pathname;
 
-  const scrollTop = () => {
-    window.scroll({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
-  };
-
-  // const handleMouseOver = () => {
-  //   setHoverState(upArrowHover);
-  // };
-  // const handleMouseOut = () => {
-  //   setHoverState(upArrow);
-  // };
   return (
     <>
       <div className="colors-container">
@@ -48,7 +36,7 @@ export default function Footer(props) {
           >
             NickRichardsonDesign@gmail.com
           </div>
-          <AnchorLink to="#top">
+          <AnchorLink to={`${path}#top`}>
             <img
               className="arrow-footer-landing"
               src={landingArrowUp}
