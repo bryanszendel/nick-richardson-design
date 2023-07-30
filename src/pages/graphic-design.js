@@ -23,50 +23,55 @@ export default function GraphicDesign() {
   }, []);
 
   return (
-    <div className="outer-container">
-      <NavBar landing={false} />
-      <div className="inner-container">
-        <ParagraphWithTitle
-          title="Graphic Design"
-          paragraph="Although I specialize in the discipline of UI/UX, before that was even a mainstream area of focus, print and graphic design were my foundation. Presented here are some of my favorite pieces throughout the years."
-        />
-        <div className="img-container">
-          <img className="detail-images" src={LogosGif} alt="Various Logos" />
-        </div>
-
-        <div className="img-container">
-          <img className="detail-images" src={CactiImage} alt="Some Cacti" />
-        </div>
-
-        <div className="img-container">
-          <img
-            className="detail-images"
-            src={CactiPostersGif}
-            alt="Various cacti posters"
+    <>
+      <div id="top" className="outer-container">
+        <NavBar landing={false} />
+        <div className="inner-container">
+          <ParagraphWithTitle
+            title="Graphic Design"
+            paragraph="Although I specialize in the discipline of UI/UX, before that was even a mainstream area of focus, print and graphic design were my foundation. Presented here are some of my favorite pieces throughout the years."
           />
-        </div>
+          <div className="img-container">
+            <img className="detail-images" src={LogosGif} alt="Various Logos" />
+          </div>
 
-        <div className="img-container">
-          <img
-            className="detail-images"
-            src={CrystalFightersImage}
-            alt="Crystal Fighters concert poster"
-          />
-        </div>
+          <div className="img-container">
+            <img className="detail-images" src={CactiImage} alt="Some Cacti" />
+          </div>
 
-        <div className="img-container">
-          <img className="detail-images" src={WitchHuntGif} alt="Witch hunt" />
-        </div>
+          <div className="img-container">
+            <img
+              className="detail-images"
+              src={CactiPostersGif}
+              alt="Various cacti posters"
+            />
+          </div>
 
-        <div className="img-container">
-          <img
-            className="detail-images"
-            src={DecadeClubImage}
-            alt="Decade club sticker"
-          />
-        </div>
+          <div className="img-container">
+            <img
+              className="detail-images"
+              src={CrystalFightersImage}
+              alt="Crystal Fighters concert poster"
+            />
+          </div>
 
-        {/* <div className="img-container">
+          <div className="img-container">
+            <img
+              className="detail-images"
+              src={WitchHuntGif}
+              alt="Witch hunt"
+            />
+          </div>
+
+          <div className="img-container">
+            <img
+              className="detail-images"
+              src={DecadeClubImage}
+              alt="Decade club sticker"
+            />
+          </div>
+
+          {/* <div className="img-container">
           <img
             className="detail-images"
             src={SummitOrizabaGif}
@@ -74,32 +79,32 @@ export default function GraphicDesign() {
           />
         </div> */}
 
-        <div className="img-container">
-          <img
-            className="detail-images"
-            src={WeddingInviteGif}
-            alt="Wedding invitations"
-          />
-        </div>
+          <div className="img-container">
+            <img
+              className="detail-images"
+              src={WeddingInviteGif}
+              alt="Wedding invitations"
+            />
+          </div>
 
-        <div className="img-container">
-          <img
-            className="detail-images"
-            src={MatterhornImage}
-            alt="Matterhorn mountain"
-          />
-        </div>
+          <div className="img-container">
+            <img
+              className="detail-images"
+              src={MatterhornImage}
+              alt="Matterhorn mountain"
+            />
+          </div>
 
-        <div className="img-container">
-          <img
-            className="detail-images"
-            src={StorefrontsOfKantoGif}
-            alt="Various storefronts booklet"
-          />
+          <div className="img-container">
+            <img
+              className="detail-images"
+              src={StorefrontsOfKantoGif}
+              alt="Various storefronts booklet"
+            />
+          </div>
         </div>
-
-        <Footer appStore={false} />
       </div>
-    </div>
+      <Footer />
+    </>
   );
 }

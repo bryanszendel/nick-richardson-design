@@ -12,7 +12,6 @@ export default function ParagraphWithTitle(props) {
         justifyContent: "flex-start",
         alignItems: "flex-start",
         flexDirection: "column",
-        // color: '#03B770',
         fontSize: "30px",
         lineHeight: "30px",
         marginRight: "auto",
@@ -22,11 +21,11 @@ export default function ParagraphWithTitle(props) {
     >
       <div
         style={{
-          fontFamily: "Gotham-Ultra",
+          fontFamily: "RobotoMono",
+          fontSize: "24px",
+          fontWeight: 500,
           textAlign: "left",
-          lineHeight: "48px",
-          // paddingRight: '20px',
-          // paddingLeft: '20px'
+          lineHeight: "42px",
         }}
       >
         {props.title}
@@ -36,10 +35,11 @@ export default function ParagraphWithTitle(props) {
           whiteSpace: "pre-wrap",
           float: "left",
           textIndent: "0",
-          fontFamily: "Gotham-Book",
-          color: "#28282A",
-          fontSize: "24px",
-          lineHeight: "40px",
+          fontFamily: "RobotoMono",
+          fontWeight: 400,
+          color: "#111111",
+          fontSize: "16px",
+          lineHeight: "42px",
           marginTop: "20px",
         }}
       >

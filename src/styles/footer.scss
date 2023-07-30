@@ -1,16 +1,28 @@
 @import "global.scss";
 
+.colors-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+.color-divider {
+  width: 20%;
+  height: 6px;
+}
 .footer {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   height: auto;
-  margin-top: 80px;
-  margin-bottom: 160px;
+  margin: 80px 0;
+  width: 100%;
+  max-width: 1000px;
+  // margin-bottom: 160px;
 }
 .footer-text {
-  font-family: "Gotham-Ultra";
+  font-family: "RobotoMono";
   text-decoration: none;
   color: #28282a;
   text-align: center;
@@ -36,7 +48,32 @@
 
 @media all and (max-width: 768px) {
   .footer {
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-top: 40px;
+    margin-bottom: 67px;
   }
+}
+
+.toast-message {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  font-family: "RobotoMono";
+  font-size: 18px;
+  background-color: #28282a;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+}
+
+.toast-message.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }

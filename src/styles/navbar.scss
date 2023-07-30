@@ -6,17 +6,21 @@
   justify-content: space-between;
 }
 
+.reverse {
+  flex-direction: row-reverse;
+}
+
 .navbar-items-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 230px;
+  width: 300px;
   padding: 0;
 }
 
 .navbar-items {
   position: relative;
-  width: 25%;
+  width: 20%;
   height: 55px;
   display: flex;
   justify-content: center;
@@ -33,7 +37,7 @@
 }
 
 .navbar-text {
-  font-family: "Gotham-Book";
+  font-family: "RobotoMono";
   width: 243px;
   color: #28282a;
   font-size: 30px;
@@ -43,29 +47,6 @@
   letter-spacing: 0;
   line-height: 36px;
   -webkit-user-select: none;
-}
-
-.toast-message {
-  top: 30px;
-  left: 50%;
-  visibility: hidden;
-  min-width: 250px;
-  margin-left: -125px;
-  font-family: "Gotham-Book";
-  font-size: 18px;
-  background-color: #28282a;
-  color: #fff;
-  text-align: center;
-  border-radius: 5px;
-  padding: 16px;
-  position: fixed;
-  z-index: 1;
-}
-
-.toast-message.show {
-  visibility: visible;
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
 @-webkit-keyframes fadein {
