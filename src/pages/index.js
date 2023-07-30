@@ -152,7 +152,7 @@ export default function Home({ data }) {
         <div className="inner-container">
           <div className="sub-description-container">
             <div className="sub-description-text">
-              I am currently a Senior Product Designer at MidFirst Bank with{" "}
+              I am currently a Senior Product Designer at Maestro with{" "}
               {getNumYears()} years SaaS experience.
             </div>
             <div className="sub-description-text mobile-hide"></div>
@@ -188,16 +188,17 @@ export default function Home({ data }) {
             imgAlt="Savings Goals"
             comingSoon={true}
             switchDir={true}
-            linkTo=""
+            // linkTo=""
           />
           <Project
             id="financial-mgmt"
             title="Financial Insights"
             imgSrc={finInsightsThumb}
             imgAlt="Financial Insights"
-            linkTo="https://www.behance.net/gallery/147772499/Financial-Insights"
+            linkTo=""
             external={true}
           />
+          {/* https://www.behance.net/gallery/147772499/Financial-Insights */}
           <Project
             title="Volunteer Scheduling"
             imgSrc={volSchedulingThumb}

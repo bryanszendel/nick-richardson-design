@@ -7,11 +7,12 @@ import Testimonial from "../components/project-details/Testimonial";
 import ParagraphWithTitle from "../components/project-details/ParagraphWithTitle";
 import Footer from "../components/Footer";
 
-import ScheduleGridImage from "../img/volunteer-scheduling/Schedule_Grid.png";
 import SchedulesSketchImage from "../img/volunteer-scheduling/Schedules_Sketch.png";
-import PhoneScreenshotsImage from "../img/volunteer-scheduling/Phone_Screenshots.png";
+import Schedules1 from "../img/volunteer-scheduling/schedules1.png";
+import Schedules2 from "../img/volunteer-scheduling/schedules2.png";
+import Schedules3 from "../img/volunteer-scheduling/schedules3.png";
 import Collage2Image from "../img/volunteer-scheduling/Collage_2.png";
-import laptopImg from "../img/volunteer-scheduling/laptop-img.png";
+import MacImg from "../img/volunteer-scheduling/mac-image.png";
 import EditSettingsModalImage from "../img/volunteer-scheduling/Edit_Settings_Modal.png";
 
 export default function VolunteerScheduling() {
@@ -25,11 +26,13 @@ export default function VolunteerScheduling() {
         <NavBar landing={false} />
         <div className="inner-container">
           <div className="page-title">Scheduling Made Simple</div>
-          <img
-            className="detail-images"
-            src={laptopImg}
-            alt="laptop with schedules app open"
-          />
+          <div className="img-container">
+            <img
+              className="detail-images"
+              src={MacImg}
+              alt="laptop with schedules app open"
+            />
+          </div>
           <ParagraphWithTitle
             title="Intro"
             paragraph={`Scheduling volunteers to serve is one of the keys to the success of any church. Without a great scheduling experience, no church management software will see mass adoption. At Church Community Builder, I worked as design lead on a project to create a usable schedulding app that users loved.`}
@@ -45,14 +48,7 @@ export default function VolunteerScheduling() {
               alt="fresh interface 1"
             />
           </div>
-          <ParagraphWithTitle />
-          <div className="img-container">
-            <img
-              className="detail-images"
-              src={ScheduleGridImage}
-              alt="Scheduling app grid view"
-            />
-          </div>
+
           <ParagraphWithTitle
             title="Ideate, Test, Repeat"
             paragraph={`After months of customer and market research, meeting with over 120 churches, user testing competitor’s software, analyzing features, dissecting jobs to be done, we developed a hypothysis and designed our initial prototypes. 
@@ -84,15 +80,14 @@ Our scheduling product launched in summer 2018 and as of about a year later, we 
           />
 
           <Testimonial
+            color="pink"
             statement={`I love the ease of use with this product. I use the scheduling software on a daily basis and they have made it easy to schedule my teams and keep everyone informed about upcoming needs.`}
             author="Dana S."
           />
-          <div>
-            <img
-              className="detail-images"
-              src={PhoneScreenshotsImage}
-              alt="Schedule Screenshots on Phone"
-            />
+          <div className="container-drop-shadow">
+            <img src={Schedules1} alt="Schedules View" />
+            <img src={Schedules2} alt="Schedules View Alt" />
+            <img src={Schedules3} alt="Schedules View Alt" />
           </div>
         </div>
       </div>

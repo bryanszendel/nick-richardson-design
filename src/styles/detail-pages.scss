@@ -1,14 +1,40 @@
 @import "global.scss";
 @import "colors.scss";
 
+.pink {
+  background-color: var(--pink);
+  ::before {
+    border-left: 9999px solid var(--pink);
+    box-shadow: 9999px 0 0 var(--pink);
+  }
+}
+.green {
+  background-color: var(--green);
+  ::before {
+    border-left: 9999px solid var(--green);
+    box-shadow: 9999px 0 0 var(--green);
+  }
+}
 #gatsby-focus-wrapper {
   overflow-x: hidden;
 }
-
+.container-drop-shadow {
+  width: 62em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  img {
+    width: 31%;
+    border-radius: 34px;
+    overflow: visible;
+    box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.16);
+  }
+}
 .outer-container {
   max-width: 1000px;
-  margin: 0 auto;
-  margin-top: 50px;
+  margin: 96px auto;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -30,16 +56,18 @@
     margin: 0 auto;
 
     .img-container {
-      max-width: 1000px;
       margin-top: 80px;
     }
     .detail-images {
-      width: 58vw;
+      margin: 0 auto;
+      width: 62.5em;
       overflow: visible;
-      border-radius: 16px;
     }
 
     @media all and (max-width: 768px) {
+      .detail-images {
+        width: 80em;
+      }
       .drop-shadow {
         box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.16);
       }
@@ -59,7 +87,6 @@
   flex-direction: column;
   margin: 96px auto;
   padding: 72px 0;
-  background-color: var(--pink);
   ::before {
     content: "";
     position: absolute;
@@ -67,10 +94,9 @@
     bottom: 0;
     left: -9999px;
     right: 0;
-    border-left: 9999px solid var(--pink);
-    box-shadow: 9999px 0 0 var(--pink);
   }
 }
+
 .testimonial-statement {
   font-family: "RobotoMono";
   font-size: 24px;
