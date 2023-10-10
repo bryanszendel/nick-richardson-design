@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
-import { Link, graphql } from "gatsby";
-import { Img } from "gatsby-plugin-image";
 
 import "normalize.css";
 import "../styles/global.scss";
@@ -11,20 +9,6 @@ import NavBar from "../components/NavBar";
 import SideNav from "../components/SideNav";
 
 import nickImg from "../img/hover-images/Headshots.png";
-import dribbbleImg from "../img/hover-images/Dribbble.png";
-import linkedinImg from "../img/hover-images/LinkedIn.png";
-import emailImg from "../img/hover-images/Email.png";
-import resumeImg from "../img/hover-images/Resume.png";
-import pushpayImg from "../img/hover-images/Pushpay.png";
-import climbingImg from "../img/hover-images/Climbing.png";
-import cactiImg from "../img/hover-images/Cacti.png";
-
-import eventCheckinImg from "../img/hover-images/Event_CheckIn.png";
-// import financialMgmtImg from "../img/hover-images/Financial_Mgmt.png";
-import volunteerSchedulingImg from "../img/hover-images/Volunteer_Scheduling.png";
-import crmImg from "../img/hover-images/CRM.png";
-// import onboardingImg from "../img/hover-images/Onboarding.png";
-import elCactusSaguaroImg from "../img/hover-images/El_Cactus_Saguaro.png";
 import circleText from "../img/Circle Text.svg";
 
 import arrow from "../img/Arrow.svg";
@@ -40,7 +24,6 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
 export default function Home({ data }) {
   const [viewportWidth, setViewportWidth] = useState(1800);
   const [hoverState, setHoverState] = useState(null);
-  const [lowerHoverState, setLowerHoverState] = useState(null);
   const [displayToast, setDisplayToast] = useState(false);
 
   useEffect(() => {
@@ -183,22 +166,22 @@ export default function Home({ data }) {
           </div>
 
           <Project
+            id="savings-goals"
             title="Savings Goals"
             imgSrc={savingsGoalsThumb}
             imgAlt="Savings Goals"
-            comingSoon={true}
             switchDir={true}
-            // linkTo=""
+            external={true}
+            linkTo="https://www.behance.net/gallery/148534371/Goals-Case-Study"
           />
           <Project
             id="financial-mgmt"
             title="Financial Insights"
             imgSrc={finInsightsThumb}
             imgAlt="Financial Insights"
-            linkTo=""
+            linkTo="https://www.behance.net/gallery/147772499/Financial-Insights"
             external={true}
           />
-          {/* https://www.behance.net/gallery/147772499/Financial-Insights */}
           <Project
             title="Volunteer Scheduling"
             imgSrc={volSchedulingThumb}
@@ -240,7 +223,11 @@ export default function Home({ data }) {
         </div>
       </div>
 
-      <Footer />
+      <div className={displayToast ? "toast-message show" : "toast-message"}>
+        Email Copied 👍
+      </div>
+
+      <Footer setDisplayToast={setDisplayToast} />
     </>
   );
 }

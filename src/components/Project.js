@@ -21,8 +21,42 @@ export default function Project({
       return comingSoon ? `` : `/${linkTo}`;
     }
   };
-  return (
+  return external ? (
+    <a
+      href={linkTo}
+      rel="noopener noreferrer"
+      target="_blank"
+      className="work-items"
+    >
+      <div
+        className={
+          switchDir ? "project-container switch-dir" : "project-container"
+        }
+      >
+        <div className="project-title-container">
+          <div
+            id={id || linkTo}
+            className={
+              switchDir ? "project-title switch-title-dir" : "project-title"
+            }
+          >
+            {title}
+            {comingSoon && <h4 className="subtitle">Coming Soon</h4>}
+          </div>
+        </div>
+        <div className="project-img-container">
+          <img
+            className={comingSoon ? "project-img no-hover" : "project-img"}
+            src={imgSrc}
+            alt={imgAlt}
+          />
+        </div>
+      </div>
+    </a>
+  ) : (
     <Link
+      external={external}
+      rel="noopener noreferrer"
       to={generateLink(linkTo, comingSoon, external)}
       className="work-items"
     >

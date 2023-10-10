@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { globalHistory } from "@reach/router";
 
 import "../styles/global.scss";
@@ -7,8 +7,7 @@ import "../styles/footer.scss";
 import landingArrowUp from "../img/ArrowUp.svg";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 
-export default function Footer(props) {
-  const [displayToast, setDisplayToast] = useState(false);
+export default function Footer({ setDisplayToast }) {
   const copyEmail = "nickrichardsondesign@gmail.com";
   const path = globalHistory.location.pathname;
 
@@ -44,9 +43,6 @@ export default function Footer(props) {
             />
           </AnchorLink>
         </div>
-      </div>
-      <div className={displayToast ? "toast-message show" : "toast-message"}>
-        Email Copied 👍
       </div>
     </>
   );

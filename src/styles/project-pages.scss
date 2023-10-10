@@ -34,7 +34,7 @@
 }
 .outer-container {
   max-width: 1000px;
-  margin: 96px auto;
+  margin: 16px auto;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -65,14 +65,18 @@
     }
 
     @media all and (max-width: 768px) {
+      .page-title {
+        font-size: 24px;
+        margin: 40px 0;
+      }
+      .img-container {
+        margin-top: 40px;
+      }
       .detail-images {
         width: 80em;
       }
       .drop-shadow {
         box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.16);
-      }
-      .key-improvements-img {
-        width: 545px;
       }
     }
   }
@@ -119,5 +123,9 @@
     width: 92%;
     align-items: center;
     justify-content: center;
+  }
+  .testimonial-statement,
+  .testimonial-author {
+    font-size: 20px;
   }
 }

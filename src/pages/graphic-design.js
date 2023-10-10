@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "normalize.css";
 
-import "../styles/detail-pages.scss";
+import "../styles/project-pages.scss";
 import NavBar from "../components/NavBar";
 import ParagraphWithTitle from "../components/project-details/ParagraphWithTitle";
 import Footer from "../components/Footer";
