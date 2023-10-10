@@ -25,7 +25,6 @@ import backArrow from "../img/back_arrow.svg";
 import { Link } from "gatsby";
 
 export default function NavBar(props) {
-  // const [navHoverState, setNavHoverState] = useState()
   const [dribbble, setDribbble] = useState(
     props.landing ? dribbbleIcon : dribbbleIconAlt
   );
@@ -83,26 +82,31 @@ export default function NavBar(props) {
         }
       >
         {/* CV */}
-        <div
+        <a
           className="navbar-items"
           target="_blank"
+          rel="noreferrer noopener"
           onClick={openResume}
           onMouseOver={() => handleMouseOver("resume")}
           onMouseOut={() => handleMouseOut("resume")}
         >
           <img src={resume} alt="CV" />
-        </div>
+        </a>
 
         {/* DRIBBBLE */}
-        <div
+        <a
           className="navbar-items"
           onMouseOver={() => handleMouseOver("dribbble")}
           onMouseOut={() => handleMouseOut("dribbble")}
         >
-          <a href="https://dribbble.com/nr-design" target="_blank">
+          <a
+            href="https://dribbble.com/nr-design"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
             <img src={dribbble} alt="Dribbble" />
           </a>
-        </div>
+        </a>
 
         {/* LINKEDIN */}
         <div
@@ -110,7 +114,11 @@ export default function NavBar(props) {
           onMouseOver={() => handleMouseOver("linkedin")}
           onMouseOut={() => handleMouseOut("linkedin")}
         >
-          <a href="https://www.linkedin.com/in/nr-design/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/nr-design/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
             <img src={linkedin} alt="LinkedIn" />
           </a>
         </div>
@@ -121,7 +129,11 @@ export default function NavBar(props) {
           onMouseOver={() => handleMouseOver("medium")}
           onMouseOut={() => handleMouseOut("medium")}
         >
-          <a href="https://medium.com/@Nick_Richardson" target="_blank">
+          <a
+            href="https://medium.com/@Nick_Richardson"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
             <img src={medium} alt="Medium" />
           </a>
         </div>
@@ -156,13 +168,13 @@ export default function NavBar(props) {
         >
           <img
             style={{
-              height: "48px",
-              width: "48px",
+              height: "24px",
+              width: "24px",
             }}
             src={backArrow}
             alt="Back arrow"
           />
-          <div className="navbar-text">All Projects</div>
+          <div className="navbar-text">Back</div>
         </Link>
       )}
     </div>

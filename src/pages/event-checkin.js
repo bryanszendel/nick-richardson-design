@@ -1,7 +1,7 @@
 import React from "react";
 import "normalize.css";
 
-import "../styles/detail-pages.scss";
+import "../styles/project-pages.scss";
 import NavBar from "../components/NavBar";
 import Testimonial from "../components/project-details/Testimonial";
 import ParagraphWithTitle from "../components/project-details/ParagraphWithTitle";
@@ -11,6 +11,7 @@ import CheckInAppImage from "../img/event_checkin/Check-In_App_Image.png";
 import KeyImprovementsImage from "../img/event_checkin/Key_Improvements_Image.png";
 import ProcessImage from "../img/event_checkin/Process_Image.png";
 import Footer from "../components/Footer";
+
 export default function EventCheckin() {
   return (
     <>

@@ -509,6 +509,13 @@
     border-color: #11111100;
     margin: 7px;
   }
+  &:hover .project-title-container #savings-goals {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 50%,
+      var(--orange) 50%
+    );
+  }
   &:hover .project-title-container #volunteer-scheduling {
     background: linear-gradient(
       180deg,
@@ -598,7 +605,15 @@
 .toolbox-title {
   margin-bottom: 42px;
 }
-.toolbox,
+.toolbox {
+  font-family: "RobotoMono";
+  color: #ffffff;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 42px; /* 175% */
+  letter-spacing: 2.4px;
+}
 .books {
   font-family: "RobotoMono";
   color: #ffffff;

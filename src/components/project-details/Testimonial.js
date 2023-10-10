@@ -1,7 +1,7 @@
 import React from "react";
 
 import "../../styles/global.scss";
-import "../../styles/detail-pages.scss";
+import "../../styles/project-pages.scss";
 
 export default function Testimonial({ statement, author, color }) {
   return (
