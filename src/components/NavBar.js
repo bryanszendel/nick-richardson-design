@@ -20,7 +20,7 @@ import mediumIcon from "../img/navbar-svgs/medium_icon.svg";
 import mediumIconAlt from "../img/navbar-svgs/medium_icon_alt.svg";
 import mediumHover from "../img/hover-svgs/medium_hover.svg";
 
-import resumeFull from "../img/CV_NickRichardson.pdf";
+import resumeFull from "../img/NR-CV-2024.pdf";
 import backArrow from "../img/back_arrow.svg";
 import { Link } from "gatsby";
 
